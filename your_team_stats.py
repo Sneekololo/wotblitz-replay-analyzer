@@ -21,11 +21,12 @@ with open(TANK_DB_FILE, encoding="utf-8") as f:
     TANK_DB = {int(k): v for k, v in raw_db.items()}
 
 TYPE_LABELS = {
-    "heavyTank":  "HT",
+    "heavyTank": "HT",
     "mediumTank": "MT",
-    "lightTank":  "LT",
-    "AT-SPG":     "TD",
+    "lightTank": "LT",
+    "AT-SPG": "TD",
 }
+
 
 def run_parser(file_path):
     result = subprocess.run(
@@ -37,6 +38,7 @@ def run_parser(file_path):
         print("❌ Error:", file_path)
         return None
     return json.loads(result.stdout)
+
 
 players = defaultdict(lambda: {
     "nickname": "unknown",
@@ -110,16 +112,16 @@ for file in os.listdir(REPLAY_FOLDER):
             pl["nickname"] = player_info_map[acc_id]["nickname"]
 
         pl["battles"] += 1
-        pl["damage"]          += info.get("damage_dealt", 0)
-        pl["frags"]           += info.get("n_enemies_destroyed", 0)
-        pl["shots"]           += info.get("n_shots", 0)
-        pl["hits"]            += info.get("n_hits_dealt", 0)
-        pl["pens"]            += info.get("n_penetrations_dealt", 0)
-        pl["assist"]          += info.get("damage_assisted_1", 0) + info.get("damage_assisted_2", 0)
-        pl["blocked"]         += info.get("damage_blocked", 0)
+        pl["damage"] += info.get("damage_dealt", 0)
+        pl["frags"] += info.get("n_enemies_destroyed", 0)
+        pl["shots"] += info.get("n_shots", 0)
+        pl["hits"] += info.get("n_hits_dealt", 0)
+        pl["pens"] += info.get("n_penetrations_dealt", 0)
+        pl["assist"] += info.get("damage_assisted_1", 0) + info.get("damage_assisted_2", 0)
+        pl["blocked"] += info.get("damage_blocked", 0)
         pl["enemies_damaged"] += info.get("n_enemies_damaged", 0)
 
-        earned   = info.get("victory_points_earned", 0)
+        earned = info.get("victory_points_earned", 0)
         captured = info.get("victory_points_seized", 0)
         pl["iPoints"] += (earned - captured)
         pl["sPoints"] += captured
@@ -141,23 +143,23 @@ for acc_id, p in players.items():
     if b == 0:
         continue
 
-    ADR     = p["damage"] / b
-    KPR     = p["frags"] / b
-    DE      = p["enemies_damaged"] / b
-    Assist  = p["assist"] / b
+    ADR = p["damage"] / b
+    KPR = p["frags"] / b
+    DE = p["enemies_damaged"] / b
+    Assist = p["assist"] / b
     Blocked = p["blocked"] / b
 
     AccH = p["hits"] / p["shots"] if p["shots"] else 0
-    AccP = p["pens"] / p["hits"]  if p["hits"]  else 0
+    AccP = p["pens"] / p["hits"] if p["hits"] else 0
 
     iPoints = p["iPoints"] / b
     sPoints = p["sPoints"] / b
 
-    Firepower  = ((100 + ADR) * (1 + KPR) ** (1/7) - 777) / 20
-    AIM        = ((1 + AccH) * (1 + AccP) - 0.9) / 0.029
-    Support    = ((1 + DE)**2 * (200 + Assist)**2 * (400 + Blocked)) ** (1/3) / 19
-    Supremacy  = math.sqrt(40 + iPoints + sPoints) / 0.13
-    BPR        = (1/76) * ((17*Firepower + 3*AIM + 2*Support + 3*Supremacy) / 25)
+    Firepower = ((100 + ADR) * (1 + KPR) ** (1 / 7) - 777) / 20
+    AIM = ((1 + AccH) * (1 + AccP) - 0.9) / 0.029
+    Support = ((1 + DE) ** 2 * (200 + Assist) ** 2 * (400 + Blocked)) ** (1 / 3) / 19
+    Supremacy = math.sqrt(40 + iPoints + sPoints) / 0.13
+    BPR = (1 / 76) * ((17 * Firepower + 3 * AIM + 2 * Support + 3 * Supremacy) / 25)
 
     if p["tank_battles"]:
         top_tank_id = p["tank_battles"].most_common(1)[0][0]
