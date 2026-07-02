@@ -71,6 +71,35 @@ body.analyze-mode .layout{display:flex}
 .home-card{background:rgba(18,18,18,.72);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:16px;box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
 .home-card-k{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.9px;color:var(--tx3);margin-bottom:8px}
 .home-card-v{font-size:13px;color:var(--tx2);line-height:1.6}
+.home-demo{padding:34px 48px 46px;background:var(--bg);border-top:1px solid var(--br)}
+.home-demo-inner{max-width:1380px;margin:0 auto;display:grid;grid-template-columns:minmax(420px,1.05fr) minmax(360px,.95fr);gap:18px;align-items:start}
+.home-demo-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:16px}
+.home-demo-title{font-size:18px;font-weight:800;color:var(--tx)}
+.home-demo-sub{font-size:13px;color:var(--tx3);margin-top:3px}
+.demo-board,.demo-summary{background:var(--sf);border:1px solid var(--br);border-radius:var(--r);overflow:hidden}
+.demo-board-h{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center;padding:14px 16px;border-bottom:1px solid var(--br);background:var(--sf2)}
+.demo-team-k{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.9px;color:var(--tx3)}
+.demo-team-v{font-size:22px;font-weight:800;color:var(--tx);margin-top:2px}
+.demo-team-v.ac{color:var(--or)}
+.demo-vs{font-size:11px;font-weight:800;color:var(--tx3)}
+.demo-lists{display:grid;grid-template-columns:1fr 1fr}
+.demo-list:first-child{border-right:1px solid var(--br)}
+.demo-row{display:grid;grid-template-columns:24px 1fr auto;gap:10px;align-items:center;padding:12px 14px;border-bottom:1px solid var(--br)}
+.demo-row:last-child{border-bottom:none}
+.demo-rank{font-size:11px;font-weight:800;color:var(--tx3)}
+.demo-name{font-size:13px;font-weight:800;color:var(--tx)}
+.demo-tank{font-size:11px;color:var(--tx3);margin-top:1px}
+.demo-bpr{font-size:13px;font-weight:800;color:var(--tx)}
+.demo-bpr.ac{color:var(--or)}
+.demo-summary{padding:16px}
+.demo-summary-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--tx);margin-bottom:12px}
+.demo-summary-line{display:grid;grid-template-columns:110px 1fr auto;gap:10px;align-items:center;margin-bottom:11px}
+.demo-summary-k{font-size:11px;font-weight:800;color:var(--tx3);text-transform:uppercase;letter-spacing:.6px}
+.demo-track{height:8px;background:var(--sf3);border-radius:999px;overflow:hidden}
+.demo-fill{height:100%;background:var(--or)}
+.demo-fill.blue{background:var(--bl)}
+.demo-summary-v{font-size:12px;font-weight:800;color:var(--tx2);text-align:right}
+.demo-note{margin-top:14px;border:1px solid var(--br);border-radius:var(--rs);padding:12px;background:var(--bg);font-size:13px;color:var(--tx2);line-height:1.6}
 
 /* â”€â”€ SIDEBAR â”€â”€ */
 .sidebar{width:var(--nav);background:var(--sf);border-right:1px solid var(--br);display:flex;flex-direction:column;padding:14px 10px;gap:4px;flex-shrink:0;position:sticky;top:56px;height:calc(100vh - 56px);overflow-y:auto}
@@ -95,7 +124,7 @@ body.analyze-mode .layout{display:flex}
 .btn-upload{background:var(--sf3);color:var(--tx2);border:1px solid var(--br)}
 .btn-upload:hover{color:var(--tx);border-color:var(--or);background:var(--or-dim)}
 .btn:disabled{opacity:.3;cursor:not-allowed;pointer-events:none}
-#fileInput,#folderFileInput{display:none}
+#fileInput,#folderFileInput,#excelInput{display:none}
 
 /* â”€â”€ CONTENT â”€â”€ */
 .content{flex:1;min-width:0;display:flex;flex-direction:column;overflow-y:auto}
@@ -144,7 +173,7 @@ body.analyze-mode .upload-card{box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
 .preview-bpr{font-size:12px;color:var(--tx);font-weight:800}
 .upload-card{grid-area:upload;background:rgba(18,18,18,.86);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:16px;box-shadow:0 18px 55px rgba(0,0,0,.26),inset 0 1px 0 rgba(255,255,255,.04)}
 .upload-card-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.9px;color:var(--tx3);margin-bottom:10px}
-.upload-grid{display:grid;grid-template-columns:180px minmax(360px,1fr) 180px;gap:14px;align-items:stretch}
+.upload-grid{display:grid;grid-template-columns:180px minmax(360px,1fr) 220px;gap:14px;align-items:stretch}
 .mode-switch{display:grid;grid-template-columns:1fr;gap:8px;margin-bottom:10px}
 .mode-btn{border:1px solid var(--br);background:var(--sf2);color:var(--tx2);border-radius:var(--rs);padding:9px 10px;font:inherit;font-size:12px;font-weight:700;cursor:pointer;transition:.15s}
 .mode-btn.active{border-color:var(--or);background:var(--or-dim);color:var(--tx)}
@@ -152,10 +181,16 @@ body.analyze-mode .upload-card{box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
 .session-bar.hidden{display:none}
 .session-meta{grid-column:1 / -1;font-size:12px;color:var(--tx3);text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .session-meta strong{color:var(--tx)}
+.action-panel{display:grid;gap:8px;align-content:start}
+.action-panel-title{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.9px;color:var(--tx3)}
+.action-panel .btn{justify-content:center;width:100%}
+.db-status{font-size:12px;color:var(--tx3);line-height:1.4}
+.db-status strong{color:var(--tx)}
 .import-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:0}
 .import-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.drop-zone{border:1px dashed var(--br2);border-radius:var(--r);background:#151515;padding:18px;display:flex;align-items:center;justify-content:space-between;gap:14px;transition:border-color .15s,background .15s;min-height:94px}
+.drop-zone{border:1px dashed var(--br2);border-radius:var(--r);background:#151515;padding:18px;display:flex;align-items:center;justify-content:space-between;gap:14px;transition:border-color .15s,background .15s;min-height:94px;cursor:pointer}
 .drop-zone.drag{border-color:var(--or);background:var(--or-dim)}
+.drop-zone:focus-visible{outline:1px solid var(--or);outline-offset:2px}
 .drop-main{display:flex;align-items:center;gap:12px;min-width:0}
 .drop-ico{width:34px;height:34px;border-radius:var(--rs);background:var(--sf3);display:flex;align-items:center;justify-content:center;color:var(--or);flex-shrink:0}
 .drop-title{font-size:13px;font-weight:700;color:var(--tx)}
@@ -213,6 +248,13 @@ body.analyze-mode .upload-card{box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
 
 @media (max-width: 760px){
   body{font-size:13px}
+  .home-demo{padding:24px 14px 32px}
+  .home-demo-inner{grid-template-columns:1fr}
+  .demo-board-h{grid-template-columns:1fr;gap:8px}
+  .demo-lists{grid-template-columns:1fr}
+  .demo-list:first-child{border-right:none;border-bottom:1px solid var(--br)}
+  .demo-summary-line{grid-template-columns:1fr;gap:6px}
+  .demo-summary-v{text-align:left}
   .topnav{height:auto;min-height:56px;padding:10px 12px;gap:8px;flex-wrap:wrap}
   .logo{margin-right:8px}
   .nav-tabs{order:3;width:100%;overflow-x:auto}
@@ -261,6 +303,7 @@ body.analyze-mode .upload-card{box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
   .home-grid{grid-template-columns:1fr;grid-template-areas:"copy" "report"}
   .home-stats{margin-top:28px}
   .home-lower{grid-template-columns:1fr}
+  .home-demo-inner{grid-template-columns:1fr}
   .hero-grid{grid-template-columns:1fr;grid-template-areas:"copy" "report" "upload"}
   .page-title{font-size:46px}
   .hero-copy{min-height:auto}
@@ -443,6 +486,7 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
 </div>
 <input type="file" id="fileInput" multiple accept=".wotbreplay"/>
 <input type="file" id="folderFileInput" multiple accept=".wotbreplay" webkitdirectory/>
+<input type="file" id="excelInput" accept=".xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
 
 <!-- TOP NAV -->
 <nav class="topnav">
@@ -525,6 +569,49 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
       <div class="home-card"><div class="home-card-k">Scrim analysis</div><div class="home-card-v">Upload a block of replays and compare your team against the opponent side.</div></div>
       <div class="home-card"><div class="home-card-k">Individual sessions</div><div class="home-card-v">Add replays match by match and finish with focused objectives.</div></div>
       <div class="home-card"><div class="home-card-k">Clean reporting</div><div class="home-card-v">Charts, BPR ratings, summaries, and Excel exports stay in the analyzer workspace.</div></div>
+    </div>
+  </section>
+  <section class="home-demo" aria-label="Sample analysis">
+    <div class="home-demo-inner">
+      <div>
+        <div class="home-demo-head">
+          <div>
+            <div class="eyebrow">Sample session</div>
+            <div class="home-demo-title">Full scrim report preview</div>
+            <div class="home-demo-sub">Fictional players, same layout as a real analysis.</div>
+          </div>
+          <a class="btn btn-ghost" href="/analyze">Try with replays</a>
+        </div>
+        <div class="demo-board">
+          <div class="demo-board-h">
+            <div><div class="demo-team-k">Our avg BPR</div><div class="demo-team-v ac">1.08</div></div>
+            <div class="demo-vs">VS</div>
+            <div style="text-align:right"><div class="demo-team-k">Enemy avg BPR</div><div class="demo-team-v">0.94</div></div>
+          </div>
+          <div class="demo-lists">
+            <div class="demo-list">
+              <div class="demo-row"><div class="demo-rank">1</div><div><div class="demo-name">AsterRook</div><div class="demo-tank">Kranvagn</div></div><div class="demo-bpr ac">1.42</div></div>
+              <div class="demo-row"><div class="demo-rank">2</div><div><div class="demo-name">Northlane</div><div class="demo-tank">XM551 Sheridan</div></div><div class="demo-bpr">1.21</div></div>
+              <div class="demo-row"><div class="demo-rank">3</div><div><div class="demo-name">PulseNine</div><div class="demo-tank">Concept 1B</div></div><div class="demo-bpr">1.09</div></div>
+              <div class="demo-row"><div class="demo-rank">4</div><div><div class="demo-name">Vanta</div><div class="demo-tank">FV4005</div></div><div class="demo-bpr">0.96</div></div>
+            </div>
+            <div class="demo-list">
+              <div class="demo-row"><div class="demo-rank">1</div><div><div class="demo-name">IronVale</div><div class="demo-tank">M-VI-Yoh</div></div><div class="demo-bpr ac">1.31</div></div>
+              <div class="demo-row"><div class="demo-rank">2</div><div><div class="demo-name">Kairox</div><div class="demo-tank">T110E5</div></div><div class="demo-bpr">1.08</div></div>
+              <div class="demo-row"><div class="demo-rank">3</div><div><div class="demo-name">Sable</div><div class="demo-tank">Object 268/4</div></div><div class="demo-bpr">0.89</div></div>
+              <div class="demo-row"><div class="demo-rank">4</div><div><div class="demo-name">Mistral</div><div class="demo-tank">TVP T 50/51</div></div><div class="demo-bpr">0.73</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="demo-summary">
+        <div class="demo-summary-title">What the report surfaces</div>
+        <div class="demo-summary-line"><div class="demo-summary-k">ADR edge</div><div class="demo-track"><div class="demo-fill" style="width:67%"></div></div><div class="demo-summary-v">+216</div></div>
+        <div class="demo-summary-line"><div class="demo-summary-k">Focus fire</div><div class="demo-track"><div class="demo-fill blue" style="width:52%"></div></div><div class="demo-summary-v">Review</div></div>
+        <div class="demo-summary-line"><div class="demo-summary-k">Survival</div><div class="demo-track"><div class="demo-fill" style="width:74%"></div></div><div class="demo-summary-v">Strong</div></div>
+        <div class="demo-note">AI summary: damage pressure is ahead, but two early trades were split across targets. Next block: call the first focus target before crossing and keep the same heavy-side structure.</div>
+        <div class="demo-note">Excel export keeps both teams in separate sheets. Excel import can turn a saved team sheet into a local team database for later comparison.</div>
+      </div>
     </div>
   </section>
 </main>
@@ -647,7 +734,7 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
               </div>
             </div>
 
-            <div class="drop-zone" id="dropZone">
+            <div class="drop-zone" id="dropZone" role="button" tabindex="0" onclick="openReplayPicker(event)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openReplayPicker(event)}">
               <div class="drop-main">
                 <div class="drop-ico">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
@@ -658,19 +745,28 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
                 </div>
               </div>
               <div class="drop-actions">
-                <button class="btn btn-or" onclick="document.getElementById('fileInput').click()">
+                <button class="btn btn-or" onclick="event.stopPropagation();document.getElementById('fileInput').click()">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
                   Select Files
                 </button>
-                <button class="link-btn desktop-only" onclick="document.getElementById('folderFileInput').click()">Folder</button>
-                <button class="link-btn" id="clearBtn" onclick="clearAll()" style="display:none">Clear</button>
+                <button class="link-btn desktop-only" onclick="event.stopPropagation();document.getElementById('folderFileInput').click()">Folder</button>
+                <button class="link-btn" id="clearBtn" onclick="event.stopPropagation();clearAll()" style="display:none">Clear</button>
               </div>
             </div>
 
-            <div class="session-bar hidden" id="sessionControls">
-              <button class="btn btn-ghost" id="startSessionBtn" onclick="startLiveSession()">Start Session</button>
-              <button class="btn btn-ghost" id="finishSessionBtn" onclick="finishLiveSession()" disabled>Finish</button>
-              <div class="session-meta" id="sessionMeta">No active session</div>
+            <div class="action-panel">
+              <div class="action-panel-title">Excel workflow</div>
+              <button class="btn btn-or" id="btnExportPanel" disabled onclick="exportXlsx()">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Export Excel
+              </button>
+              <button class="btn btn-ghost" onclick="document.getElementById('excelInput').click()">Import team Excel</button>
+              <div class="db-status" id="teamDbStatus">No team database loaded</div>
+              <div class="session-bar hidden" id="sessionControls">
+                <button class="btn btn-ghost" id="startSessionBtn" onclick="startLiveSession()">Start Session</button>
+                <button class="btn btn-ghost" id="finishSessionBtn" onclick="finishLiveSession()" disabled>Finish</button>
+                <div class="session-meta" id="sessionMeta">No active session</div>
+              </div>
             </div>
           </div>
         </div>
@@ -892,6 +988,7 @@ let enemyData = [];
 let lastSession = {processed:0, discovered:0, errors:[]};
 let analysisMode = 'scrim';
 let liveSession = emptyLiveSession();
+let teamDatabase = [];
 let sortState = {
   our:   {k:'BPR', a:false},
   enemy: {k:'BPR', a:false},
@@ -903,6 +1000,7 @@ document.addEventListener('DOMContentLoaded', refreshHealth);
 document.addEventListener('DOMContentLoaded', refreshPublicStats);
 document.addEventListener('DOMContentLoaded', setupDropZone);
 document.addEventListener('DOMContentLoaded', restoreLiveSession);
+document.addEventListener('DOMContentLoaded', restoreTeamDatabase);
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closePlayerModal();
 });
@@ -922,12 +1020,66 @@ function initPageMode() {
 // â”€â”€ File input (folder upload) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 document.getElementById('fileInput').addEventListener('change', e => uploadReplaySelection(e, 'selected files'));
 document.getElementById('folderFileInput').addEventListener('change', e => uploadReplaySelection(e, 'selected folder'));
+document.getElementById('excelInput').addEventListener('change', importTeamExcel);
+
+function openReplayPicker(event) {
+  if (event?.target?.closest('button')) return;
+  document.getElementById('fileInput').click();
+}
 
 async function uploadReplaySelection(e, sourceLabel) {
   const files = [...e.target.files].filter(isReplayFile);
   if (!files.length) { toast(`No .wotbreplay files found in ${sourceLabel}`,'err'); return; }
   await uploadReplayFiles(files);
   e.target.value = '';
+}
+
+async function importTeamExcel(e) {
+  const file = e.target.files?.[0];
+  if (!file) return;
+  setVeil(true, 'Importing team Excel...');
+  const fd = new FormData();
+  fd.append('file', file, file.name);
+  try {
+    const response = await fetch(`${API}/api/team-db/import`, {method:'POST', body:fd});
+    const json = await response.json();
+    if (!response.ok || json.error) {
+      toast(json.error || 'Excel import failed', 'err');
+      return;
+    }
+    teamDatabase = json.players || [];
+    localStorage.setItem('blitzscrim.teamDatabase', JSON.stringify({
+      importedAt:new Date().toISOString(),
+      file:file.name,
+      players:teamDatabase
+    }));
+    updateTeamDatabaseStatus(file.name);
+    toast(`${teamDatabase.length} players imported from Excel`, 'ok');
+  } catch(err) {
+    toast('Excel import error: ' + err.message, 'err');
+  } finally {
+    setVeil(false);
+    e.target.value = '';
+  }
+}
+
+function restoreTeamDatabase() {
+  try {
+    const stored = JSON.parse(localStorage.getItem('blitzscrim.teamDatabase') || 'null');
+    teamDatabase = stored?.players || [];
+    updateTeamDatabaseStatus(stored?.file);
+  } catch(e) {
+    teamDatabase = [];
+    updateTeamDatabaseStatus();
+  }
+}
+
+function updateTeamDatabaseStatus(fileName='') {
+  const el = document.getElementById('teamDbStatus');
+  if (!el) return;
+  el.innerHTML = teamDatabase.length
+    ? `<strong>${teamDatabase.length}</strong> players loaded${fileName ? ` from ${esc(fileName)}` : ''}`
+    : 'No team database loaded';
 }
 
 async function uploadReplayFiles(files) {
@@ -1189,6 +1341,7 @@ function applyResults(j) {
   document.getElementById('sbEnemyTeam').classList.remove('dim');
   document.getElementById('secTabs').style.display = 'flex';
   document.getElementById('btnExport').disabled = false;
+  document.getElementById('btnExportPanel').disabled = false;
   document.getElementById('clearBtn').style.display = 'inline-flex';
 
   buildDD('our');
@@ -1661,6 +1814,7 @@ function clearAll() {
   document.getElementById('taEnemy').style.display='none';
   document.getElementById('errPanel').classList.remove('show');
   document.getElementById('btnExport').disabled=true;
+  document.getElementById('btnExportPanel').disabled=true;
   document.getElementById('clearBtn').style.display='none';
   document.getElementById('sbOurTeam').classList.add('dim');
   document.getElementById('sbEnemyTeam').classList.add('dim');

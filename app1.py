@@ -10,6 +10,7 @@ from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 
 from excel_export import send_stats_workbook
+from excel_import import parse_team_database
 from replay_parser import ReplayParser
 from stats import process_replay_folder
 from usage_stats import UsageStats
@@ -135,6 +136,24 @@ def close_session():
 def export():
     data = request.json or {}
     return send_stats_workbook(data.get("our_team", []), data.get("enemy_team", []))
+
+
+@app.route("/api/team-db/import", methods=["POST"])
+def import_team_db():
+    uploaded_file = request.files.get("file")
+    if not uploaded_file:
+        return jsonify({"error": "No Excel file uploaded"}), 400
+    if not uploaded_file.filename.lower().endswith(".xlsx"):
+        return jsonify({"error": "Only .xlsx files are accepted."}), 400
+
+    try:
+        players = parse_team_database(uploaded_file)
+    except Exception as exc:
+        return jsonify({"error": f"Cannot read Excel file: {exc}"}), 400
+
+    if not players:
+        return jsonify({"error": "No players found. The file must include a nickname/player column."}), 400
+    return jsonify({"players": players, "count": len(players)})
 
 
 def save_replay_uploads(files, target_dir):
