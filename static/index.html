@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>PERFORMANCE STATS</title>
+<link rel="icon" href="/static/favicon.svg" type="image/svg+xml"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -19,7 +20,7 @@
 html,body{height:100%}
 body{background:var(--bg);color:var(--tx);font-family:'Inter',-apple-system,sans-serif;font-size:14px;line-height:1.5;display:flex;flex-direction:column;min-height:100vh}
 
-/* ── TOP NAV ── */
+/* â”€â”€ TOP NAV â”€â”€ */
 .topnav{height:56px;background:var(--sf);border-bottom:1px solid var(--br);display:flex;align-items:center;padding:0 20px;position:sticky;top:0;z-index:200;flex-shrink:0}
 .logo{display:flex;align-items:center;gap:10px;margin-right:28px;text-decoration:none;flex-shrink:0}
 .logo-hex{width:28px;height:28px;background:var(--or);clip-path:polygon(50% 0%,95% 25%,95% 75%,50% 100%,5% 75%,5% 25%);display:flex;align-items:center;justify-content:center}
@@ -35,10 +36,10 @@ body{background:var(--bg);color:var(--tx);font-family:'Inter',-apple-system,sans
 .sys-pill.ok .sys-dot{background:var(--gn);box-shadow:0 0 0 3px rgba(31,214,85,.12)}
 .sys-pill.err .sys-dot{background:var(--rd);box-shadow:0 0 0 3px rgba(255,64,64,.12)}
 
-/* ── LAYOUT ── */
+/* â”€â”€ LAYOUT â”€â”€ */
 .layout{display:flex;flex:1;min-height:0;overflow:hidden}
 
-/* ── SIDEBAR ── */
+/* â”€â”€ SIDEBAR â”€â”€ */
 .sidebar{width:var(--nav);background:var(--sf);border-right:1px solid var(--br);display:flex;flex-direction:column;padding:12px 8px;gap:2px;flex-shrink:0;position:sticky;top:56px;height:calc(100vh - 56px);overflow-y:auto}
 .sb-lbl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;color:var(--tx3);padding:10px 10px 4px;margin-top:4px}
 .sb-item{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:var(--rs);font-size:13px;font-weight:500;color:var(--tx2);cursor:pointer;transition:all .12s;border:none;background:none;width:100%;text-align:left}
@@ -48,7 +49,7 @@ body{background:var(--bg);color:var(--tx);font-family:'Inter',-apple-system,sans
 .sb-item.dim{opacity:.35;pointer-events:none}
 .sb-ico{color:var(--tx3);flex-shrink:0;transition:color .12s}
 
-/* ── BUTTONS ── */
+/* â”€â”€ BUTTONS â”€â”€ */
 .btn{display:inline-flex;align-items:center;gap:7px;padding:8px 16px;border-radius:var(--rs);font-family:'Inter',sans-serif;font-weight:600;font-size:13px;border:none;cursor:pointer;transition:all .12s;white-space:nowrap;flex-shrink:0}
 .btn-or{background:var(--or);color:#fff}
 .btn-or:hover{background:var(--or2)}
@@ -60,10 +61,10 @@ body{background:var(--bg);color:var(--tx);font-family:'Inter',-apple-system,sans
 .btn:disabled{opacity:.3;cursor:not-allowed;pointer-events:none}
 #fileInput,#folderFileInput{display:none}
 
-/* ── CONTENT ── */
+/* â”€â”€ CONTENT â”€â”€ */
 .content{flex:1;min-width:0;display:flex;flex-direction:column;overflow-y:auto}
 
-/* ── PAGE HEADER ── */
+/* â”€â”€ PAGE HEADER â”€â”€ */
 .page-hdr{background:var(--sf);border-bottom:1px solid var(--br);padding:22px 28px 20px;flex-shrink:0}
 .eyebrow{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--or);margin-bottom:3px}
 .page-title{font-size:22px;font-weight:700;color:var(--tx);letter-spacing:-.3px}
@@ -71,6 +72,12 @@ body{background:var(--bg);color:var(--tx);font-family:'Inter',-apple-system,sans
 
 .import-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .import-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.drop-zone{margin-top:14px;border:1px dashed var(--br2);border-radius:var(--r);background:var(--bg);padding:18px;display:flex;align-items:center;justify-content:space-between;gap:14px;transition:border-color .15s,background .15s}
+.drop-zone.drag{border-color:var(--or);background:var(--or-dim)}
+.drop-main{display:flex;align-items:center;gap:12px;min-width:0}
+.drop-ico{width:34px;height:34px;border-radius:var(--rs);background:var(--sf3);display:flex;align-items:center;justify-content:center;color:var(--or);flex-shrink:0}
+.drop-title{font-size:13px;font-weight:700;color:var(--tx)}
+.drop-sub{font-size:12px;color:var(--tx3);margin-top:2px}
 .f-input{background:var(--bg);border:1px solid var(--br);border-radius:var(--rs);color:var(--tx);font-family:'Inter',sans-serif;font-size:13px;padding:9px 13px;outline:none;transition:border-color .15s;min-width:0}
 .f-input:focus{border-color:var(--or)}
 .f-input::placeholder{color:var(--tx3)}
@@ -92,13 +99,13 @@ body{background:var(--bg);color:var(--tx);font-family:'Inter',-apple-system,sans
 .sp-val{font-size:19px;font-weight:700;color:var(--tx);line-height:1}
 .sp-val.ac{color:var(--or)}
 
-/* ── SECTION TABS ── */
+/* â”€â”€ SECTION TABS â”€â”€ */
 .sec-tabs{display:none;align-items:center;gap:0;padding:0 28px;background:var(--sf);border-bottom:1px solid var(--br);flex-shrink:0}
 .sec-tab{padding:14px 18px;font-size:13px;font-weight:500;color:var(--tx2);cursor:pointer;border:none;background:none;border-bottom:2px solid transparent;transition:all .15s;display:flex;align-items:center;gap:7px}
 .sec-tab:hover{color:var(--tx)}
 .sec-tab.active{color:var(--tx);border-bottom-color:var(--or)}
 
-/* ── OVERVIEW SECTION ── */
+/* â”€â”€ OVERVIEW SECTION â”€â”€ */
 .section{display:none;padding:24px 28px 32px;flex:1}
 .section.visible{display:block}
 .panel-title{font-size:14px;font-weight:700;color:var(--tx);margin-bottom:12px}
@@ -135,6 +142,8 @@ body{background:var(--bg);color:var(--tx);font-family:'Inter',-apple-system,sans
   .import-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
   .import-actions .btn{width:100%;justify-content:center}
   .import-actions .btn-ghost{grid-column:1 / -1}
+  .drop-zone{align-items:flex-start;flex-direction:column;padding:14px}
+  .drop-zone .btn{width:100%;justify-content:center}
   .f-input-wide{width:100%;min-width:0}
   .sep{display:none}
   .desktop-only{display:none!important}
@@ -148,7 +157,7 @@ body{background:var(--bg);color:var(--tx);font-family:'Inter',-apple-system,sans
   .strip{gap:18px}
 }
 
-/* ── MATCH OVERVIEW (two-team side by side) ── */
+/* â”€â”€ MATCH OVERVIEW (two-team side by side) â”€â”€ */
 .match-wrap{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:start;margin-bottom:28px}
 .team-side{}
 .team-header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:var(--sf);border:1px solid var(--br);border-radius:var(--r) var(--r) 0 0;border-bottom:none}
@@ -178,7 +187,7 @@ body{background:var(--bg);color:var(--tx);font-family:'Inter',-apple-system,sans
 .ov-bpr-val{font-size:13px;font-weight:700;color:var(--tx)}
 .ov-adr{font-size:11px;color:var(--tx3)}
 
-/* ── TOOLBAR ── */
+/* â”€â”€ TOOLBAR â”€â”€ */
 .toolbar{display:none;align-items:center;justify-content:space-between;padding:12px 28px;border-bottom:1px solid var(--br);gap:10px;flex-wrap:wrap;background:var(--sf);flex-shrink:0}
 .toolbar-l{display:flex;align-items:center;gap:8px}
 .search-wrap{position:relative}
@@ -194,7 +203,7 @@ body{background:var(--bg);color:var(--tx);font-family:'Inter',-apple-system,sans
 .dd-row:hover{background:var(--sf3);color:var(--tx)}
 .dd-row input{accent-color:var(--or);cursor:pointer;width:14px;height:14px}
 
-/* ── DETAIL TABLE ── */
+/* â”€â”€ DETAIL TABLE â”€â”€ */
 .table-area{display:none;padding:20px 28px 32px}
 .table-card{background:var(--sf);border:1px solid var(--br);border-radius:var(--r);overflow:hidden}
 table{width:100%;border-collapse:collapse;white-space:nowrap}
@@ -270,7 +279,7 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
 </head>
 <body>
 
-<div class="veil" id="veil"><div class="spinner"></div><div class="spin-lbl" id="veilMsg">Processing replays…</div></div>
+<div class="veil" id="veil"><div class="spinner"></div><div class="spin-lbl" id="veilMsg">Processing replaysâ€¦</div></div>
 <div class="upload-prog" id="upProg"><div class="upload-prog-fill" id="upFill"></div></div>
 <div class="toasts" id="toasts"></div>
 <input type="file" id="fileInput" multiple accept=".wotbreplay"/>
@@ -336,7 +345,7 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
 
     <!-- PAGE HEADER -->
     <div class="page-hdr">
-      <div class="eyebrow">BPR 2.0 · Replay Analysis</div>
+      <div class="eyebrow">BPR 2.0 Â· Replay Analysis</div>
       <div class="page-title">Team Statistics</div>
       <div class="page-sub">Paste a server folder path, upload selected replay files, or upload a replay folder</div>
 
@@ -362,6 +371,19 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
         </div>
       </div>
 
+      <div class="drop-zone" id="dropZone">
+        <div class="drop-main">
+          <div class="drop-ico">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          </div>
+          <div>
+            <div class="drop-title">Drop replay files here</div>
+            <div class="drop-sub" id="uploadLimits">Only .wotbreplay files are accepted.</div>
+          </div>
+        </div>
+        <button class="btn btn-upload" onclick="document.getElementById('fileInput').click()">Select Files</button>
+      </div>
+
       <div class="health-panel" id="healthPanel">
         <div class="health-grid">
           <div class="health-item"><div class="health-lbl">Parser</div><div class="health-val" id="hParser">-</div></div>
@@ -372,19 +394,19 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
       </div>
 
       <div class="strip" id="strip">
-        <div><div class="sp-lbl">Replays</div><div class="sp-val" id="sReplays">—</div></div>
-        <div><div class="sp-lbl">Our Players</div><div class="sp-val" id="sOurPlayers">—</div></div>
-        <div><div class="sp-lbl">Enemy Players</div><div class="sp-val" id="sEnemyPlayers">—</div></div>
-        <div><div class="sp-lbl">Our Avg BPR</div><div class="sp-val ac" id="sOurBpr">—</div></div>
-        <div><div class="sp-lbl">Enemy Avg BPR</div><div class="sp-val" id="sEnemyBpr">—</div></div>
-        <div><div class="sp-lbl">Our Best</div><div class="sp-val ac" id="sOurBest">—</div></div>
-        <div><div class="sp-lbl">Parse Errors</div><div class="sp-val" id="sErr" style="color:var(--rd)">—</div></div>
+        <div><div class="sp-lbl">Replays</div><div class="sp-val" id="sReplays">â€”</div></div>
+        <div><div class="sp-lbl">Our Players</div><div class="sp-val" id="sOurPlayers">â€”</div></div>
+        <div><div class="sp-lbl">Enemy Players</div><div class="sp-val" id="sEnemyPlayers">â€”</div></div>
+        <div><div class="sp-lbl">Our Avg BPR</div><div class="sp-val ac" id="sOurBpr">â€”</div></div>
+        <div><div class="sp-lbl">Enemy Avg BPR</div><div class="sp-val" id="sEnemyBpr">â€”</div></div>
+        <div><div class="sp-lbl">Our Best</div><div class="sp-val ac" id="sOurBest">â€”</div></div>
+        <div><div class="sp-lbl">Parse Errors</div><div class="sp-val" id="sErr" style="color:var(--rd)">â€”</div></div>
       </div>
     </div>
 
     <!-- ERROR PANEL -->
     <div class="err-panel" id="errPanel">
-      <div class="err-title">⚠ Failed to parse</div>
+      <div class="err-title">âš  Failed to parse</div>
       <div class="err-list" id="errList"></div>
     </div>
 
@@ -404,14 +426,14 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
       </button>
     </div>
 
-    <!-- ── OVERVIEW SECTION ── -->
+    <!-- â”€â”€ OVERVIEW SECTION â”€â”€ -->
     <div class="section" id="secOverview">
       <div class="match-wrap">
         <!-- OUR TEAM -->
         <div class="team-side">
           <div class="team-header">
             <span class="team-label-our">Our Team</span>
-            <span class="team-avg-bpr">Avg BPR <span id="ovOurAvg">—</span></span>
+            <span class="team-avg-bpr">Avg BPR <span id="ovOurAvg">â€”</span></span>
           </div>
           <div class="ov-list" id="ovOurList"></div>
         </div>
@@ -425,7 +447,7 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
         <div class="team-side">
           <div class="team-header">
             <span class="team-label-enemy">Enemy Team</span>
-            <span class="team-avg-bpr">Avg BPR <span id="ovEnemyAvg">—</span></span>
+            <span class="team-avg-bpr">Avg BPR <span id="ovEnemyAvg">â€”</span></span>
           </div>
           <div class="ov-list" id="ovEnemyList"></div>
         </div>
@@ -462,6 +484,8 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
           <div class="settings-row"><div class="settings-k">Parser</div><div class="settings-v" id="setParser">-</div></div>
           <div class="settings-row"><div class="settings-k">Tank DB</div><div class="settings-v" id="setTankDb">-</div></div>
           <div class="settings-row"><div class="settings-k">Upload Limit</div><div class="settings-v" id="setUpload">-</div></div>
+          <div class="settings-row"><div class="settings-k">File Limit</div><div class="settings-v" id="setFileLimit">-</div></div>
+          <div class="settings-row"><div class="settings-k">Temporary Storage</div><div class="settings-v" id="setStorage">-</div></div>
           <div class="settings-row"><div class="settings-k">Executable</div><div class="settings-v" id="setPath">-</div></div>
         </div>
         <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
@@ -471,12 +495,12 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
       </div>
     </div>
 
-    <!-- ── OUR TEAM TABLE SECTION ── -->
+    <!-- â”€â”€ OUR TEAM TABLE SECTION â”€â”€ -->
     <div class="toolbar" id="toolbarOur">
       <div class="toolbar-l">
         <div class="search-wrap">
           <svg class="s-ico" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input class="search-inp" id="searchOur" placeholder="Search player…" oninput="renderTable('our')"/>
+          <input class="search-inp" id="searchOur" placeholder="Search playerâ€¦" oninput="renderTable('our')"/>
         </div>
         <div class="dd-wrap" id="ddOurWrap">
           <button class="btn btn-ghost" style="font-size:12px;padding:7px 12px" onclick="toggleDD('our')">
@@ -498,12 +522,12 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
       </div>
     </div>
 
-    <!-- ── ENEMY TEAM TABLE SECTION ── -->
+    <!-- â”€â”€ ENEMY TEAM TABLE SECTION â”€â”€ -->
     <div class="toolbar" id="toolbarEnemy">
       <div class="toolbar-l">
         <div class="search-wrap">
           <svg class="s-ico" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input class="search-inp" id="searchEnemy" placeholder="Search player…" oninput="renderTable('enemy')"/>
+          <input class="search-inp" id="searchEnemy" placeholder="Search playerâ€¦" oninput="renderTable('enemy')"/>
         </div>
         <div class="dd-wrap" id="ddEnemyWrap">
           <button class="btn btn-ghost" style="font-size:12px;padding:7px 12px" onclick="toggleDD('enemy')">
@@ -526,8 +550,9 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
     </div>
 
     <footer class="site-footer">
-      PerFORmance · Based on the original WoT Blitz Replay Analyzer project by
+      PerFORmance Â· Based on the original WoT Blitz Replay Analyzer project by
       <a href="https://github.com/roklimovich/wotblitz-replay-analyzer" target="_blank" rel="noopener noreferrer">roklimovich</a>.
+      <a href="/privacy">Privacy</a>
     </footer>
 
   </div><!-- /content -->
@@ -580,16 +605,24 @@ let sortState = {
 let curSection = 'overview';
 
 document.addEventListener('DOMContentLoaded', refreshHealth);
+document.addEventListener('DOMContentLoaded', setupDropZone);
+window.addEventListener('pagehide', () => {
+  if (navigator.sendBeacon) navigator.sendBeacon(`${API}/api/session/close`, new Blob([], {type:'application/json'}));
+});
 
-// ── File input (folder upload) ─────────────────────────────
+// â”€â”€ File input (folder upload) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 document.getElementById('fileInput').addEventListener('change', e => uploadReplaySelection(e, 'selected files'));
 document.getElementById('folderFileInput').addEventListener('change', e => uploadReplaySelection(e, 'selected folder'));
 
 async function uploadReplaySelection(e, sourceLabel) {
-  const files = [...e.target.files].filter(f => f.name.endsWith('.wotbreplay'));
+  const files = [...e.target.files].filter(isReplayFile);
   if (!files.length) { toast(`No .wotbreplay files found in ${sourceLabel}`,'err'); return; }
+  await uploadReplayFiles(files);
+  e.target.value = '';
+}
 
-  setVeil(true, `Uploading ${files.length} replays…`);
+async function uploadReplayFiles(files) {
+  setVeil(true, `Uploading ${files.length} replaysâ€¦`);
 
   const fd = new FormData();
   files.forEach(f => fd.append('files', f, f.name));
@@ -624,15 +657,37 @@ async function uploadReplaySelection(e, sourceLabel) {
   } finally {
     setVeil(false);
     setTimeout(() => { prog.classList.remove('show'); fill.style.width='0%'; }, 600);
-    e.target.value = '';
   }
 }
 
-// ── Generate from path ─────────────────────────────────────
+function setupDropZone() {
+  const zone = document.getElementById('dropZone');
+  if (!zone) return;
+  ['dragenter','dragover'].forEach(eventName => zone.addEventListener(eventName, e => {
+    e.preventDefault();
+    zone.classList.add('drag');
+  }));
+  ['dragleave','drop'].forEach(eventName => zone.addEventListener(eventName, e => {
+    e.preventDefault();
+    zone.classList.remove('drag');
+  }));
+  zone.addEventListener('drop', e => {
+    const allFiles = [...e.dataTransfer.files];
+    const replayFiles = allFiles.filter(isReplayFile);
+    if (replayFiles.length !== allFiles.length) toast('Only .wotbreplay files are accepted', 'err');
+    uploadReplayFiles(replayFiles, 'dropped files');
+  });
+}
+
+function isReplayFile(file) {
+  return file.name.toLowerCase().endsWith('.wotbreplay');
+}
+
+// Generate from path â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 async function generatePath() {
   const folder = document.getElementById('folderInput').value.trim();
   if (!folder) { toast('Enter a folder path','err'); return; }
-  setVeil(true, 'Processing replays…');
+  setVeil(true, 'Processing replaysâ€¦');
   try {
     const r = await fetch(`${API}/api/process`, {
       method:'POST', headers:{'Content-Type':'application/json'},
@@ -647,7 +702,7 @@ async function generatePath() {
   } finally { setVeil(false); }
 }
 
-// ── Apply JSON results ─────────────────────────────────────
+// â”€â”€ Apply JSON results â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function applyResults(j) {
   ourData   = j.our_team   || [];
   enemyData = j.enemy_team || [];
@@ -660,7 +715,7 @@ function applyResults(j) {
   set('sEnemyPlayers', enemyData.length);
   set('sOurBpr',       avgF(ourData,   'BPR'));
   set('sEnemyBpr',     avgF(enemyData, 'BPR'));
-  set('sOurBest',      ourData[0]?.nickname ?? '—');
+  set('sOurBest',      ourData[0]?.nickname ?? 'â€”');
   set('sErr',          j.errors?.length || 0);
 
   if (j.errors?.length) {
@@ -684,7 +739,7 @@ function applyResults(j) {
   switchSection('overview');
 }
 
-// ── Section switching ──────────────────────────────────────
+// â”€â”€ Section switching â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function switchSection(sec) {
   curSection = sec;
 
@@ -716,7 +771,7 @@ function switchSection(sec) {
   if (sec === 'settings') refreshHealth(true);
 }
 
-// ── Overview (two-team cards, BPR+ADR sorted) ─────────────
+// â”€â”€ Overview (two-team cards, BPR+ADR sorted) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function renderOverview() {
   const sorted_our   = bprAdrSort([...ourData]);
   const sorted_enemy = bprAdrSort([...enemyData]);
@@ -773,9 +828,9 @@ function renderAnalytics() {
   set('mAdrEdge', signed(adrEdge));
   set('mAdrEdgeSub', adrEdge >= 0 ? 'Damage pressure advantage' : 'Damage pressure deficit');
   set('mBestPlayer', best?.nickname || '-');
-  set('mBestPlayerSub', best ? `BPR ${best.BPR} · ADR ${best.ADR}` : '-');
+  set('mBestPlayerSub', best ? `BPR ${best.BPR} Â· ADR ${best.ADR}` : '-');
   set('mReplayHealth', `${replayHealth}%`);
-  set('mReplayHealthSub', `${lastSession.processed}/${lastSession.discovered || lastSession.processed} parsed · ${lastSession.errors.length} errors`);
+  set('mReplayHealthSub', `${lastSession.processed}/${lastSession.discovered || lastSession.processed} parsed Â· ${lastSession.errors.length} errors`);
 
   drawGroupedBars('chartAverages', [
     {label:'BPR', our:ourBpr, enemy:enemyBpr},
@@ -859,13 +914,13 @@ function legend(ctx, items){ items.forEach((it,i)=>{ctx.fillStyle=it[1];ctx.fill
 function avgNum(arr,k){ return arr.length ? arr.reduce((s,p)=>s+(Number(p[k])||0),0)/arr.length : 0; }
 function sumNum(arr,k){ return arr.reduce((s,p)=>s+(Number(p[k])||0),0); }
 function signed(n){ return `${n>=0?'+':''}${n.toFixed(2)}`; }
-function trimLabel(s,n){ s=String(s||''); return s.length>n ? s.slice(0,n-1)+'…' : s; }
+function trimLabel(s,n){ s=String(s||''); return s.length>n ? s.slice(0,n-1)+'â€¦' : s; }
 function topTankType(players){
   const values = ['HT','MT','LT','TD'].map(label => ({label, value:sumNum(players,label)})).sort((a,b)=>b.value-a.value);
   return values[0]?.value ? values[0] : null;
 }
 
-// ── Detail table ───────────────────────────────────────────
+// â”€â”€ Detail table â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function renderTable(team) {
   const data    = team==='our' ? ourData : enemyData;
   const cols    = team==='our' ? COLS_OUR : COLS_ENEMY;
@@ -891,7 +946,7 @@ function renderTable(team) {
 
   thEl.innerHTML = `<tr>${vc.map(c=>`
     <th class="${ss.k===c.k?'sorted':''}" onclick="doSort('${team}','${c.k}')">
-      ${c.h}<span class="sarr">${ss.k===c.k?(ss.a?'↑':'↓'):'↕'}</span>
+      ${c.h}<span class="sarr">${ss.k===c.k?(ss.a?'â†‘':'â†“'):'â†•'}</span>
     </th>`).join('')}</tr>`;
 
   if (!rows.length) {
@@ -911,7 +966,7 @@ function doSort(team, k) {
   renderTable(team);
 }
 
-// ── Cell renderer ──────────────────────────────────────────
+// â”€â”€ Cell renderer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function cell(c, p, rank) {
   const v = c.k==='_rank' ? rank : p[c.k];
   switch(c.fmt) {
@@ -932,12 +987,12 @@ function cell(c, p, rank) {
       const pct = Math.min(100,v||0);
       return `<div class="acc-cell"><div class="acc-bg"><div class="acc-fill" style="width:${pct}%"></div></div><span class="acc-v">${v}%</span></div>`;
     }
-    case 'm': return `<span class="td-m">${v??'—'}</span>`;
-    default:  return `<span class="td-n">${v??'—'}</span>`;
+    case 'm': return `<span class="td-m">${v??'â€”'}</span>`;
+    default:  return `<span class="td-n">${v??'â€”'}</span>`;
   }
 }
 
-// ── Column dropdown ────────────────────────────────────────
+// â”€â”€ Column dropdown â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function buildDD(team) {
   const cols = team==='our' ? COLS_OUR : COLS_ENEMY;
   const id   = team==='our' ? 'ddOurMenu' : 'ddEnemyMenu';
@@ -962,10 +1017,10 @@ document.addEventListener('click', e => {
   });
 });
 
-// ── Export ─────────────────────────────────────────────────
+// â”€â”€ Export â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 async function exportXlsx() {
   if (!ourData.length && !enemyData.length) return;
-  setVeil(true, 'Generating Excel…');
+  setVeil(true, 'Generating Excelâ€¦');
   try {
     const r = await fetch(`${API}/api/export`, {
       method:'POST', headers:{'Content-Type':'application/json'},
@@ -976,7 +1031,7 @@ async function exportXlsx() {
     const url  = URL.createObjectURL(blob);
     Object.assign(document.createElement('a'),{href:url,download:'results.xlsx'}).click();
     URL.revokeObjectURL(url);
-    toast('Excel exported — two sheets: Our Team + Enemy Team','ok');
+    toast('Excel exported â€” two sheets: Our Team + Enemy Team','ok');
   } catch(e) { toast('Export error: '+e.message,'err'); }
   finally { setVeil(false); }
 }
@@ -1012,6 +1067,7 @@ function applyHealth(health, showPanel=false) {
   setHealthValue('hTankDb', health.checks?.tank_db ? `${health.tank_count || 0} tanks` : 'Missing', health.checks?.tank_db);
   set('hUpload', `${health.max_upload_mb || 0} MB`);
   set('hPath', health.parser || 'Not found');
+  set('uploadLimits', `Up to ${health.max_upload_files || 200} files · ${health.max_upload_mb || 0} MB total · .wotbreplay only`);
   document.querySelectorAll('.local-only').forEach(el => el.style.display = health.public_mode ? 'none' : '');
   document.querySelector('.page-sub').textContent = health.public_mode
     ? 'Upload selected World of Tanks Blitz replay files directly from your device'
@@ -1019,6 +1075,8 @@ function applyHealth(health, showPanel=false) {
   set('setParser', health.checks?.parser ? 'Ready' : 'Missing');
   set('setTankDb', health.checks?.tank_db ? `${health.tank_count || 0} tanks loaded` : 'Missing');
   set('setUpload', `${health.max_upload_mb || 0} MB`);
+  set('setFileLimit', `${health.max_upload_files || 200} replay files`);
+  set('setStorage', `${health.max_temp_upload_dirs || 20} temp sessions · ${Math.round((health.upload_ttl_seconds || 1800) / 60)} min TTL`);
   set('setPath', health.parser || 'Not found');
 
   document.getElementById('healthPanel').classList.toggle('show', showPanel || !ok);
@@ -1043,7 +1101,7 @@ async function copySessionSummary() {
   }
 }
 
-// ── Clear ──────────────────────────────────────────────────
+// â”€â”€ Clear â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function clearAll() {
   ourData=[]; enemyData=[];
   lastSession = {processed:0, discovered:0, errors:[]};
@@ -1065,14 +1123,14 @@ function clearAll() {
   switchSection('overview');
 }
 
-// ── Helpers ────────────────────────────────────────────────
+// â”€â”€ Helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function bprAdrSort(arr) {
   return arr.sort((a,b) => b.BPR!==a.BPR ? b.BPR-a.BPR : b.ADR-a.ADR);
 }
 function bprClass(v) { return v>=1.1?'elite':v>=0.9?'high':v>=0.7?'mid':'low'; }
-function avgF(arr,k){ return arr.length?(arr.reduce((s,p)=>s+(p[k]||0),0)/arr.length).toFixed(2):'—'; }
+function avgF(arr,k){ return arr.length?(arr.reduce((s,p)=>s+(p[k]||0),0)/arr.length).toFixed(2):'â€”'; }
 function set(id,v){ const el=document.getElementById(id); if(el) el.textContent=v; }
-function setVeil(v,msg='Processing…'){ document.getElementById('veil').classList.toggle('on',v); document.getElementById('veilMsg').textContent=msg; }
+function setVeil(v,msg='Processingâ€¦'){ document.getElementById('veil').classList.toggle('on',v); document.getElementById('veilMsg').textContent=msg; }
 function esc(s){ return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 function formatError(err){ return typeof err === 'string' ? err : `${err.file || 'unknown'}: ${err.reason || 'parse failed'}`; }
 
@@ -1091,3 +1149,4 @@ function toast(msg, type='inf') {
 </script>
 </body>
 </html>
+

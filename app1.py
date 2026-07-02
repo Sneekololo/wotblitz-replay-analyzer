@@ -2,6 +2,7 @@ import json
 import os
 import shutil
 import tempfile
+import time
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -18,6 +19,10 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent
 TANK_DB_FILE = BASE_DIR / "tank_db.json"
 MAX_UPLOAD_MB = int(os.getenv("MAX_UPLOAD_MB", "512"))
+MAX_UPLOAD_FILES = int(os.getenv("MAX_UPLOAD_FILES", "200"))
+MAX_TEMP_UPLOAD_DIRS = int(os.getenv("MAX_TEMP_UPLOAD_DIRS", "20"))
+UPLOAD_TTL_SECONDS = int(os.getenv("UPLOAD_TTL_SECONDS", "1800"))
+UPLOAD_TMP_ROOT = Path(os.getenv("UPLOAD_TMP_ROOT", tempfile.gettempdir())) / "blitzscrim_uploads"
 PUBLIC_MODE = os.getenv("PUBLIC_MODE", "0") == "1"
 
 app = Flask(__name__, static_folder="static")
@@ -37,6 +42,11 @@ def index():
     return send_from_directory("static", "index.html")
 
 
+@app.route("/privacy")
+def privacy():
+    return send_from_directory("static", "privacy.html")
+
+
 @app.route("/api/health")
 def health():
     parser_path = parser.path()
@@ -50,6 +60,9 @@ def health():
         "parser": parser_path,
         "tank_count": len(tank_db),
         "max_upload_mb": MAX_UPLOAD_MB,
+        "max_upload_files": MAX_UPLOAD_FILES,
+        "max_temp_upload_dirs": MAX_TEMP_UPLOAD_DIRS,
+        "upload_ttl_seconds": UPLOAD_TTL_SECONDS,
         "public_mode": PUBLIC_MODE,
     })
 
@@ -74,11 +87,18 @@ def upload():
     if not parser.available():
         return parser_missing_response()
 
+    cleanup_upload_storage()
     files = request.files.getlist("files")
     if not files:
         return jsonify({"error": "No files uploaded"}), 400
+    if len(files) > MAX_UPLOAD_FILES:
+        return jsonify({"error": f"Too many files. Maximum is {MAX_UPLOAD_FILES} replays per upload."}), 413
+    invalid_files = [file.filename for file in files if not is_replay_file(file.filename)]
+    if invalid_files:
+        return jsonify({"error": "Only .wotbreplay files are accepted."}), 400
 
-    tmp_dir = tempfile.mkdtemp(prefix="blitz_replays_")
+    UPLOAD_TMP_ROOT.mkdir(parents=True, exist_ok=True)
+    tmp_dir = tempfile.mkdtemp(prefix="session_", dir=UPLOAD_TMP_ROOT)
     try:
         saved = save_replay_uploads(files, tmp_dir)
         if saved == 0:
@@ -86,6 +106,12 @@ def upload():
         return jsonify(process_replay_folder(tmp_dir, parser, tank_db))
     finally:
         shutil.rmtree(tmp_dir, ignore_errors=True)
+
+
+@app.route("/api/session/close", methods=["POST"])
+def close_session():
+    cleanup_upload_storage()
+    return ("", 204)
 
 
 @app.route("/api/export", methods=["POST"])
@@ -97,7 +123,7 @@ def export():
 def save_replay_uploads(files, target_dir):
     saved = 0
     for uploaded_file in files:
-        if not uploaded_file.filename.endswith(".wotbreplay"):
+        if not is_replay_file(uploaded_file.filename):
             continue
         file_name = os.path.basename(uploaded_file.filename)
         uploaded_file.save(os.path.join(target_dir, file_name))
@@ -105,8 +131,34 @@ def save_replay_uploads(files, target_dir):
     return saved
 
 
+def is_replay_file(file_name):
+    return file_name.lower().endswith(".wotbreplay")
+
+
 def parser_missing_response():
     return jsonify({"error": "wotbreplay-inspector is not installed or not in PATH"}), 503
+
+
+def cleanup_upload_storage(max_age_seconds=UPLOAD_TTL_SECONDS):
+    if not UPLOAD_TMP_ROOT.exists():
+        return
+
+    now = time.time()
+    sessions = []
+    for path in UPLOAD_TMP_ROOT.iterdir():
+        if not path.is_dir():
+            continue
+        age = now - path.stat().st_mtime
+        sessions.append((path.stat().st_mtime, path))
+        if age >= max_age_seconds:
+            shutil.rmtree(path, ignore_errors=True)
+
+    remaining = [item for item in sessions if item[1].exists()]
+    if len(remaining) <= MAX_TEMP_UPLOAD_DIRS:
+        return
+
+    for _, path in sorted(remaining)[:len(remaining) - MAX_TEMP_UPLOAD_DIRS]:
+        shutil.rmtree(path, ignore_errors=True)
 
 
 if __name__ == "__main__":
