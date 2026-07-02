@@ -86,8 +86,8 @@ body{background:var(--bg);color:var(--tx);font-family:'Inter',-apple-system,sans
 .eyebrow{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.8px;color:var(--or);margin-bottom:10px}
 .page-title{font-size:58px;font-weight:800;color:var(--tx);letter-spacing:0;line-height:.95;margin-bottom:14px}
 .page-sub{font-size:17px;color:var(--tx2);max-width:920px;margin:0;line-height:1.65}
-.hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:34px;width:100%}
-.hero-stat{background:rgba(18,18,18,.72);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:15px 14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:auto;width:100%;transform:translateY(-28px)}
+.hero-stat{min-height:92px;background:rgba(18,18,18,.72);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:17px 14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.04);display:flex;flex-direction:column;justify-content:flex-start}
 .hero-stat-val{font-size:28px;font-weight:800;color:var(--tx);line-height:1}
 .hero-stat-lbl{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.9px;color:var(--tx3);margin-top:8px}
 .report-preview{grid-area:report;background:rgba(18,18,18,.82);border:1px solid rgba(255,255,255,.11);border-radius:var(--r);padding:16px;box-shadow:0 18px 55px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.04);min-height:320px}
@@ -198,8 +198,8 @@ body{background:var(--bg);color:var(--tx);font-family:'Inter',-apple-system,sans
   .hero-grid{grid-template-columns:1fr;grid-template-areas:"copy" "report" "upload";gap:14px}
   .hero-copy{min-height:auto}
   .page-title{font-size:34px}
-  .hero-stats{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:18px}
-  .hero-stat{padding:11px 10px}
+  .hero-stats{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:18px;transform:none}
+  .hero-stat{min-height:78px;padding:11px 10px}
   .hero-stat-val{font-size:20px}
   .upload-grid{grid-template-columns:1fr}
   .session-bar{grid-template-columns:1fr 1fr}
@@ -1385,9 +1385,9 @@ async function refreshPublicStats() {
   try {
     const response = await fetch(`${API}/api/public-stats`);
     const stats = await response.json();
-    set('globalReplays', compactInt(stats.replays || 0));
-    set('globalPlayers', compactInt(stats.players || 0));
-    set('globalSessions', compactInt(stats.sessions || 0));
+    animateStat('globalReplays', stats.replays || 0);
+    animateStat('globalPlayers', stats.players || 0);
+    animateStat('globalSessions', stats.sessions || 0);
   } catch(e) {
     set('globalReplays', '-');
     set('globalPlayers', '-');
@@ -1472,6 +1472,27 @@ function bprClass(v) { return v>=1.1?'elite':v>=0.9?'high':v>=0.7?'mid':'low'; }
 function avgF(arr,k){ return arr.length?(arr.reduce((s,p)=>s+(p[k]||0),0)/arr.length).toFixed(2):'â€”'; }
 function round2(n){ return Math.round((Number(n) || 0) * 100) / 100; }
 function compactInt(n){ return new Intl.NumberFormat('en', {notation:n>=10000?'compact':'standard', maximumFractionDigits:1}).format(n); }
+function animateStat(id, target) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const end = Math.max(0, Number(target) || 0);
+  const start = Number(el.dataset.value || 0);
+  el.dataset.value = String(end);
+  if (start === end) {
+    el.textContent = compactInt(end);
+    return;
+  }
+  const duration = 900;
+  const started = performance.now();
+  const ease = t => 1 - Math.pow(1 - t, 3);
+  const tick = now => {
+    const p = Math.min(1, (now - started) / duration);
+    const value = Math.round(start + (end - start) * ease(p));
+    el.textContent = compactInt(value);
+    if (p < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+}
 function set(id,v){ const el=document.getElementById(id); if(el) el.textContent=v; }
 function setVeil(v,msg='Processingâ€¦'){ document.getElementById('veil').classList.toggle('on',v); document.getElementById('veilMsg').textContent=msg; }
 function esc(s){ return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
