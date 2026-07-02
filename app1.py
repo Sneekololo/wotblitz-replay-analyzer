@@ -12,6 +12,7 @@ from flask_cors import CORS
 from excel_export import send_stats_workbook
 from replay_parser import ReplayParser
 from stats import process_replay_folder
+from usage_stats import UsageStats
 
 
 load_dotenv()
@@ -23,6 +24,7 @@ MAX_UPLOAD_FILES = int(os.getenv("MAX_UPLOAD_FILES", "200"))
 MAX_TEMP_UPLOAD_DIRS = int(os.getenv("MAX_TEMP_UPLOAD_DIRS", "20"))
 UPLOAD_TTL_SECONDS = int(os.getenv("UPLOAD_TTL_SECONDS", "1800"))
 UPLOAD_TMP_ROOT = Path(os.getenv("UPLOAD_TMP_ROOT", tempfile.gettempdir())) / "blitzscrim_uploads"
+USAGE_STATS_FILE = Path(os.getenv("USAGE_STATS_FILE", BASE_DIR / "data" / "usage_stats.json"))
 PUBLIC_MODE = os.getenv("PUBLIC_MODE", "0") == "1"
 
 app = Flask(__name__, static_folder="static")
@@ -30,6 +32,7 @@ CORS(app)
 app.config["MAX_CONTENT_LENGTH"] = MAX_UPLOAD_MB * 1024 * 1024
 
 parser = ReplayParser(os.getenv("WOTBREPLAY_INSPECTOR_BIN", "wotbreplay-inspector"))
+usage_stats = UsageStats(USAGE_STATS_FILE)
 tank_db = {}
 
 if TANK_DB_FILE.exists():
@@ -67,6 +70,11 @@ def health():
     })
 
 
+@app.route("/api/public-stats")
+def public_stats():
+    return jsonify(usage_stats.read())
+
+
 @app.route("/api/process", methods=["POST"])
 def process():
     if PUBLIC_MODE:
@@ -79,7 +87,9 @@ def process():
     if not folder or not os.path.isdir(folder):
         return jsonify({"error": "Invalid folder path"}), 400
 
-    return jsonify(process_replay_folder(folder, parser, tank_db))
+    result = process_replay_folder(folder, parser, tank_db)
+    usage_stats.add_session(result)
+    return jsonify(result)
 
 
 @app.route("/api/upload", methods=["POST"])
@@ -103,7 +113,9 @@ def upload():
         saved = save_replay_uploads(files, tmp_dir)
         if saved == 0:
             return jsonify({"error": "No .wotbreplay files found in upload"}), 400
-        return jsonify(process_replay_folder(tmp_dir, parser, tank_db))
+        result = process_replay_folder(tmp_dir, parser, tank_db)
+        usage_stats.add_session(result)
+        return jsonify(result)
     finally:
         shutil.rmtree(tmp_dir, ignore_errors=True)
 

@@ -9,6 +9,7 @@ This repository now includes a Flask web app in `app1.py` with a browser UI in `
 The web app works like this:
 
 - upload one or more `.wotbreplay` files from the browser;
+- choose Scrim or Individual analysis, with an optional live session that can be updated after each match;
 - the backend runs `wotbreplay-inspector battle-results`;
 - results are aggregated into allied and enemy team tables;
 - the browser can export the current result set as `results.xlsx`.
@@ -19,6 +20,7 @@ The backend is split into focused modules:
 - `replay_parser.py`: `wotbreplay-inspector` integration;
 - `stats.py`: replay aggregation and BPR calculations;
 - `excel_export.py`: Excel workbook generation.
+- `usage_stats.py`: public homepage counters.
 
 ### Run locally on Windows
 
@@ -76,6 +78,7 @@ MAX_TEMP_UPLOAD_DIRS=20
 UPLOAD_TTL_SECONDS=1800
 PUBLIC_MODE=1
 WOTBREPLAY_INSPECTOR_BIN=wotbreplay-inspector
+USAGE_STATS_FILE=/opt/blitzscrim/data/usage_stats.json
 ```
 
 ---
