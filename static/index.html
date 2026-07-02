@@ -30,6 +30,10 @@ body{background:var(--bg);color:var(--tx);font-family:'Inter',-apple-system,sans
 .nav-tab.active{color:var(--tx)}
 .nav-tab.dim{opacity:.35;pointer-events:none}
 .nav-right{display:flex;align-items:center;gap:8px;margin-left:auto}
+.sys-pill{display:inline-flex;align-items:center;gap:7px;height:30px;padding:0 10px;border:1px solid var(--br);border-radius:var(--rs);background:var(--bg);color:var(--tx2);font-size:12px;font-weight:600}
+.sys-dot{width:7px;height:7px;border-radius:50%;background:var(--yw);box-shadow:0 0 0 3px rgba(255,184,0,.12)}
+.sys-pill.ok .sys-dot{background:var(--gn);box-shadow:0 0 0 3px rgba(31,214,85,.12)}
+.sys-pill.err .sys-dot{background:var(--rd);box-shadow:0 0 0 3px rgba(255,64,64,.12)}
 
 /* ── LAYOUT ── */
 .layout{display:flex;flex:1;min-height:0;overflow:hidden}
@@ -54,7 +58,7 @@ body{background:var(--bg);color:var(--tx);font-family:'Inter',-apple-system,sans
 .btn-upload{background:var(--sf3);color:var(--tx2);border:1px solid var(--br)}
 .btn-upload:hover{color:var(--tx);border-color:var(--or);background:var(--or-dim)}
 .btn:disabled{opacity:.3;cursor:not-allowed;pointer-events:none}
-#fileInput{display:none}
+#fileInput,#folderFileInput{display:none}
 
 /* ── CONTENT ── */
 .content{flex:1;min-width:0;display:flex;flex-direction:column;overflow-y:auto}
@@ -66,12 +70,21 @@ body{background:var(--bg);color:var(--tx);font-family:'Inter',-apple-system,sans
 .page-sub{font-size:13px;color:var(--tx2);margin-top:3px;margin-bottom:18px}
 
 .import-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.import-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .f-input{background:var(--bg);border:1px solid var(--br);border-radius:var(--rs);color:var(--tx);font-family:'Inter',sans-serif;font-size:13px;padding:9px 13px;outline:none;transition:border-color .15s;min-width:0}
 .f-input:focus{border-color:var(--or)}
 .f-input::placeholder{color:var(--tx3)}
 .f-input-wide{flex:1;min-width:260px}
 
 .sep{color:var(--tx3);font-size:12px;font-weight:500;flex-shrink:0}
+
+.health-panel{display:none;margin-top:12px;border:1px solid var(--br);border-radius:var(--r);background:var(--bg);padding:12px 14px}
+.health-panel.show{display:block}
+.health-grid{display:grid;grid-template-columns:repeat(4,minmax(120px,1fr));gap:10px}
+.health-item{min-width:0}
+.health-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--tx3);margin-bottom:2px}
+.health-val{font-size:12px;font-weight:600;color:var(--tx2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.health-val.ok{color:var(--gn)}.health-val.err{color:var(--rd)}
 
 /* stats strip */
 .strip{display:none;gap:32px;border-top:1px solid var(--br);margin-top:20px;padding-top:18px;flex-wrap:wrap}
@@ -88,6 +101,48 @@ body{background:var(--bg);color:var(--tx);font-family:'Inter',-apple-system,sans
 /* ── OVERVIEW SECTION ── */
 .section{display:none;padding:24px 28px 32px;flex:1}
 .section.visible{display:block}
+.panel-title{font-size:14px;font-weight:700;color:var(--tx);margin-bottom:12px}
+.analytics-grid{display:grid;grid-template-columns:repeat(2,minmax(280px,1fr));gap:16px;margin-bottom:16px}
+.metric-grid{display:grid;grid-template-columns:repeat(4,minmax(140px,1fr));gap:12px;margin-bottom:16px}
+.metric-box,.chart-box,.summary-box,.settings-box{background:var(--sf);border:1px solid var(--br);border-radius:var(--r);padding:16px}
+.metric-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--tx3);margin-bottom:5px}
+.metric-val{font-size:22px;font-weight:700;color:var(--tx)}
+.metric-sub{font-size:12px;color:var(--tx3);margin-top:3px}
+.chart-box canvas{width:100%;height:220px;display:block}
+.summary-text{font-size:13px;color:var(--tx2);line-height:1.75;white-space:pre-line}
+.settings-grid{display:grid;grid-template-columns:repeat(2,minmax(220px,1fr));gap:12px}
+.settings-row{border:1px solid var(--br);border-radius:var(--rs);padding:12px;background:var(--bg)}
+.settings-k{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--tx3);margin-bottom:4px}
+.settings-v{font-size:13px;color:var(--tx2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.empty-analytics{padding:48px 16px;text-align:center;color:var(--tx3)}
+
+@media (max-width: 760px){
+  body{font-size:13px}
+  .topnav{height:auto;min-height:56px;padding:10px 12px;gap:8px;flex-wrap:wrap}
+  .logo{margin-right:8px}
+  .nav-tabs{order:3;width:100%;overflow-x:auto}
+  .nav-right{margin-left:0}
+  .layout{display:block;overflow:visible}
+  .sidebar{position:static;width:100%;height:auto;border-right:none;border-bottom:1px solid var(--br);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:8px}
+  .sb-lbl{display:none}
+  .sb-item{justify-content:center;padding:9px 6px;font-size:12px}
+  .content{overflow:visible}
+  .page-hdr{padding:18px 14px}
+  .import-row{display:grid;grid-template-columns:1fr;gap:8px}
+  .import-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .import-actions .btn{width:100%;justify-content:center}
+  .import-actions .btn-ghost{grid-column:1 / -1}
+  .f-input-wide{width:100%;min-width:0}
+  .sep{display:none}
+  .desktop-only{display:none!important}
+  .health-grid,.metric-grid,.analytics-grid,.settings-grid{grid-template-columns:1fr}
+  .match-wrap{grid-template-columns:1fr;gap:14px}
+  .vs-col{display:none}
+  .section,.table-area{padding:16px 14px 24px}
+  .toolbar{padding:12px 14px}
+  .table-card{overflow-x:auto}
+  .strip{gap:18px}
+}
 
 /* ── MATCH OVERVIEW (two-team side by side) ── */
 .match-wrap{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:start;margin-bottom:28px}
@@ -214,7 +269,8 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
 <div class="veil" id="veil"><div class="spinner"></div><div class="spin-lbl" id="veilMsg">Processing replays…</div></div>
 <div class="upload-prog" id="upProg"><div class="upload-prog-fill" id="upFill"></div></div>
 <div class="toasts" id="toasts"></div>
-<input type="file" id="fileInput" multiple accept=".wotbreplay" webkitdirectory/>
+<input type="file" id="fileInput" multiple accept=".wotbreplay"/>
+<input type="file" id="folderFileInput" multiple accept=".wotbreplay" webkitdirectory/>
 
 <!-- TOP NAV -->
 <nav class="topnav">
@@ -223,16 +279,19 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
     <span class="logo-name">PERFORMANCE STATS</span>
   </a>
   <div class="nav-tabs">
-    <a class="nav-tab active" href="#">
+    <button class="nav-tab active" data-section="overview" onclick="switchSection('overview')">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
       Overview
-    </a>
-    <a class="nav-tab dim" href="#">
+    </button>
+    <button class="nav-tab" data-section="analytics" onclick="switchSection('analytics')">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
       Analytics
-    </a>
+    </button>
   </div>
   <div class="nav-right">
+    <button class="sys-pill" id="sysPill" onclick="refreshHealth(true)" title="System status">
+      <span class="sys-dot"></span><span id="sysTxt">Checking</span>
+    </button>
     <button class="btn btn-ghost" id="btnExport" disabled onclick="exportXlsx()" style="font-size:12px;padding:7px 14px">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
       Export Excel
@@ -245,20 +304,24 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
   <!-- SIDEBAR -->
   <aside class="sidebar">
     <div class="sb-lbl">Session</div>
-    <button class="sb-item active" onclick="switchSection('overview')">
+    <button class="sb-item active" data-section="overview" onclick="switchSection('overview')">
       <span class="sb-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
       Overview
     </button>
-    <button class="sb-item dim" id="sbOurTeam" onclick="switchSection('our')">
+    <button class="sb-item dim" id="sbOurTeam" data-section="our" onclick="switchSection('our')">
       <span class="sb-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span>
       Our Team
     </button>
-    <button class="sb-item dim" id="sbEnemyTeam" onclick="switchSection('enemy')">
+    <button class="sb-item dim" id="sbEnemyTeam" data-section="enemy" onclick="switchSection('enemy')">
       <span class="sb-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
       Enemy Team
     </button>
     <div class="sb-lbl">Tools</div>
-    <button class="sb-item dim">
+    <button class="sb-item" id="sbAnalytics" data-section="analytics" onclick="switchSection('analytics')">
+      <span class="sb-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>
+      Analytics
+    </button>
+    <button class="sb-item" id="sbSettings" data-section="settings" onclick="switchSection('settings')">
       <span class="sb-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></span>
       Settings
     </button>
@@ -271,22 +334,37 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
     <div class="page-hdr">
       <div class="eyebrow">BPR 2.0 · Replay Analysis</div>
       <div class="page-title">Team Statistics</div>
-      <div class="page-sub">Paste a folder path or upload replay files directly from your machine</div>
+      <div class="page-sub">Paste a server folder path, upload selected replay files, or upload a replay folder</div>
 
       <div class="import-row">
-        <input class="f-input f-input-wide" id="folderInput" type="text"
+        <input class="f-input f-input-wide local-only" id="folderInput" type="text"
           placeholder="D:\World of Tanks Blitz\replays\2026-03-18"
           onkeydown="if(event.key==='Enter')generatePath()"/>
-        <button class="btn btn-or" onclick="generatePath()">
+        <button class="btn btn-or local-only" onclick="generatePath()">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
           Generate
         </button>
-        <span class="sep">or</span>
-        <button class="btn btn-upload" onclick="document.getElementById('fileInput').click()">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-          Upload Folder
-        </button>
-        <button class="btn btn-ghost" onclick="clearAll()">Clear</button>
+        <span class="sep local-only">or</span>
+        <div class="import-actions">
+          <button class="btn btn-upload" onclick="document.getElementById('fileInput').click()">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Upload Files
+          </button>
+          <button class="btn btn-upload desktop-only" onclick="document.getElementById('folderFileInput').click()">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            Upload Folder
+          </button>
+          <button class="btn btn-ghost" onclick="clearAll()">Clear</button>
+        </div>
+      </div>
+
+      <div class="health-panel" id="healthPanel">
+        <div class="health-grid">
+          <div class="health-item"><div class="health-lbl">Parser</div><div class="health-val" id="hParser">-</div></div>
+          <div class="health-item"><div class="health-lbl">Tank DB</div><div class="health-val" id="hTankDb">-</div></div>
+          <div class="health-item"><div class="health-lbl">Upload Limit</div><div class="health-val" id="hUpload">-</div></div>
+          <div class="health-item"><div class="health-lbl">Executable</div><div class="health-val" id="hPath">-</div></div>
+        </div>
       </div>
 
       <div class="strip" id="strip">
@@ -350,6 +428,45 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
       </div>
     </div>
 
+    <!-- ANALYTICS SECTION -->
+    <div class="section" id="secAnalytics">
+      <div id="analyticsEmpty" class="empty-analytics">
+        <div class="empty-t">No session loaded</div>
+        <div class="empty-s">Load replays to generate charts and session insights</div>
+      </div>
+      <div id="analyticsContent" style="display:none">
+        <div class="metric-grid">
+          <div class="metric-box"><div class="metric-lbl">BPR Edge</div><div class="metric-val" id="mBprEdge">-</div><div class="metric-sub" id="mBprEdgeSub">-</div></div>
+          <div class="metric-box"><div class="metric-lbl">ADR Edge</div><div class="metric-val" id="mAdrEdge">-</div><div class="metric-sub" id="mAdrEdgeSub">-</div></div>
+          <div class="metric-box"><div class="metric-lbl">Best Player</div><div class="metric-val" id="mBestPlayer">-</div><div class="metric-sub" id="mBestPlayerSub">-</div></div>
+          <div class="metric-box"><div class="metric-lbl">Replay Health</div><div class="metric-val" id="mReplayHealth">-</div><div class="metric-sub" id="mReplayHealthSub">-</div></div>
+        </div>
+        <div class="analytics-grid">
+          <div class="chart-box"><div class="panel-title">Team Averages</div><canvas id="chartAverages" width="520" height="220"></canvas></div>
+          <div class="chart-box"><div class="panel-title">Tank Type Mix</div><canvas id="chartTypes" width="520" height="220"></canvas></div>
+          <div class="chart-box"><div class="panel-title">Top BPR Players</div><canvas id="chartTopBpr" width="520" height="220"></canvas></div>
+          <div class="summary-box"><div class="panel-title">AI Session Summary</div><div class="summary-text" id="aiSummary">-</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SETTINGS SECTION -->
+    <div class="section" id="secSettings">
+      <div class="settings-box">
+        <div class="panel-title">System Settings</div>
+        <div class="settings-grid">
+          <div class="settings-row"><div class="settings-k">Parser</div><div class="settings-v" id="setParser">-</div></div>
+          <div class="settings-row"><div class="settings-k">Tank DB</div><div class="settings-v" id="setTankDb">-</div></div>
+          <div class="settings-row"><div class="settings-k">Upload Limit</div><div class="settings-v" id="setUpload">-</div></div>
+          <div class="settings-row"><div class="settings-k">Executable</div><div class="settings-v" id="setPath">-</div></div>
+        </div>
+        <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
+          <button class="btn btn-ghost" onclick="refreshHealth(true)">Refresh System</button>
+          <button class="btn btn-ghost" onclick="copySessionSummary()">Copy Summary</button>
+        </div>
+      </div>
+    </div>
+
     <!-- ── OUR TEAM TABLE SECTION ── -->
     <div class="toolbar" id="toolbarOur">
       <div class="toolbar-l">
@@ -408,7 +525,7 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
 </div><!-- /layout -->
 
 <script>
-const API = 'http://localhost:5000';
+const API = '';
 
 const COLS = [
   {k:'_rank',     h:'#',         vis:true,  fmt:'rank'},
@@ -446,16 +563,22 @@ const COLS_ENEMY = COLS.map(c=>({...c}));
 
 let ourData   = [];
 let enemyData = [];
+let lastSession = {processed:0, discovered:0, errors:[]};
 let sortState = {
   our:   {k:'BPR', a:false},
   enemy: {k:'BPR', a:false},
 };
 let curSection = 'overview';
 
+document.addEventListener('DOMContentLoaded', refreshHealth);
+
 // ── File input (folder upload) ─────────────────────────────
-document.getElementById('fileInput').addEventListener('change', async e => {
+document.getElementById('fileInput').addEventListener('change', e => uploadReplaySelection(e, 'selected files'));
+document.getElementById('folderFileInput').addEventListener('change', e => uploadReplaySelection(e, 'selected folder'));
+
+async function uploadReplaySelection(e, sourceLabel) {
   const files = [...e.target.files].filter(f => f.name.endsWith('.wotbreplay'));
-  if (!files.length) { toast('No .wotbreplay files found in selected folder','err'); return; }
+  if (!files.length) { toast(`No .wotbreplay files found in ${sourceLabel}`,'err'); return; }
 
   setVeil(true, `Uploading ${files.length} replays…`);
 
@@ -492,9 +615,9 @@ document.getElementById('fileInput').addEventListener('change', async e => {
   } finally {
     setVeil(false);
     setTimeout(() => { prog.classList.remove('show'); fill.style.width='0%'; }, 600);
-    e.target.value = ''; // reset so same folder can be re-uploaded
+    e.target.value = '';
   }
-});
+}
 
 // ── Generate from path ─────────────────────────────────────
 async function generatePath() {
@@ -511,7 +634,7 @@ async function generatePath() {
     applyResults(j);
     toast(`${ourData.length + enemyData.length} players loaded from ${j.processed} replays`,'ok');
   } catch(e) {
-    toast('Cannot reach backend. Is app.py running?','err');
+    toast('Cannot reach backend. Is the server running?','err');
   } finally { setVeil(false); }
 }
 
@@ -519,6 +642,7 @@ async function generatePath() {
 function applyResults(j) {
   ourData   = j.our_team   || [];
   enemyData = j.enemy_team || [];
+  lastSession = {processed:j.processed || 0, discovered:j.discovered || j.processed || 0, errors:j.errors || []};
 
   // summary strip
   document.getElementById('strip').style.display = 'flex';
@@ -532,7 +656,10 @@ function applyResults(j) {
 
   if (j.errors?.length) {
     document.getElementById('errPanel').classList.add('show');
-    document.getElementById('errList').textContent = j.errors.join('\n');
+    document.getElementById('errList').textContent = j.errors.map(formatError).join('\n');
+  } else {
+    document.getElementById('errPanel').classList.remove('show');
+    document.getElementById('errList').textContent = '';
   }
 
   // unlock sidebar items
@@ -544,6 +671,7 @@ function applyResults(j) {
   buildDD('our');
   buildDD('enemy');
   renderOverview();
+  renderAnalytics();
   switchSection('overview');
 }
 
@@ -553,16 +681,21 @@ function switchSection(sec) {
 
   // sidebar
   document.querySelectorAll('.sb-item').forEach(el => el.classList.remove('active'));
-  const sbMap = {overview: 0, our: 1, enemy: 2};
-  document.querySelectorAll('.sb-item')[sbMap[sec]]?.classList.add('active');
+  document.querySelector(`.sb-item[data-section="${sec}"]`)?.classList.add('active');
+
+  document.querySelectorAll('.nav-tab').forEach(el => el.classList.remove('active'));
+  const navSection = sec === 'analytics' ? 'analytics' : 'overview';
+  document.querySelector(`.nav-tab[data-section="${navSection}"]`)?.classList.add('active');
 
   // tabs
   ['tabOverview','tabOur','tabEnemy'].forEach(id => document.getElementById(id).classList.remove('active'));
   const tabMap = {overview:'tabOverview', our:'tabOur', enemy:'tabEnemy'};
-  document.getElementById(tabMap[sec]).classList.add('active');
+  if (tabMap[sec]) document.getElementById(tabMap[sec]).classList.add('active');
 
   // panels
   document.getElementById('secOverview').style.display  = sec==='overview' ? 'block'  : 'none';
+  document.getElementById('secAnalytics').style.display = sec==='analytics' ? 'block' : 'none';
+  document.getElementById('secSettings').style.display  = sec==='settings' ? 'block' : 'none';
   document.getElementById('toolbarOur').style.display   = sec==='our'      ? 'flex'   : 'none';
   document.getElementById('taOur').style.display        = sec==='our'      ? 'block'  : 'none';
   document.getElementById('toolbarEnemy').style.display = sec==='enemy'    ? 'flex'   : 'none';
@@ -570,6 +703,8 @@ function switchSection(sec) {
 
   if (sec === 'our')   renderTable('our');
   if (sec === 'enemy') renderTable('enemy');
+  if (sec === 'analytics') renderAnalytics();
+  if (sec === 'settings') refreshHealth(true);
 }
 
 // ── Overview (two-team cards, BPR+ADR sorted) ─────────────
@@ -606,6 +741,119 @@ function ovRow(p, rank) {
       <div class="ov-adr">ADR ${p.ADR}</div>
     </div>
   </div>`;
+}
+
+function renderAnalytics() {
+  const hasData = ourData.length || enemyData.length;
+  document.getElementById('analyticsEmpty').style.display = hasData ? 'none' : 'block';
+  document.getElementById('analyticsContent').style.display = hasData ? 'block' : 'none';
+  if (!hasData) return;
+
+  const ourBpr = avgNum(ourData, 'BPR');
+  const enemyBpr = avgNum(enemyData, 'BPR');
+  const ourAdr = avgNum(ourData, 'ADR');
+  const enemyAdr = avgNum(enemyData, 'ADR');
+  const bprEdge = ourBpr - enemyBpr;
+  const adrEdge = ourAdr - enemyAdr;
+  const allPlayers = bprAdrSort([...ourData, ...enemyData]);
+  const best = allPlayers[0];
+  const replayHealth = lastSession.discovered ? Math.round((lastSession.processed / lastSession.discovered) * 100) : 100;
+
+  set('mBprEdge', signed(bprEdge));
+  set('mBprEdgeSub', bprEdge >= 0 ? 'Our team leads' : 'Enemy team leads');
+  set('mAdrEdge', signed(adrEdge));
+  set('mAdrEdgeSub', adrEdge >= 0 ? 'Damage pressure advantage' : 'Damage pressure deficit');
+  set('mBestPlayer', best?.nickname || '-');
+  set('mBestPlayerSub', best ? `BPR ${best.BPR} · ADR ${best.ADR}` : '-');
+  set('mReplayHealth', `${replayHealth}%`);
+  set('mReplayHealthSub', `${lastSession.processed}/${lastSession.discovered || lastSession.processed} parsed · ${lastSession.errors.length} errors`);
+
+  drawGroupedBars('chartAverages', [
+    {label:'BPR', our:ourBpr, enemy:enemyBpr},
+    {label:'ADR / 1000', our:ourAdr / 1000, enemy:enemyAdr / 1000},
+    {label:'KPR', our:avgNum(ourData, 'KPR'), enemy:avgNum(enemyData, 'KPR')},
+    {label:'AccH / 100', our:avgNum(ourData, 'AccH') / 100, enemy:avgNum(enemyData, 'AccH') / 100},
+  ]);
+  drawTypeBars('chartTypes', ['HT','MT','LT','TD'].map(k => ({label:k, our:sumNum(ourData,k), enemy:sumNum(enemyData,k)})));
+  drawTopBars('chartTopBpr', allPlayers.slice(0, 7).map(p => ({label:p.nickname, value:p.BPR, team:ourData.includes(p) ? 'our' : 'enemy'})));
+  document.getElementById('aiSummary').textContent = buildSessionSummary({ourBpr, enemyBpr, ourAdr, enemyAdr, best, replayHealth});
+}
+
+function buildSessionSummary(ctx) {
+  const lines = [];
+  const bprDiff = ctx.ourBpr - ctx.enemyBpr;
+  const adrDiff = ctx.ourAdr - ctx.enemyAdr;
+  lines.push(`Session analyzed: ${lastSession.processed} replay${lastSession.processed!==1?'s':''}, ${ourData.length} allied players, ${enemyData.length} enemy players.`);
+  lines.push(bprDiff >= 0
+    ? `The allied side has a BPR advantage of ${bprDiff.toFixed(2)}, which suggests stronger global efficiency across firepower, aim, support and supremacy.`
+    : `The enemy side has a BPR advantage of ${Math.abs(bprDiff).toFixed(2)}, so the session points to a measurable efficiency gap.`);
+  lines.push(adrDiff >= 0
+    ? `Damage output is favorable by ${adrDiff.toFixed(0)} ADR on average.`
+    : `Average damage is behind by ${Math.abs(adrDiff).toFixed(0)} ADR, which is the main pressure point to review.`);
+  if (ctx.best) lines.push(`${ctx.best.nickname} is the standout player with ${ctx.best.BPR} BPR, ${ctx.best.ADR} ADR and ${ctx.best.main_tank} as main tank.`);
+  const topType = topTankType([...ourData, ...enemyData]);
+  if (topType) lines.push(`The most represented tank class is ${topType.label}, with ${topType.value} recorded battles in the aggregated player data.`);
+  if (lastSession.errors.length) lines.push(`${lastSession.errors.length} replay${lastSession.errors.length!==1?'s':''} failed parsing; review the error panel before treating the session as complete.`);
+  return lines.join('\n');
+}
+
+function drawGroupedBars(id, rows) {
+  const canvas = document.getElementById(id), ctx = canvas.getContext('2d');
+  clearCanvas(ctx, canvas);
+  const max = Math.max(1, ...rows.flatMap(r => [r.our, r.enemy]));
+  const left = 46, top = 22, barW = 26, gap = 62, base = canvas.height - 38, h = canvas.height - 70;
+  rows.forEach((r, i) => {
+    const x = left + i * (barW * 2 + gap);
+    drawBar(ctx, x, base, barW, h * r.our / max, '#FF5500');
+    drawBar(ctx, x + barW + 5, base, barW, h * r.enemy / max, '#4B8EF5');
+    label(ctx, r.label, x - 12, canvas.height - 14, '#9E9E9E', 11);
+  });
+  legend(ctx, [['Our','#FF5500'],['Enemy','#4B8EF5']]);
+}
+
+function drawTypeBars(id, rows) {
+  const canvas = document.getElementById(id), ctx = canvas.getContext('2d');
+  clearCanvas(ctx, canvas);
+  const max = Math.max(1, ...rows.flatMap(r => [r.our, r.enemy]));
+  rows.forEach((r, i) => {
+    const y = 36 + i * 42;
+    label(ctx, r.label, 18, y + 13, '#FFFFFF', 12);
+    drawHBar(ctx, 60, y, 180 * r.our / max, '#FF5500');
+    drawHBar(ctx, 250, y, 180 * r.enemy / max, '#4B8EF5');
+    label(ctx, String(r.our), 64 + 180 * r.our / max, y + 13, '#9E9E9E', 11);
+    label(ctx, String(r.enemy), 254 + 180 * r.enemy / max, y + 13, '#9E9E9E', 11);
+  });
+  legend(ctx, [['Our','#FF5500'],['Enemy','#4B8EF5']]);
+}
+
+function drawTopBars(id, rows) {
+  const canvas = document.getElementById(id), ctx = canvas.getContext('2d');
+  clearCanvas(ctx, canvas);
+  const max = Math.max(1, ...rows.map(r => r.value));
+  rows.forEach((r, i) => {
+    const y = 28 + i * 25;
+    label(ctx, trimLabel(r.label, 16), 16, y + 12, '#9E9E9E', 11);
+    drawHBar(ctx, 150, y, 300 * r.value / max, r.team === 'our' ? '#FF5500' : '#4B8EF5');
+    label(ctx, r.value.toFixed(2), 456, y + 12, '#FFFFFF', 11);
+  });
+}
+
+function clearCanvas(ctx, canvas) {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = '#1F1F1F';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
+function drawBar(ctx, x, base, w, h, color){ ctx.fillStyle=color; ctx.fillRect(x, base - h, w, h); }
+function drawHBar(ctx, x, y, w, color){ ctx.fillStyle=color; ctx.fillRect(x, y, w, 16); }
+function label(ctx, text, x, y, color, size){ ctx.fillStyle=color; ctx.font=`${size}px Inter, sans-serif`; ctx.fillText(text, x, y); }
+function legend(ctx, items){ items.forEach((it,i)=>{ctx.fillStyle=it[1];ctx.fillRect(370+i*68,10,10,10);label(ctx,it[0],384+i*68,19,'#9E9E9E',11);}); }
+function avgNum(arr,k){ return arr.length ? arr.reduce((s,p)=>s+(Number(p[k])||0),0)/arr.length : 0; }
+function sumNum(arr,k){ return arr.reduce((s,p)=>s+(Number(p[k])||0),0); }
+function signed(n){ return `${n>=0?'+':''}${n.toFixed(2)}`; }
+function trimLabel(s,n){ s=String(s||''); return s.length>n ? s.slice(0,n-1)+'…' : s; }
+function topTankType(players){
+  const values = ['HT','MT','LT','TD'].map(label => ({label, value:sumNum(players,label)})).sort((a,b)=>b.value-a.value);
+  return values[0]?.value ? values[0] : null;
 }
 
 // ── Detail table ───────────────────────────────────────────
@@ -724,12 +972,77 @@ async function exportXlsx() {
   finally { setVeil(false); }
 }
 
+async function refreshHealth(showPanel=false) {
+  const pill = document.getElementById('sysPill');
+  const txt = document.getElementById('sysTxt');
+  pill.className = 'sys-pill';
+  txt.textContent = 'Checking';
+  try {
+    const response = await fetch(`${API}/api/health`);
+    const health = await response.json();
+    applyHealth(health, showPanel);
+  } catch(e) {
+    pill.className = 'sys-pill err';
+    txt.textContent = 'Offline';
+    document.getElementById('healthPanel').classList.add('show');
+    setHealthValue('hParser', 'Unavailable', false);
+    setHealthValue('hTankDb', 'Unknown', false);
+    set('hUpload', '-');
+    set('hPath', 'Backend unreachable');
+  }
+}
+
+function applyHealth(health, showPanel=false) {
+  const pill = document.getElementById('sysPill');
+  const txt = document.getElementById('sysTxt');
+  const ok = !!health.ok;
+  pill.className = `sys-pill ${ok ? 'ok' : 'err'}`;
+  txt.textContent = ok ? 'Ready' : 'Needs setup';
+
+  setHealthValue('hParser', health.checks?.parser ? 'Ready' : 'Missing', health.checks?.parser);
+  setHealthValue('hTankDb', health.checks?.tank_db ? `${health.tank_count || 0} tanks` : 'Missing', health.checks?.tank_db);
+  set('hUpload', `${health.max_upload_mb || 0} MB`);
+  set('hPath', health.parser || 'Not found');
+  document.querySelectorAll('.local-only').forEach(el => el.style.display = health.public_mode ? 'none' : '');
+  document.querySelector('.page-sub').textContent = health.public_mode
+    ? 'Upload selected World of Tanks Blitz replay files directly from your device'
+    : 'Paste a server folder path, upload selected replay files, or upload a replay folder';
+  set('setParser', health.checks?.parser ? 'Ready' : 'Missing');
+  set('setTankDb', health.checks?.tank_db ? `${health.tank_count || 0} tanks loaded` : 'Missing');
+  set('setUpload', `${health.max_upload_mb || 0} MB`);
+  set('setPath', health.parser || 'Not found');
+
+  document.getElementById('healthPanel').classList.toggle('show', showPanel || !ok);
+}
+
+function setHealthValue(id, text, ok) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.textContent = text;
+  el.classList.toggle('ok', !!ok);
+  el.classList.toggle('err', !ok);
+}
+
+async function copySessionSummary() {
+  const text = document.getElementById('aiSummary')?.textContent?.trim();
+  if (!text || text === '-') { toast('No session summary available', 'err'); return; }
+  try {
+    await navigator.clipboard.writeText(text);
+    toast('Summary copied', 'ok');
+  } catch(e) {
+    toast('Clipboard unavailable', 'err');
+  }
+}
+
 // ── Clear ──────────────────────────────────────────────────
 function clearAll() {
   ourData=[]; enemyData=[];
+  lastSession = {processed:0, discovered:0, errors:[]};
   document.getElementById('strip').style.display='none';
   document.getElementById('secTabs').style.display='none';
   document.getElementById('secOverview').style.display='none';
+  document.getElementById('secAnalytics').style.display='none';
+  document.getElementById('secSettings').style.display='none';
   document.getElementById('toolbarOur').style.display='none';
   document.getElementById('taOur').style.display='none';
   document.getElementById('toolbarEnemy').style.display='none';
@@ -739,6 +1052,8 @@ function clearAll() {
   document.getElementById('sbOurTeam').classList.add('dim');
   document.getElementById('sbEnemyTeam').classList.add('dim');
   ['searchOur','searchEnemy','folderInput'].forEach(id=>document.getElementById(id).value='');
+  renderAnalytics();
+  switchSection('overview');
 }
 
 // ── Helpers ────────────────────────────────────────────────
@@ -750,6 +1065,7 @@ function avgF(arr,k){ return arr.length?(arr.reduce((s,p)=>s+(p[k]||0),0)/arr.le
 function set(id,v){ const el=document.getElementById(id); if(el) el.textContent=v; }
 function setVeil(v,msg='Processing…'){ document.getElementById('veil').classList.toggle('on',v); document.getElementById('veilMsg').textContent=msg; }
 function esc(s){ return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function formatError(err){ return typeof err === 'string' ? err : `${err.file || 'unknown'}: ${err.reason || 'parse failed'}`; }
 
 function toast(msg, type='inf') {
   const ico={
