@@ -45,6 +45,11 @@ def index():
     return send_from_directory("static", "index.html")
 
 
+@app.route("/analyze")
+def analyze():
+    return send_from_directory("static", "index.html")
+
+
 @app.route("/privacy")
 def privacy():
     return send_from_directory("static", "privacy.html")
