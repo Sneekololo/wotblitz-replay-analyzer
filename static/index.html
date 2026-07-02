@@ -70,14 +70,17 @@ body{background:var(--bg);color:var(--tx);font-family:'Inter',-apple-system,sans
 .page-title{font-size:22px;font-weight:700;color:var(--tx);letter-spacing:-.3px}
 .page-sub{font-size:13px;color:var(--tx2);margin-top:3px;margin-bottom:18px}
 
-.import-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.import-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
 .import-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.drop-zone{margin-top:14px;border:1px dashed var(--br2);border-radius:var(--r);background:var(--bg);padding:18px;display:flex;align-items:center;justify-content:space-between;gap:14px;transition:border-color .15s,background .15s}
+.drop-zone{border:1px dashed var(--br2);border-radius:var(--r);background:var(--bg);padding:18px;display:flex;align-items:center;justify-content:space-between;gap:14px;transition:border-color .15s,background .15s}
 .drop-zone.drag{border-color:var(--or);background:var(--or-dim)}
 .drop-main{display:flex;align-items:center;gap:12px;min-width:0}
 .drop-ico{width:34px;height:34px;border-radius:var(--rs);background:var(--sf3);display:flex;align-items:center;justify-content:center;color:var(--or);flex-shrink:0}
 .drop-title{font-size:13px;font-weight:700;color:var(--tx)}
 .drop-sub{font-size:12px;color:var(--tx3);margin-top:2px}
+.drop-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.link-btn{background:none;border:none;color:var(--tx3);font:inherit;font-size:12px;font-weight:600;cursor:pointer;padding:6px 4px}
+.link-btn:hover{color:var(--or)}
 .f-input{background:var(--bg);border:1px solid var(--br);border-radius:var(--rs);color:var(--tx);font-family:'Inter',sans-serif;font-size:13px;padding:9px 13px;outline:none;transition:border-color .15s;min-width:0}
 .f-input:focus{border-color:var(--or)}
 .f-input::placeholder{color:var(--tx3)}
@@ -143,7 +146,8 @@ body{background:var(--bg);color:var(--tx);font-family:'Inter',-apple-system,sans
   .import-actions .btn{width:100%;justify-content:center}
   .import-actions .btn-ghost{grid-column:1 / -1}
   .drop-zone{align-items:flex-start;flex-direction:column;padding:14px}
-  .drop-zone .btn{width:100%;justify-content:center}
+  .drop-actions{width:100%;display:grid;grid-template-columns:1fr}
+  .drop-actions .btn{width:100%;justify-content:center}
   .f-input-wide{width:100%;min-width:0}
   .sep{display:none}
   .desktop-only{display:none!important}
@@ -357,18 +361,6 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
           Generate
         </button>
-        <span class="sep local-only">or</span>
-        <div class="import-actions">
-          <button class="btn btn-upload" onclick="document.getElementById('fileInput').click()">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            Upload Files
-          </button>
-          <button class="btn btn-upload desktop-only" onclick="document.getElementById('folderFileInput').click()">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-            Upload Folder
-          </button>
-          <button class="btn btn-ghost" onclick="clearAll()">Clear</button>
-        </div>
       </div>
 
       <div class="drop-zone" id="dropZone">
@@ -381,7 +373,14 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
             <div class="drop-sub" id="uploadLimits">Only .wotbreplay files are accepted.</div>
           </div>
         </div>
-        <button class="btn btn-upload" onclick="document.getElementById('fileInput').click()">Select Files</button>
+        <div class="drop-actions">
+          <button class="btn btn-or" onclick="document.getElementById('fileInput').click()">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Select Files
+          </button>
+          <button class="link-btn desktop-only" onclick="document.getElementById('folderFileInput').click()">Folder</button>
+          <button class="link-btn" id="clearBtn" onclick="clearAll()" style="display:none">Clear</button>
+        </div>
       </div>
 
       <div class="health-panel" id="healthPanel">
@@ -731,6 +730,7 @@ function applyResults(j) {
   document.getElementById('sbEnemyTeam').classList.remove('dim');
   document.getElementById('secTabs').style.display = 'flex';
   document.getElementById('btnExport').disabled = false;
+  document.getElementById('clearBtn').style.display = 'inline-flex';
 
   buildDD('our');
   buildDD('enemy');
@@ -1116,6 +1116,7 @@ function clearAll() {
   document.getElementById('taEnemy').style.display='none';
   document.getElementById('errPanel').classList.remove('show');
   document.getElementById('btnExport').disabled=true;
+  document.getElementById('clearBtn').style.display='none';
   document.getElementById('sbOurTeam').classList.add('dim');
   document.getElementById('sbEnemyTeam').classList.add('dim');
   ['searchOur','searchEnemy','folderInput'].forEach(id=>document.getElementById(id).value='');
