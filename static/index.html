@@ -398,6 +398,8 @@ th.sorted{color:var(--or)}
 tbody tr{border-bottom:1px solid var(--br);transition:background .1s}
 tbody tr:last-child{border-bottom:none}
 tbody tr:hover{background:rgba(255,255,255,.025)}
+tbody tr.player-row{cursor:pointer}
+tbody tr.player-row:focus-visible{outline:1px solid var(--or);outline-offset:-2px}
 td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
 
 .td-rank{font-size:12px;font-weight:700;color:var(--tx3);width:36px;text-align:center}
@@ -1536,7 +1538,7 @@ function ovRow(p, rank) {
 
 function findPlayer(accountId) {
   const id = String(accountId);
-  return [...ourData, ...enemyData].find(p => String(p.account_id) === id);
+  return [...ourData, ...enemyData].find(p => String(p.account_id) === id || String(p.nickname) === id);
 }
 
 function openPlayerModal(accountId) {
@@ -1558,8 +1560,8 @@ function openPlayerModal(accountId) {
     modalBar('BPR', p.BPR, 1.5),
     modalBar('ADR', p.ADR, 3500),
     modalBar('Kills / battle', p.KPR, 3),
-    modalBar('Accuracy', p.ACCH, 100, '%'),
-    modalBar('Pen rate', p.ACCP, 100, '%'),
+    modalBar('Accuracy', p.AccH, 100, '%'),
+    modalBar('Pen rate', p.AccP, 100, '%'),
     modalBar('Support', p.assist, Math.max(1, maxMetric('assist')))
   ].join('');
 
@@ -1755,7 +1757,10 @@ function renderTable(team) {
   }
   emEl.style.display = 'none';
   cntEl.textContent = `${rows.length} player${rows.length!==1?'s':''}`;
-  tbEl.innerHTML = rows.map(p => `<tr>${vc.map(c=>`<td data-label="${escAttr(c.h)}" data-key="${escAttr(c.k)}">${cell(c,p,rankMap[p.account_id])}</td>`).join('')}</tr>`).join('');
+  tbEl.innerHTML = rows.map(p => {
+    const playerId = escAttr(p.account_id || p.nickname);
+    return `<tr class="player-row" role="button" tabindex="0" data-player-id="${playerId}" onclick="openPlayerModal(this.dataset.playerId)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPlayerModal(this.dataset.playerId)}">${vc.map(c=>`<td data-label="${escAttr(c.h)}" data-key="${escAttr(c.k)}">${cell(c,p,rankMap[p.account_id])}</td>`).join('')}</tr>`;
+  }).join('');
 }
 
 function doSort(team, k) {
