@@ -47,6 +47,10 @@ body{background:var(--bg);color:var(--tx);font-family:'Inter',-apple-system,sans
 .nav-action{display:none}
 body.analyze-mode.has-session .nav-action{display:inline-flex}
 body.shared-mode #btnSharePanel{display:none}
+.share-expiry{display:none;height:30px;border:1px solid var(--br);border-radius:var(--rs);background:var(--bg);color:var(--tx2);font:600 12px 'Inter',sans-serif;padding:0 8px;outline:none}
+body.analyze-mode.has-session .share-expiry{display:block}
+body.shared-mode .share-expiry{display:none}
+.share-expiry:focus{border-color:var(--or);color:var(--tx)}
 .sys-pill{display:inline-flex;align-items:center;gap:7px;height:30px;padding:0 10px;border:1px solid var(--br);border-radius:var(--rs);background:var(--bg);color:var(--tx2);font-size:12px;font-weight:600}
 .sys-dot{width:7px;height:7px;border-radius:50%;background:var(--yw);box-shadow:0 0 0 3px rgba(255,184,0,.12)}
 .sys-pill.ok .sys-dot{background:var(--gn);box-shadow:0 0 0 3px rgba(31,214,85,.12)}
@@ -608,6 +612,11 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
     </a>
   </div>
   <div class="nav-right">
+    <select class="share-expiry" id="shareTtlSelect" title="Share link expiration">
+      <option value="86400">24h</option>
+      <option value="259200">3d</option>
+      <option value="604800">7d</option>
+    </select>
     <button class="btn btn-ghost nav-action" id="btnSharePanel" disabled onclick="createShareLink()" title="Share 24h link" style="font-size:12px;padding:7px 12px">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="10.5" x2="15.4" y2="6.5"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/></svg>
       Share
@@ -1104,9 +1113,31 @@ document.addEventListener('DOMContentLoaded', setupDropZone);
 document.addEventListener('DOMContentLoaded', loadSharedReport);
 document.addEventListener('DOMContentLoaded', restoreLiveSession);
 document.addEventListener('DOMContentLoaded', restoreTeamDatabase);
+document.addEventListener('DOMContentLoaded', setupShareExpiry);
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closePlayerModal();
 });
+
+function setupShareExpiry() {
+  const select = document.getElementById('shareTtlSelect');
+  if (!select) return;
+  select.addEventListener('change', updateShareButtonTitle);
+  updateShareButtonTitle();
+}
+
+function updateShareButtonTitle() {
+  const btn = document.getElementById('btnSharePanel');
+  if (!btn) return;
+  btn.title = `Share ${shareTtlLabel()} link`;
+}
+
+function shareTtlSeconds() {
+  return Number(document.getElementById('shareTtlSelect')?.value || 86400);
+}
+
+function shareTtlLabel(seconds=shareTtlSeconds()) {
+  return seconds === 604800 ? '7d' : seconds === 259200 ? '3d' : '24h';
+}
 window.addEventListener('pagehide', () => {
   if (navigator.sendBeacon) navigator.sendBeacon(`${API}/api/session/close`, new Blob([], {type:'application/json'}));
 });
@@ -1853,7 +1884,8 @@ async function createShareLink() {
         discovered:lastSession.discovered || lastSession.processed || 0,
         errors:lastSession.errors || [],
         mode:lastSession.mode || analysisMode,
-        uploads:lastSession.uploads || 1
+        uploads:lastSession.uploads || 1,
+        ttl_seconds:shareTtlSeconds()
       })
     });
     const json = await response.json();
@@ -1862,9 +1894,9 @@ async function createShareLink() {
       return;
     }
     await copyText(json.url);
-    const expires = json.expires_at ? new Date(json.expires_at * 1000).toLocaleString('en') : '24 hours';
+    const expires = json.expires_at ? new Date(json.expires_at * 1000).toLocaleString('en') : shareTtlLabel();
     set('shareStatus', `Copied - expires ${expires}`);
-    toast('Temporary link copied', 'ok');
+    toast(`${shareTtlLabel(json.ttl_seconds)} link copied`, 'ok');
   } catch(e) {
     toast('Share error: ' + e.message, 'err');
   } finally {
@@ -1919,7 +1951,7 @@ async function loadSharedReport() {
     }
     applyResults(json.report || {});
     const expires = json.expires_at ? new Date(json.expires_at * 1000).toLocaleString('en') : 'soon';
-    set('shareStatus', `Shared report - expires ${expires}`);
+    set('shareStatus', `Shared report - renewed until ${expires}`);
     toast('Shared report loaded', 'ok');
   } catch(e) {
     toast('Cannot load shared report', 'err');
