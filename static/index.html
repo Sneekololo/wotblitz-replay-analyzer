@@ -237,13 +237,6 @@ body.shared-mode .action-panel{max-width:360px}
 .sp-val.ac{color:var(--or)}
 body.analyze-mode.has-session .strip{border:1px solid var(--br);border-radius:var(--r);background:rgba(18,18,18,.55);padding:14px 16px;margin-top:14px;display:grid!important;grid-template-columns:repeat(7,minmax(92px,1fr));gap:14px}
 
-/* â”€â”€ SECTION TABS â”€â”€ */
-.sec-tabs{display:none;align-items:center;gap:0;padding:0 28px;background:var(--sf);border-bottom:1px solid var(--br);flex-shrink:0}
-.sec-tab{padding:14px 18px;font-size:13px;font-weight:500;color:var(--tx2);cursor:pointer;border:none;background:none;border-bottom:2px solid transparent;transition:all .15s;display:flex;align-items:center;gap:7px}
-.sec-tab:hover{color:var(--tx)}
-.sec-tab.active{color:var(--tx);border-bottom-color:var(--or)}
-body.analyze-mode.has-session .sec-tabs{position:sticky;top:56px;z-index:80;background:rgba(31,31,31,.96);backdrop-filter:blur(10px)}
-
 /* â”€â”€ OVERVIEW SECTION â”€â”€ */
 .section{display:none;padding:24px 28px 32px;flex:1}
 .section.visible{display:block}
@@ -503,9 +496,6 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
   body.analyze-mode .strip[style*="flex"]{display:grid!important}
   body.analyze-mode.has-session .strip{grid-template-columns:repeat(2,minmax(0,1fr));margin:12px 0 0;padding:12px}
   body.analyze-mode .sp-val{font-size:17px;min-width:0;overflow:hidden;text-overflow:ellipsis}
-  body.analyze-mode .sec-tabs{overflow-x:auto;padding:0 12px;scrollbar-width:none}
-  body.analyze-mode .sec-tabs::-webkit-scrollbar{display:none}
-  body.analyze-mode .sec-tab{flex:0 0 auto;padding:13px 12px;white-space:nowrap}
   body.analyze-mode .section{padding:14px 12px 22px}
   body.analyze-mode .match-wrap{display:grid;grid-template-columns:1fr;gap:14px;margin-bottom:0}
   body.analyze-mode .team-header{padding:12px}
@@ -900,22 +890,6 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
     <div class="err-panel" id="errPanel">
       <div class="err-title">Warning Failed to parse</div>
       <div class="err-list" id="errList"></div>
-    </div>
-
-    <!-- SECTION TABS -->
-    <div class="sec-tabs" id="secTabs">
-      <button class="sec-tab active" id="tabOverview" onclick="switchSection('overview')">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-        Review
-      </button>
-      <button class="sec-tab" id="tabOur" onclick="switchSection('our')">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-        Our Team
-      </button>
-      <button class="sec-tab" id="tabEnemy" onclick="switchSection('enemy')">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        Enemy Team
-      </button>
     </div>
 
     <!-- â”€â”€ OVERVIEW SECTION â”€â”€ -->
@@ -1459,7 +1433,6 @@ function applyResults(j) {
   // unlock sidebar items
   document.getElementById('sbOurTeam').classList.remove('dim');
   document.getElementById('sbEnemyTeam').classList.remove('dim');
-  document.getElementById('secTabs').style.display = 'flex';
   document.getElementById('btnExport').disabled = false;
   document.getElementById('btnExportPanel').disabled = false;
   document.getElementById('btnSharePanel').disabled = false;
@@ -1482,11 +1455,6 @@ function switchSection(sec) {
 
   document.getElementById('navHome')?.classList.toggle('active', document.body.classList.contains('home-mode'));
   document.getElementById('navAnalyze')?.classList.toggle('active', document.body.classList.contains('analyze-mode'));
-
-  // tabs
-  ['tabOverview','tabOur','tabEnemy'].forEach(id => document.getElementById(id).classList.remove('active'));
-  const tabMap = {overview:'tabOverview', our:'tabOur', enemy:'tabEnemy'};
-  if (tabMap[sec]) document.getElementById(tabMap[sec]).classList.add('active');
 
   // panels
   document.getElementById('secOverview').style.display  = sec==='overview' ? 'block'  : 'none';
@@ -1995,7 +1963,6 @@ function clearAll() {
   localStorage.removeItem('blitzscrim.liveSession');
   updateSessionUi();
   document.getElementById('strip').style.display='none';
-  document.getElementById('secTabs').style.display='none';
   document.getElementById('secOverview').style.display='none';
   document.getElementById('secAnalytics').style.display='none';
   document.getElementById('secSettings').style.display='none';
