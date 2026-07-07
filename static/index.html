@@ -145,10 +145,15 @@ body.analyze-mode .page-hdr{padding:24px 28px 20px}
 body.analyze-mode .hero-grid{grid-template-columns:1fr;grid-template-areas:"upload"}
 body.analyze-mode .hero-copy,body.analyze-mode .report-preview{display:none}
 body.analyze-mode .upload-card{box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
+body.analyze-mode .upload-grid{grid-template-columns:156px minmax(360px,1fr) 260px;align-items:start}
+body.analyze-mode .upload-grid>div:first-child,.action-panel{background:#151515;border:1px solid var(--br);border-radius:var(--r);padding:12px}
+body.analyze-mode .mode-switch{background:var(--bg);border:1px solid var(--br);border-radius:var(--r);padding:4px;gap:4px;margin-bottom:0}
+body.analyze-mode .mode-btn{border-color:transparent;background:transparent;min-height:36px}
+body.analyze-mode .mode-btn.active{background:var(--or-dim);border-color:var(--or);color:var(--tx)}
 body.analyze-mode.has-session .page-hdr{padding:16px 28px}
 body.analyze-mode.has-session .upload-card{background:rgba(18,18,18,.74)}
-body.analyze-mode.has-session .upload-grid{grid-template-columns:150px minmax(360px,1fr) 260px}
-body.analyze-mode.has-session .drop-zone{min-height:76px;padding:14px 16px}
+body.analyze-mode.has-session .upload-grid{grid-template-columns:156px minmax(360px,1fr) 260px}
+body.analyze-mode.has-session .drop-zone{min-height:92px;padding:16px}
 body.analyze-mode.has-session .upload-card-title{display:none}
 .hero-copy{grid-area:copy;display:flex;flex-direction:column;justify-content:space-between;min-height:320px;padding:8px 0}
 .eyebrow{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.8px;color:var(--or);margin-bottom:10px}
@@ -205,7 +210,7 @@ body.shared-mode .action-panel{max-width:360px}
 .db-status strong{color:var(--tx)}
 .import-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:0}
 .import-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.drop-zone{border:1px dashed var(--br2);border-radius:var(--r);background:#151515;padding:18px;display:flex;align-items:center;justify-content:space-between;gap:14px;transition:border-color .15s,background .15s;min-height:94px;cursor:pointer}
+.drop-zone{border:1px dashed var(--br2);border-radius:var(--r);background:#151515;padding:16px;display:flex;align-items:center;justify-content:space-between;gap:14px;transition:border-color .15s,background .15s;min-height:92px;cursor:pointer}
 .drop-zone.drag{border-color:var(--or);background:var(--or-dim)}
 .drop-zone:focus-visible{outline:1px solid var(--or);outline-offset:2px}
 .drop-main{display:flex;align-items:center;gap:12px;min-width:0}
@@ -851,7 +856,6 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
                 Export Excel
               </button>
               <button class="btn btn-ghost" id="btnSharePanel" disabled onclick="createShareLink()">Share 24h link</button>
-              <button class="btn btn-ghost" onclick="document.getElementById('excelInput').click()">Import team Excel</button>
               <div class="action-panel-status">
                 <div class="db-status" id="shareStatus">No shared link created</div>
                 <div class="db-status" id="teamDbStatus">No team database loaded</div>
@@ -956,6 +960,7 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
         </div>
         <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
           <button class="btn btn-ghost" onclick="refreshHealth(true)">Refresh System</button>
+          <button class="btn btn-ghost" onclick="document.getElementById('excelInput').click()">Import team Excel</button>
           <button class="btn btn-ghost" onclick="copySessionSummary()">Copy Summary</button>
         </div>
       </div>
@@ -1365,8 +1370,12 @@ function restoreLiveSession() {
 function updateSessionUi() {
   const active = liveSession.active;
   const hasSaved = !!liveSession.processed;
-  document.getElementById('finishSessionBtn').disabled = !active && !hasSaved;
-  document.getElementById('startSessionBtn').textContent = active ? 'Restart' : 'Start Session';
+  const startBtn = document.getElementById('startSessionBtn');
+  const finishBtn = document.getElementById('finishSessionBtn');
+  startBtn.style.display = active ? 'none' : 'inline-flex';
+  finishBtn.style.display = active ? 'inline-flex' : 'none';
+  finishBtn.disabled = !active;
+  startBtn.textContent = hasSaved ? 'New Session' : 'Start Session';
   const modeLabel = analysisMode === 'scrim' ? 'Scrim' : 'Individual';
   const status = active ? 'Recording' : (hasSaved ? 'Saved' : 'No active session');
   document.getElementById('sessionMeta').innerHTML = hasSaved || active
