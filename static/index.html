@@ -125,6 +125,13 @@ body.analyze-mode .layout{display:flex}
 .btn-upload:hover{color:var(--tx);border-color:var(--or);background:var(--or-dim)}
 .btn:disabled{opacity:.3;cursor:not-allowed;pointer-events:none}
 #fileInput,#folderFileInput,#excelInput{display:none}
+.metric-help{position:relative;display:inline-flex;align-items:center;gap:5px;vertical-align:middle}
+.info-dot{width:15px;height:15px;border:1px solid var(--br2);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:var(--sf3);color:var(--tx2);font:800 10px/1 'Inter',sans-serif;cursor:help;padding:0;flex-shrink:0}
+.info-dot:hover,.info-dot:focus-visible{border-color:var(--or);color:var(--or);outline:none}
+.info-tip{position:absolute;left:0;top:calc(100% + 8px);z-index:90;width:280px;padding:10px 12px;border:1px solid var(--br2);border-radius:var(--r);background:#101010;box-shadow:0 14px 36px rgba(0,0,0,.45);color:var(--tx2);font-size:12px;font-weight:500;line-height:1.5;text-transform:none;letter-spacing:0;white-space:normal;opacity:0;visibility:hidden;transform:translateY(-3px);transition:.12s;pointer-events:none}
+.metric-help:hover .info-tip,.metric-help:focus-within .info-tip{opacity:1;visibility:visible;transform:translateY(0)}
+th .metric-help{display:inline-flex}
+th .info-tip{left:auto;right:0}
 
 /* â”€â”€ CONTENT â”€â”€ */
 .content{flex:1;min-width:0;display:flex;flex-direction:column;overflow-y:auto}
@@ -857,8 +864,8 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
         <div><div class="sp-lbl">Replays</div><div class="sp-val" id="sReplays">-</div></div>
         <div><div class="sp-lbl">Our Players</div><div class="sp-val" id="sOurPlayers">-</div></div>
         <div><div class="sp-lbl">Enemy Players</div><div class="sp-val" id="sEnemyPlayers">-</div></div>
-        <div><div class="sp-lbl">Our Avg BPR</div><div class="sp-val ac" id="sOurBpr">-</div></div>
-        <div><div class="sp-lbl">Enemy Avg BPR</div><div class="sp-val" id="sEnemyBpr">-</div></div>
+        <div><div class="sp-lbl metric-help">Our Avg BPR <button class="info-dot" type="button" aria-label="What is BPR 2.0?">i</button><span class="info-tip">BPR 2.0 is a replay performance score combining damage impact, accuracy, support actions and game mode contribution. It is designed for comparison inside the analyzed session.</span></div><div class="sp-val ac" id="sOurBpr">-</div></div>
+        <div><div class="sp-lbl metric-help">Enemy Avg BPR <button class="info-dot" type="button" aria-label="What is BPR 2.0?">i</button><span class="info-tip">BPR 2.0 is a replay performance score combining damage impact, accuracy, support actions and game mode contribution. It is designed for comparison inside the analyzed session.</span></div><div class="sp-val" id="sEnemyBpr">-</div></div>
         <div><div class="sp-lbl">Our Best</div><div class="sp-val ac" id="sOurBest">-</div></div>
         <div><div class="sp-lbl">Parse Errors</div><div class="sp-val" id="sErr" style="color:var(--rd)">-</div></div>
       </div>
@@ -893,7 +900,7 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
         <div class="team-side">
           <div class="team-header">
             <span class="team-label-our">Our Team</span>
-            <span class="team-avg-bpr">Avg BPR <span id="ovOurAvg">-</span></span>
+            <span class="team-avg-bpr"><span class="metric-help">Avg BPR <button class="info-dot" type="button" aria-label="What is BPR 2.0?">i</button><span class="info-tip">BPR 2.0 is a replay performance score combining damage impact, accuracy, support actions and game mode contribution. It is designed for comparison inside the analyzed session.</span></span> <span id="ovOurAvg">-</span></span>
           </div>
           <div class="ov-list" id="ovOurList"></div>
         </div>
@@ -907,7 +914,7 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
         <div class="team-side">
           <div class="team-header">
             <span class="team-label-enemy">Enemy Team</span>
-            <span class="team-avg-bpr">Avg BPR <span id="ovEnemyAvg">-</span></span>
+            <span class="team-avg-bpr"><span class="metric-help">Avg BPR <button class="info-dot" type="button" aria-label="What is BPR 2.0?">i</button><span class="info-tip">BPR 2.0 is a replay performance score combining damage impact, accuracy, support actions and game mode contribution. It is designed for comparison inside the analyzed session.</span></span> <span id="ovEnemyAvg">-</span></span>
           </div>
           <div class="ov-list" id="ovEnemyList"></div>
         </div>
@@ -1020,6 +1027,7 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
 
 <script>
 const API = '';
+const BPR_HELP_TEXT = 'BPR 2.0 is a replay performance score combining damage impact, accuracy, support actions and game mode contribution. It is designed for comparison inside the analyzed session.';
 
 const COLS = [
   {k:'_rank',     h:'#',         vis:true,  fmt:'rank'},
@@ -1066,6 +1074,10 @@ let sortState = {
   enemy: {k:'BPR', a:false},
 };
 let curSection = 'overview';
+
+function metricHelp(label) {
+  return `<span class="metric-help">${label}<button class="info-dot" type="button" aria-label="What is BPR 2.0?" onclick="event.stopPropagation()">i</button><span class="info-tip">${BPR_HELP_TEXT}</span></span>`;
+}
 
 document.addEventListener('DOMContentLoaded', initPageMode);
 document.addEventListener('DOMContentLoaded', refreshHealth);
@@ -1712,7 +1724,7 @@ function renderTable(team) {
 
   thEl.innerHTML = `<tr>${vc.map(c=>`
     <th class="${ss.k===c.k?'sorted':''}" onclick="doSort('${team}','${c.k}')">
-      ${c.h}
+      ${c.k === 'BPR' ? metricHelp(c.h) : c.h}
     </th>`).join('')}</tr>`;
 
   if (!rows.length) {
