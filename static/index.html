@@ -44,7 +44,9 @@ body{background:var(--bg);color:var(--tx);font-family:'Inter',-apple-system,sans
 .nav-tab.active{color:var(--tx)}
 .nav-tab.dim{opacity:.35;pointer-events:none}
 .nav-right{display:flex;align-items:center;gap:8px;margin-left:auto}
-#btnExport{display:none!important}
+.nav-action{display:none}
+body.analyze-mode.has-session .nav-action{display:inline-flex}
+body.shared-mode #btnSharePanel{display:none}
 .sys-pill{display:inline-flex;align-items:center;gap:7px;height:30px;padding:0 10px;border:1px solid var(--br);border-radius:var(--rs);background:var(--bg);color:var(--tx2);font-size:12px;font-weight:600}
 .sys-dot{width:7px;height:7px;border-radius:50%;background:var(--yw);box-shadow:0 0 0 3px rgba(255,184,0,.12)}
 .sys-pill.ok .sys-dot{background:var(--gn);box-shadow:0 0 0 3px rgba(31,214,85,.12)}
@@ -145,14 +147,14 @@ body.analyze-mode .page-hdr{padding:24px 28px 20px}
 body.analyze-mode .hero-grid{grid-template-columns:1fr;grid-template-areas:"upload"}
 body.analyze-mode .hero-copy,body.analyze-mode .report-preview{display:none}
 body.analyze-mode .upload-card{box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
-body.analyze-mode .upload-grid{grid-template-columns:156px minmax(360px,1fr) 260px;align-items:start}
-body.analyze-mode .upload-grid>div:first-child,.action-panel{background:#151515;border:1px solid var(--br);border-radius:var(--r);padding:12px}
+body.analyze-mode .upload-grid{grid-template-columns:180px minmax(360px,1fr);align-items:start}
+body.analyze-mode .upload-grid>div:first-child{background:#151515;border:1px solid var(--br);border-radius:var(--r);padding:12px}
 body.analyze-mode .mode-switch{background:var(--bg);border:1px solid var(--br);border-radius:var(--r);padding:4px;gap:4px;margin-bottom:0}
 body.analyze-mode .mode-btn{border-color:transparent;background:transparent;min-height:36px}
 body.analyze-mode .mode-btn.active{background:var(--or-dim);border-color:var(--or);color:var(--tx)}
 body.analyze-mode.has-session .page-hdr{padding:16px 28px}
 body.analyze-mode.has-session .upload-card{background:rgba(18,18,18,.74)}
-body.analyze-mode.has-session .upload-grid{grid-template-columns:156px minmax(360px,1fr) 260px}
+body.analyze-mode.has-session .upload-grid{grid-template-columns:180px minmax(360px,1fr)}
 body.analyze-mode.has-session .drop-zone{min-height:92px;padding:16px}
 body.analyze-mode.has-session .upload-card-title{display:none}
 .hero-copy{grid-area:copy;display:flex;flex-direction:column;justify-content:space-between;min-height:320px;padding:8px 0}
@@ -191,21 +193,17 @@ body.analyze-mode.has-session .upload-card-title{display:none}
 .upload-card{grid-area:upload;background:rgba(18,18,18,.86);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:16px;box-shadow:0 18px 55px rgba(0,0,0,.26),inset 0 1px 0 rgba(255,255,255,.04)}
 .upload-card-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.9px;color:var(--tx3);margin-bottom:10px}
 .upload-grid{display:grid;grid-template-columns:180px minmax(360px,1fr) 220px;gap:14px;align-items:stretch}
-body.shared-mode .upload-card-title,body.shared-mode .mode-switch,body.shared-mode .drop-zone,body.shared-mode #btnSharePanel,body.shared-mode #excelInput,body.shared-mode #teamDbStatus,body.shared-mode .action-panel button[onclick*="excelInput"],body.shared-mode #sessionControls{display:none!important}
+body.shared-mode .upload-card-title,body.shared-mode .mode-switch,body.shared-mode .drop-zone,body.shared-mode #excelInput,body.shared-mode #teamDbStatus,body.shared-mode #sessionControls{display:none!important}
 body.shared-mode .upload-card{padding:12px 16px}
 body.shared-mode .upload-grid{display:block}
-body.shared-mode .action-panel{max-width:360px}
 .mode-switch{display:grid;grid-template-columns:1fr;gap:8px;margin-bottom:10px}
 .mode-btn{border:1px solid var(--br);background:var(--sf2);color:var(--tx2);border-radius:var(--rs);padding:9px 10px;font:inherit;font-size:12px;font-weight:700;cursor:pointer;transition:.15s}
 .mode-btn.active{border-color:var(--or);background:var(--or-dim);color:var(--tx)}
-.session-bar{display:grid;grid-template-columns:1fr;gap:8px;align-content:start}
+.session-bar{display:grid;grid-template-columns:1fr;gap:8px;align-content:start;margin-top:10px}
 .session-bar.hidden{display:none}
 .session-meta{grid-column:1 / -1;font-size:12px;color:var(--tx3);text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .session-meta strong{color:var(--tx)}
-.action-panel{display:grid;gap:8px;align-content:start}
-.action-panel-title{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.9px;color:var(--tx3)}
-.action-panel .btn{justify-content:center;width:100%}
-.action-panel-status{display:grid;gap:5px;margin-top:2px}
+.hidden-status{display:none}
 .db-status{font-size:12px;color:var(--tx3);line-height:1.4}
 .db-status strong{color:var(--tx)}
 .import-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:0}
@@ -494,8 +492,7 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
   body.analyze-mode .drop-zone{min-height:132px;padding:14px;gap:14px}
   body.analyze-mode .drop-main{align-items:flex-start}
   body.analyze-mode .drop-actions{display:grid;grid-template-columns:1fr;gap:8px;width:100%}
-  body.analyze-mode .drop-actions .btn,body.analyze-mode .action-panel .btn{min-height:42px}
-  body.analyze-mode .action-panel{border-top:1px solid var(--br);padding-top:12px}
+  body.analyze-mode .drop-actions .btn{min-height:42px}
   body.analyze-mode .session-bar{grid-template-columns:1fr;gap:8px}
   body.analyze-mode .strip{display:none;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:14px 12px;margin:0;border-top:1px solid var(--br);background:rgba(18,18,18,.45)}
   body.analyze-mode .strip[style*="flex"]{display:grid!important}
@@ -600,12 +597,13 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
     </a>
   </div>
   <div class="nav-right">
+    <button class="btn btn-ghost nav-action" id="btnSharePanel" disabled onclick="createShareLink()" title="Share 24h link" style="font-size:12px;padding:7px 12px">Share</button>
+    <button class="btn btn-or nav-action" id="btnExportPanel" disabled onclick="exportXlsx()" title="Export Excel" style="font-size:12px;padding:7px 12px">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Export
+    </button>
     <button class="sys-pill" id="sysPill" onclick="refreshHealth(true)" title="System status">
       <span class="sys-dot"></span><span id="sysTxt">Checking</span>
-    </button>
-    <button class="btn btn-ghost" id="btnExport" disabled onclick="exportXlsx()" style="font-size:12px;padding:7px 14px">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Export Excel
     </button>
   </div>
 </nav>
@@ -818,6 +816,11 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
                 <button class="mode-btn active" id="modeScrim" onclick="setAnalysisMode('scrim')">Scrim</button>
                 <button class="mode-btn" id="modeIndividual" onclick="setAnalysisMode('individual')">Individual</button>
               </div>
+              <div class="session-bar hidden" id="sessionControls">
+                <button class="btn btn-ghost" id="startSessionBtn" onclick="startLiveSession()">Start Session</button>
+                <button class="btn btn-ghost" id="finishSessionBtn" onclick="finishLiveSession()" disabled>Finish</button>
+                <div class="session-meta" id="sessionMeta">No active session</div>
+              </div>
               <div class="import-row">
                 <input class="f-input f-input-wide local-only" id="folderInput" type="text"
                   placeholder="D:\World of Tanks Blitz\replays\2026-03-18"
@@ -848,24 +851,10 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
                 <button class="link-btn" id="clearBtn" onclick="event.stopPropagation();clearAll()" style="display:none">Clear</button>
               </div>
             </div>
-
-            <div class="action-panel">
-              <div class="action-panel-title">Report actions</div>
-              <button class="btn btn-or" id="btnExportPanel" disabled onclick="exportXlsx()">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                Export Excel
-              </button>
-              <button class="btn btn-ghost" id="btnSharePanel" disabled onclick="createShareLink()">Share 24h link</button>
-              <div class="action-panel-status">
-                <div class="db-status" id="shareStatus">No shared link created</div>
-                <div class="db-status" id="teamDbStatus">No team database loaded</div>
-              </div>
-              <div class="session-bar hidden" id="sessionControls">
-                <button class="btn btn-ghost" id="startSessionBtn" onclick="startLiveSession()">Start Session</button>
-                <button class="btn btn-ghost" id="finishSessionBtn" onclick="finishLiveSession()" disabled>Finish</button>
-                <div class="session-meta" id="sessionMeta">No active session</div>
-              </div>
-            </div>
+          </div>
+          <div class="hidden-status">
+            <div id="shareStatus">No shared link created</div>
+            <div id="teamDbStatus">No team database loaded</div>
           </div>
         </div>
       </div>
@@ -1442,7 +1431,6 @@ function applyResults(j) {
   // unlock sidebar items
   document.getElementById('sbOurTeam').classList.remove('dim');
   document.getElementById('sbEnemyTeam').classList.remove('dim');
-  document.getElementById('btnExport').disabled = false;
   document.getElementById('btnExportPanel').disabled = false;
   document.getElementById('btnSharePanel').disabled = false;
   document.getElementById('clearBtn').style.display = 'inline-flex';
@@ -1980,7 +1968,6 @@ function clearAll() {
   document.getElementById('toolbarEnemy').style.display='none';
   document.getElementById('taEnemy').style.display='none';
   document.getElementById('errPanel').classList.remove('show');
-  document.getElementById('btnExport').disabled=true;
   document.getElementById('btnExportPanel').disabled=true;
   document.getElementById('btnSharePanel').disabled=true;
   set('shareStatus', 'No shared link created');
