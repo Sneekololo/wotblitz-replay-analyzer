@@ -145,6 +145,11 @@ body.analyze-mode .page-hdr{padding:24px 28px 20px}
 body.analyze-mode .hero-grid{grid-template-columns:1fr;grid-template-areas:"upload"}
 body.analyze-mode .hero-copy,body.analyze-mode .report-preview{display:none}
 body.analyze-mode .upload-card{box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
+body.analyze-mode.has-session .page-hdr{padding:16px 28px}
+body.analyze-mode.has-session .upload-card{background:rgba(18,18,18,.74)}
+body.analyze-mode.has-session .upload-grid{grid-template-columns:150px minmax(360px,1fr) 260px}
+body.analyze-mode.has-session .drop-zone{min-height:76px;padding:14px 16px}
+body.analyze-mode.has-session .upload-card-title{display:none}
 .hero-copy{grid-area:copy;display:flex;flex-direction:column;justify-content:space-between;min-height:320px;padding:8px 0}
 .eyebrow{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.8px;color:var(--or);margin-bottom:10px}
 .page-title{font-size:58px;font-weight:800;color:var(--tx);letter-spacing:0;line-height:.95;margin-bottom:14px}
@@ -195,6 +200,7 @@ body.shared-mode .action-panel{max-width:360px}
 .action-panel{display:grid;gap:8px;align-content:start}
 .action-panel-title{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.9px;color:var(--tx3)}
 .action-panel .btn{justify-content:center;width:100%}
+.action-panel-status{display:grid;gap:5px;margin-top:2px}
 .db-status{font-size:12px;color:var(--tx3);line-height:1.4}
 .db-status strong{color:var(--tx)}
 .import-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:0}
@@ -229,12 +235,14 @@ body.shared-mode .action-panel{max-width:360px}
 .sp-lbl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.9px;color:var(--tx3);margin-bottom:2px}
 .sp-val{font-size:19px;font-weight:700;color:var(--tx);line-height:1}
 .sp-val.ac{color:var(--or)}
+body.analyze-mode.has-session .strip{border:1px solid var(--br);border-radius:var(--r);background:rgba(18,18,18,.55);padding:14px 16px;margin-top:14px;display:grid!important;grid-template-columns:repeat(7,minmax(92px,1fr));gap:14px}
 
 /* â”€â”€ SECTION TABS â”€â”€ */
 .sec-tabs{display:none;align-items:center;gap:0;padding:0 28px;background:var(--sf);border-bottom:1px solid var(--br);flex-shrink:0}
 .sec-tab{padding:14px 18px;font-size:13px;font-weight:500;color:var(--tx2);cursor:pointer;border:none;background:none;border-bottom:2px solid transparent;transition:all .15s;display:flex;align-items:center;gap:7px}
 .sec-tab:hover{color:var(--tx)}
 .sec-tab.active{color:var(--tx);border-bottom-color:var(--or)}
+body.analyze-mode.has-session .sec-tabs{position:sticky;top:56px;z-index:80;background:rgba(31,31,31,.96);backdrop-filter:blur(10px)}
 
 /* â”€â”€ OVERVIEW SECTION â”€â”€ */
 .section{display:none;padding:24px 28px 32px;flex:1}
@@ -493,6 +501,7 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
   body.analyze-mode .session-bar{grid-template-columns:1fr;gap:8px}
   body.analyze-mode .strip{display:none;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:14px 12px;margin:0;border-top:1px solid var(--br);background:rgba(18,18,18,.45)}
   body.analyze-mode .strip[style*="flex"]{display:grid!important}
+  body.analyze-mode.has-session .strip{grid-template-columns:repeat(2,minmax(0,1fr));margin:12px 0 0;padding:12px}
   body.analyze-mode .sp-val{font-size:17px;min-width:0;overflow:hidden;text-overflow:ellipsis}
   body.analyze-mode .sec-tabs{overflow-x:auto;padding:0 12px;scrollbar-width:none}
   body.analyze-mode .sec-tabs::-webkit-scrollbar{display:none}
@@ -514,8 +523,8 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
   body.analyze-mode .search-inp{width:100%;min-height:38px}
   body.analyze-mode .cnt-lbl{width:100%;text-align:left}
   body.analyze-mode .table-area{padding:12px 12px 22px;overflow:hidden}
-  body.analyze-mode .table-card{overflow-x:auto;-webkit-overflow-scrolling:touch}
-  body.analyze-mode table{min-width:980px}
+  body.analyze-mode .table-card{overflow:visible}
+  body.analyze-mode table{min-width:0}
   body.analyze-mode th,body.analyze-mode td{padding:10px 11px}
   body.analyze-mode .site-footer{padding:12px;text-align:center}
 }
@@ -528,6 +537,20 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
   body.analyze-mode .strip{grid-template-columns:1fr}
   body.analyze-mode .toolbar-l{grid-template-columns:1fr}
   body.analyze-mode .dd-wrap .btn{width:100%;justify-content:center}
+  body.analyze-mode thead{display:none}
+  body.analyze-mode tbody,body.analyze-mode tr,body.analyze-mode td{display:block;width:100%}
+  body.analyze-mode tbody{display:grid;gap:10px}
+  body.analyze-mode tbody tr{border:1px solid var(--br);border-radius:var(--r);background:var(--sf);padding:8px}
+  body.analyze-mode tbody tr:hover{background:var(--sf)}
+  body.analyze-mode td{display:grid;grid-template-columns:92px 1fr;gap:10px;align-items:center;border-bottom:1px solid var(--br);padding:8px 6px}
+  body.analyze-mode td:last-child{border-bottom:none}
+  body.analyze-mode td::before{content:attr(data-label);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;color:var(--tx3)}
+  body.analyze-mode td[data-key="_rank"]{display:none}
+  body.analyze-mode td[data-key="nickname"]{grid-template-columns:1fr;padding-top:4px}
+  body.analyze-mode td[data-key="nickname"]::before{display:none}
+  body.analyze-mode .player-cell{gap:9px}
+  body.analyze-mode .pname{font-size:14px}
+  body.analyze-mode .tank-tag{max-width:100%;justify-self:start}
 }
 
 /* upload progress bar */
@@ -699,16 +722,16 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
   <aside class="sidebar">
     <div class="side-head">
       <div class="side-title">Analyzer</div>
-      <div class="side-sub">Upload replays, review teams, export reports.</div>
+      <div class="side-sub">Import, review, share.</div>
     </div>
     <div class="sb-lbl">Workflow</div>
     <button class="sb-item active" data-section="overview" onclick="switchSection('overview')">
       <span class="sb-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
-      Match Review
+      Review
     </button>
     <button class="sb-item" id="sbAnalytics" data-section="analytics" onclick="switchSection('analytics')">
       <span class="sb-ico"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>
-      Reports
+      Charts
     </button>
     <div class="sb-lbl">Tables</div>
     <button class="sb-item dim" id="sbOurTeam" data-section="our" onclick="switchSection('our')">
@@ -793,7 +816,7 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
         </div>
 
         <div class="upload-card">
-          <div class="upload-card-title">Analyze replays</div>
+          <div class="upload-card-title">Replay input</div>
           <div class="upload-grid">
             <div>
               <div class="mode-switch" aria-label="Analysis mode">
@@ -832,15 +855,17 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
             </div>
 
             <div class="action-panel">
-              <div class="action-panel-title">Excel workflow</div>
+              <div class="action-panel-title">Report actions</div>
               <button class="btn btn-or" id="btnExportPanel" disabled onclick="exportXlsx()">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 Export Excel
               </button>
               <button class="btn btn-ghost" id="btnSharePanel" disabled onclick="createShareLink()">Share 24h link</button>
               <button class="btn btn-ghost" onclick="document.getElementById('excelInput').click()">Import team Excel</button>
-              <div class="db-status" id="shareStatus">No shared link created</div>
-              <div class="db-status" id="teamDbStatus">No team database loaded</div>
+              <div class="action-panel-status">
+                <div class="db-status" id="shareStatus">No shared link created</div>
+                <div class="db-status" id="teamDbStatus">No team database loaded</div>
+              </div>
               <div class="session-bar hidden" id="sessionControls">
                 <button class="btn btn-ghost" id="startSessionBtn" onclick="startLiveSession()">Start Session</button>
                 <button class="btn btn-ghost" id="finishSessionBtn" onclick="finishLiveSession()" disabled>Finish</button>
@@ -881,7 +906,7 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
     <div class="sec-tabs" id="secTabs">
       <button class="sec-tab active" id="tabOverview" onclick="switchSection('overview')">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-        Match Overview
+        Review
       </button>
       <button class="sec-tab" id="tabOur" onclick="switchSection('our')">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
@@ -938,7 +963,7 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
           <div class="chart-box"><div class="panel-title">Team Averages</div><canvas id="chartAverages" width="520" height="220"></canvas></div>
           <div class="chart-box"><div class="panel-title">Tank Type Mix</div><canvas id="chartTypes" width="520" height="220"></canvas></div>
           <div class="chart-box"><div class="panel-title">Top BPR Players</div><canvas id="chartTopBpr" width="520" height="220"></canvas></div>
-          <div class="summary-box"><div class="panel-title">AI Session Summary</div><div class="summary-text" id="aiSummary">-</div></div>
+          <div class="summary-box"><div class="panel-title">Session Summary</div><div class="summary-text" id="aiSummary">-</div></div>
         </div>
       </div>
     </div>
@@ -1404,6 +1429,7 @@ async function generatePath() {
 function applyResults(j) {
   ourData   = j.our_team   || [];
   enemyData = j.enemy_team || [];
+  document.body.classList.add('has-session');
   lastSession = {
     processed:j.processed || 0,
     discovered:j.discovered || j.processed || 0,
@@ -1735,7 +1761,7 @@ function renderTable(team) {
   }
   emEl.style.display = 'none';
   cntEl.textContent = `${rows.length} player${rows.length!==1?'s':''}`;
-  tbEl.innerHTML = rows.map(p => `<tr>${vc.map(c=>`<td>${cell(c,p,rankMap[p.account_id])}</td>`).join('')}</tr>`).join('');
+  tbEl.innerHTML = rows.map(p => `<tr>${vc.map(c=>`<td data-label="${escAttr(c.h)}" data-key="${escAttr(c.k)}">${cell(c,p,rankMap[p.account_id])}</td>`).join('')}</tr>`).join('');
 }
 
 function doSort(team, k) {
@@ -1963,6 +1989,7 @@ async function copySessionSummary() {
 // â”€â”€ Clear â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function clearAll() {
   ourData=[]; enemyData=[];
+  document.body.classList.remove('has-session');
   lastSession = {processed:0, discovered:0, errors:[], mode:analysisMode, uploads:0};
   liveSession = emptyLiveSession();
   localStorage.removeItem('blitzscrim.liveSession');
