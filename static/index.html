@@ -219,6 +219,7 @@ body.shared-mode .upload-grid{display:block}
 .db-status{font-size:12px;color:var(--tx3);line-height:1.4}
 .db-status strong{color:var(--tx)}
 .import-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:0}
+body.analyze-mode .import-row{grid-column:1 / -1;display:grid;grid-template-columns:minmax(260px,1fr) auto;gap:8px;align-items:center;margin-top:2px}
 .import-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .drop-zone{border:1px dashed var(--br2);border-radius:var(--r);background:#151515;padding:16px;display:flex;align-items:center;justify-content:space-between;gap:14px;transition:border-color .15s,background .15s;min-height:92px;cursor:pointer}
 .drop-zone.drag{border-color:var(--or);background:var(--or-dim)}
@@ -504,6 +505,8 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
   body.analyze-mode .new-analyze-card{margin:0;padding:12px;align-items:flex-start;flex-direction:column}
   body.analyze-mode .upload-card-title{margin-bottom:12px}
   body.analyze-mode .upload-grid{display:grid;grid-template-columns:1fr;gap:12px}
+  body.analyze-mode .import-row{grid-template-columns:1fr}
+  body.analyze-mode .import-row .btn{width:100%;justify-content:center}
   body.analyze-mode .mode-switch{grid-template-columns:1fr 1fr;margin-bottom:0}
   body.analyze-mode .mode-btn{min-height:42px}
   body.analyze-mode .drop-zone{min-height:132px;padding:14px;gap:14px}
@@ -617,6 +620,7 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
     <select class="lang-select" id="langSelect" title="Language">
       <option value="en">EN</option>
       <option value="fr">FR</option>
+      <option value="ru">RU</option>
     </select>
     <select class="share-expiry" id="shareTtlSelect" title="Share link expiration">
       <option value="86400">24h</option>
@@ -847,15 +851,6 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
                 <button class="btn btn-ghost" id="finishSessionBtn" onclick="finishLiveSession()" disabled>Finish</button>
                 <div class="session-meta" id="sessionMeta">No active session</div>
               </div>
-              <div class="import-row">
-                <input class="f-input f-input-wide local-only" id="folderInput" type="text"
-                  placeholder="D:\World of Tanks Blitz\replays\2026-03-18"
-                  onkeydown="if(event.key==='Enter')generatePath()"/>
-                <button class="btn btn-or local-only" onclick="generatePath()">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                  Generate
-                </button>
-              </div>
             </div>
 
             <div class="drop-zone" id="dropZone" role="button" tabindex="0" onclick="openReplayPicker(event)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openReplayPicker(event)}">
@@ -876,6 +871,15 @@ td{padding:12px 14px;font-size:13px;color:var(--tx2);vertical-align:middle}
                 <button class="link-btn desktop-only" onclick="event.stopPropagation();document.getElementById('folderFileInput').click()" data-i18n="upload.folder">Folder</button>
                 <button class="link-btn" id="clearBtn" onclick="event.stopPropagation();clearAll()" style="display:none" data-i18n="upload.clear">Clear</button>
               </div>
+            </div>
+            <div class="import-row local-only">
+              <input class="f-input f-input-wide" id="folderInput" type="text"
+                placeholder="D:\World of Tanks Blitz\replays\2026-03-18"
+                onkeydown="if(event.key==='Enter')generatePath()"/>
+              <button class="btn btn-or" onclick="generatePath()">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <span data-i18n="upload.generate">Generate</span>
+              </button>
             </div>
           </div>
           <div class="hidden-status">
@@ -1072,13 +1076,14 @@ const I18N = {
     'upload.select':'Select Files',
     'upload.folder':'Folder',
     'upload.clear':'Clear',
+    'upload.generate':'Generate',
     'new.title':'Analysis loaded',
     'new.sub':'Start a new analysis to upload another replay set.',
     'new.button':'New Analyze',
     'side.title':'Analyzer',
     'side.sub':'Import, review, share.',
     'side.workflow':'Workflow',
-    'side.review':'Vue d’ensemble',
+    'side.review':'Review',
     'side.charts':'Charts',
     'side.tables':'Tables',
     'side.our':'Our Team',
@@ -1125,13 +1130,14 @@ const I18N = {
     'upload.select':'Choisir fichiers',
     'upload.folder':'Dossier',
     'upload.clear':'Effacer',
+    'upload.generate':'Générer',
     'new.title':'Analyse chargée',
     'new.sub':'Lance une nouvelle analyse pour importer un autre groupe de replays.',
     'new.button':'Nouvelle analyse',
     'side.title':'Analyseur',
     'side.sub':'Importer, analyser, partager.',
     'side.workflow':'Workflow',
-    'side.review':'Review',
+    'side.review':'Vue d’ensemble',
     'side.charts':'Graphiques',
     'side.tables':'Tableaux',
     'side.our':'Notre équipe',
@@ -1165,6 +1171,60 @@ const I18N = {
     'col.shots':'Tirs',
     'col.hits':'Touches',
     'col.pens':'Péné.',
+    'col.account_id':'Account ID'
+  },
+  ru: {
+    'nav.home':'Главная',
+    'nav.analyze':'Анализ',
+    'actions.share':'Поделиться',
+    'actions.export':'Экспорт',
+    'mode.scrim':'Тренировка',
+    'mode.individual':'Индивидуальный',
+    'upload.title':'Перетащите файлы реплеев сюда',
+    'upload.select':'Выбрать файлы',
+    'upload.folder':'Папка',
+    'upload.clear':'Очистить',
+    'upload.generate':'Запуск',
+    'new.title':'Анализ загружен',
+    'new.sub':'Начните новый анализ, чтобы загрузить другой набор реплеев.',
+    'new.button':'Новый анализ',
+    'side.title':'Анализатор',
+    'side.sub':'Импорт, просмотр, репост.',
+    'side.workflow':'Процесс',
+    'side.review':'Обзор',
+    'side.charts':'Графики',
+    'side.tables':'Таблицы',
+    'side.our':'Наша команда',
+    'side.enemy':'Вражеская команда',
+    'side.system':'Система',
+    'side.settings':'Настройки',
+    'bpr.help':'BPR 2.0 — это рейтинг эффективности в реплее, который учитывает урон, точность, поддержку и вклад в режим боя. Он предназначен для сравнения игроков внутри анализируемой сессии.',
+    'col._rank':'#',
+    'col.nickname':'Игрок',
+    'col.BPR':'BPR 2.0',
+    'col.battles':'Бои',
+    'col.main_tank':'Основной танк',
+    'col.HT':'ТТ',
+    'col.MT':'СТ',
+    'col.LT':'ЛТ',
+    'col.TD':'ПТ',
+    'col.ADR':'ADR',
+    'col.KPR':'KPR',
+    'col.frags':'Фраги',
+    'col.DE':'DE',
+    'col.assist':'Ассист',
+    'col.blocked':'Заблокировано',
+    'col.AccH':'Попад. %',
+    'col.AccP':'Проб. %',
+    'col.Firepower':'Огневая мощь',
+    'col.AIM':'Точность',
+    'col.Support':'Поддержка',
+    'col.Supremacy':'Превосходство',
+    'col.iPoints':'iPoints',
+    'col.sPoints':'sPoints',
+    'col.shots':'Выстрелы',
+    'col.hits':'Попадания',
+    'col.pens':'Пробития',
     'col.account_id':'Account ID'
   }
 };
