@@ -1,0 +1,2926 @@
+[
+  {
+    "name": "T-34",
+    "dev_id": 1
+  },
+  {
+    "name": "Pz.Kpfw. IV Ausf. G",
+    "dev_id": 17
+  },
+  {
+    "name": "T14",
+    "dev_id": 33
+  },
+  {
+    "name": "Type 59",
+    "dev_id": 49
+  },
+  {
+    "name": "Vickers Medium Mk. I",
+    "dev_id": 81
+  },
+  {
+    "name": "Vindicator Ultramarines",
+    "dev_id": 113
+  },
+  {
+    "name": "SU-85",
+    "dev_id": 257
+  },
+  {
+    "name": "M3 Stuart",
+    "dev_id": 289
+  },
+  {
+    "name": "D2",
+    "dev_id": 321
+  },
+  {
+    "name": "Vickers Medium Mk. II",
+    "dev_id": 337
+  },
+  {
+    "name": "Chi-Ni",
+    "dev_id": 353
+  },
+  {
+    "name": "Progetto M40 mod. 65",
+    "dev_id": 385
+  },
+  {
+    "name": "IS",
+    "dev_id": 513
+  },
+  {
+    "name": "Tiger I",
+    "dev_id": 529
+  },
+  {
+    "name": "T1 Cunningham",
+    "dev_id": 545
+  },
+  {
+    "name": "Renault FT",
+    "dev_id": 577
+  },
+  {
+    "name": "Sherman Firefly",
+    "dev_id": 593
+  },
+  {
+    "name": "Renault Otsu",
+    "dev_id": 609
+  },
+  {
+    "name": "Stridsvagn 74A2",
+    "dev_id": 625
+  },
+  {
+    "name": "Prototipo Standard B",
+    "dev_id": 641
+  },
+  {
+    "name": "BT-7",
+    "dev_id": 769
+  },
+  {
+    "name": "Pz.Kpfw. 35 (t)",
+    "dev_id": 785
+  },
+  {
+    "name": "M6",
+    "dev_id": 801
+  },
+  {
+    "name": "WZ-111",
+    "dev_id": 817
+  },
+  {
+    "name": "Matilda",
+    "dev_id": 849
+  },
+  {
+    "name": "Type 95 Ha-Go",
+    "dev_id": 865
+  },
+  {
+    "name": "Edelweiss",
+    "dev_id": 881
+  },
+  {
+    "name": "P.44 Pantera",
+    "dev_id": 897
+  },
+  {
+    "name": "BT-2",
+    "dev_id": 1025
+  },
+  {
+    "name": "StuG III Ausf. G",
+    "dev_id": 1041
+  },
+  {
+    "name": "M4 Sherman",
+    "dev_id": 1057
+  },
+  {
+    "name": "T-34-1",
+    "dev_id": 1073
+  },
+  {
+    "name": "B1",
+    "dev_id": 1089
+  },
+  {
+    "name": "Cromwell",
+    "dev_id": 1105
+  },
+  {
+    "name": "Type 5 Chi-Ri",
+    "dev_id": 1121
+  },
+  {
+    "name": "Predator Ultramarines",
+    "dev_id": 1137
+  },
+  {
+    "name": "P.43 ter",
+    "dev_id": 1153
+  },
+  {
+    "name": "Panther I",
+    "dev_id": 1297
+  },
+  {
+    "name": "M4A3E8 Sherman",
+    "dev_id": 1313
+  },
+  {
+    "name": "Renault NC-31",
+    "dev_id": 1329
+  },
+  {
+    "name": "Churchill Mk. VI",
+    "dev_id": 1361
+  },
+  {
+    "name": "Type 3 Chi-Nu",
+    "dev_id": 1377
+  },
+  {
+    "name": "Nameless",
+    "dev_id": 1393
+  },
+  {
+    "name": "P.43 bis",
+    "dev_id": 1409
+  },
+  {
+    "name": "T-28 mod. 1940",
+    "dev_id": 1537
+  },
+  {
+    "name": "Jagdpanzer IV",
+    "dev_id": 1553
+  },
+  {
+    "name": "T20",
+    "dev_id": 1569
+  },
+  {
+    "name": "T-34-2",
+    "dev_id": 1585
+  },
+  {
+    "name": "D1",
+    "dev_id": 1601
+  },
+  {
+    "name": "Sherman V",
+    "dev_id": 1617
+  },
+  {
+    "name": "Type 1 Chi-He",
+    "dev_id": 1633
+  },
+  {
+    "name": "Helsing",
+    "dev_id": 1649
+  },
+  {
+    "name": "Lago",
+    "dev_id": 1665
+  },
+  {
+    "name": "Hetzer",
+    "dev_id": 1809
+  },
+  {
+    "name": "M2 Light Tank",
+    "dev_id": 1825
+  },
+  {
+    "name": "WZ-120",
+    "dev_id": 1841
+  },
+  {
+    "name": "Bat.-Châtillon 25 t AP",
+    "dev_id": 1857
+  },
+  {
+    "name": "Type 4 Chi-To",
+    "dev_id": 1889
+  },
+  {
+    "name": "O-47",
+    "dev_id": 1905
+  },
+  {
+    "name": "Strv m/42",
+    "dev_id": 1921
+  },
+  {
+    "name": "A-20",
+    "dev_id": 2049
+  },
+  {
+    "name": "Pz.Kpfw. II",
+    "dev_id": 2065
+  },
+  {
+    "name": "WZ-111 model 1-4",
+    "dev_id": 2097
+  },
+  {
+    "name": "Crusader",
+    "dev_id": 2129
+  },
+  {
+    "name": "Type 97 Chi-Ha",
+    "dev_id": 2145
+  },
+  {
+    "name": "WZ 135G FT Blaze",
+    "dev_id": 2161
+  },
+  {
+    "name": "14TP",
+    "dev_id": 2177
+  },
+  {
+    "name": "SU-152",
+    "dev_id": 2305
+  },
+  {
+    "name": "VK 36.01 (H)",
+    "dev_id": 2321
+  },
+  {
+    "name": "Vickers Mk. E Type B",
+    "dev_id": 2353
+  },
+  {
+    "name": "FCM 36 Pak 40",
+    "dev_id": 2369
+  },
+  {
+    "name": "Vickers Medium Mk. III",
+    "dev_id": 2385
+  },
+  {
+    "name": "Type 98 Ke-Ni",
+    "dev_id": 2401
+  },
+  {
+    "name": "10TP",
+    "dev_id": 2433
+  },
+  {
+    "name": "T-34-85",
+    "dev_id": 2561
+  },
+  {
+    "name": "VK 30.01 (H)",
+    "dev_id": 2577
+  },
+  {
+    "name": "T30",
+    "dev_id": 2593
+  },
+  {
+    "name": "Type 64",
+    "dev_id": 2609
+  },
+  {
+    "name": "ARL 44",
+    "dev_id": 2625
+  },
+  {
+    "name": "STA-1",
+    "dev_id": 2657
+  },
+  {
+    "name": "Vickers Mk. F",
+    "dev_id": 2689
+  },
+  {
+    "name": "KV-1S",
+    "dev_id": 2817
+  },
+  {
+    "name": "T34",
+    "dev_id": 2849
+  },
+  {
+    "name": "WZ-110",
+    "dev_id": 2865
+  },
+  {
+    "name": "AMX 40",
+    "dev_id": 2881
+  },
+  {
+    "name": "Churchill I",
+    "dev_id": 2897
+  },
+  {
+    "name": "Type 5 Ke-Ho",
+    "dev_id": 2913
+  },
+  {
+    "name": "Progetto M35 mod. 46",
+    "dev_id": 2945
+  },
+  {
+    "name": "T-46",
+    "dev_id": 3073
+  },
+  {
+    "name": "Leichttraktor",
+    "dev_id": 3089
+  },
+  {
+    "name": "M3 Lee",
+    "dev_id": 3105
+  },
+  {
+    "name": "M5A1 Stuart",
+    "dev_id": 3121
+  },
+  {
+    "name": "AMX 50 100",
+    "dev_id": 3137
+  },
+  {
+    "name": "Black Prince",
+    "dev_id": 3153
+  },
+  {
+    "name": "50TP prototyp",
+    "dev_id": 3201
+  },
+  {
+    "name": "MS-1 mod. 1",
+    "dev_id": 3329
+  },
+  {
+    "name": "Pz.Kpfw. 38 (t)",
+    "dev_id": 3345
+  },
+  {
+    "name": "T1 Heavy Tank",
+    "dev_id": 3361
+  },
+  {
+    "name": "WZ-131",
+    "dev_id": 3377
+  },
+  {
+    "name": "Type 61",
+    "dev_id": 3425
+  },
+  {
+    "name": "Emil I",
+    "dev_id": 3457
+  },
+  {
+    "name": "SU-100",
+    "dev_id": 3585
+  },
+  {
+    "name": "Panzerjäger I",
+    "dev_id": 3601
+  },
+  {
+    "name": "IS-2",
+    "dev_id": 3633
+  },
+  {
+    "name": "Bat.-Châtillon 25 t",
+    "dev_id": 3649
+  },
+  {
+    "name": "STB-1",
+    "dev_id": 3681
+  },
+  {
+    "name": "Lupus",
+    "dev_id": 3697
+  },
+  {
+    "name": "Strv 74",
+    "dev_id": 3713
+  },
+  {
+    "name": "Jagdpanther",
+    "dev_id": 3857
+  },
+  {
+    "name": "T29",
+    "dev_id": 3873
+  },
+  {
+    "name": "WZ-132",
+    "dev_id": 3889
+  },
+  {
+    "name": "AMX 50 120",
+    "dev_id": 3905
+  },
+  {
+    "name": "Caernarvon",
+    "dev_id": 3921
+  },
+  {
+    "name": "Ho-Ri Type III",
+    "dev_id": 3937
+  },
+  {
+    "name": "T 55A",
+    "dev_id": 3953
+  },
+  {
+    "name": "Leo",
+    "dev_id": 3969
+  },
+  {
+    "name": "VK 30.02 (D)",
+    "dev_id": 4113
+  },
+  {
+    "name": "WZ-121",
+    "dev_id": 4145
+  },
+  {
+    "name": "Ho-Ri Type II",
+    "dev_id": 4193
+  },
+  {
+    "name": "WarDuck",
+    "dev_id": 4209
+  },
+  {
+    "name": "Emil II",
+    "dev_id": 4225
+  },
+  {
+    "name": "T-44",
+    "dev_id": 4353
+  },
+  {
+    "name": "Pz.Kpfw. III",
+    "dev_id": 4369
+  },
+  {
+    "name": "T32",
+    "dev_id": 4385
+  },
+  {
+    "name": "Type 2597 Chi-Ha",
+    "dev_id": 4401
+  },
+  {
+    "name": "AMX M4 mle. 54",
+    "dev_id": 4417
+  },
+  {
+    "name": "Conqueror",
+    "dev_id": 4433
+  },
+  {
+    "name": "IS-2 Pravda SP",
+    "dev_id": 4449
+  },
+  {
+    "name": "Hafen",
+    "dev_id": 4465
+  },
+  {
+    "name": "Kranvagn",
+    "dev_id": 4481
+  },
+  {
+    "name": "T-26",
+    "dev_id": 4609
+  },
+  {
+    "name": "Type T-34",
+    "dev_id": 4657
+  },
+  {
+    "name": "Churchill VII",
+    "dev_id": 4689
+  },
+  {
+    "name": "Firefly Saunders SP",
+    "dev_id": 4705
+  },
+  {
+    "name": "Gravedigger",
+    "dev_id": 4721
+  },
+  {
+    "name": "EMIL 1951",
+    "dev_id": 4737
+  },
+  {
+    "name": "Pz.Kpfw. III Ausf. A",
+    "dev_id": 4881
+  },
+  {
+    "name": "M2 Medium Tank",
+    "dev_id": 4897
+  },
+  {
+    "name": "59-16",
+    "dev_id": 4913
+  },
+  {
+    "name": "AMX 13 90",
+    "dev_id": 4929
+  },
+  {
+    "name": "Valentine Mk. IX",
+    "dev_id": 4945
+  },
+  {
+    "name": "Ho-Ri Type I",
+    "dev_id": 4961
+  },
+  {
+    "name": "Scavenger",
+    "dev_id": 4977
+  },
+  {
+    "name": "P.43/06 anniversario",
+    "dev_id": 4993
+  },
+  {
+    "name": "AT-1",
+    "dev_id": 5121
+  },
+  {
+    "name": "Tiger II",
+    "dev_id": 5137
+  },
+  {
+    "name": "M5 Stuart",
+    "dev_id": 5153
+  },
+  {
+    "name": "Type 58",
+    "dev_id": 5169
+  },
+  {
+    "name": "AMX 13 75",
+    "dev_id": 5185
+  },
+  {
+    "name": "Cruiser Mk. I",
+    "dev_id": 5201
+  },
+  {
+    "name": "Chi-To SPG",
+    "dev_id": 5217
+  },
+  {
+    "name": "Smasher",
+    "dev_id": 5233
+  },
+  {
+    "name": "Pudel",
+    "dev_id": 5249
+  },
+  {
+    "name": "IS-3",
+    "dev_id": 5377
+  },
+  {
+    "name": "VK 16.02 Leopard",
+    "dev_id": 5393
+  },
+  {
+    "name": "M7",
+    "dev_id": 5409
+  },
+  {
+    "name": "WZ-113",
+    "dev_id": 5425
+  },
+  {
+    "name": "AMX 30 1er prototype",
+    "dev_id": 5441
+  },
+  {
+    "name": "Comet",
+    "dev_id": 5457
+  },
+  {
+    "name": "Mitsu 108",
+    "dev_id": 5473
+  },
+  {
+    "name": "Y5 T-34",
+    "dev_id": 5489
+  },
+  {
+    "name": "TVP T 50/51",
+    "dev_id": 5505
+  },
+  {
+    "name": "T2 Medium Tank",
+    "dev_id": 5665
+  },
+  {
+    "name": "121B",
+    "dev_id": 5681
+  },
+  {
+    "name": "Centurion Mk. 7/1",
+    "dev_id": 5713
+  },
+  {
+    "name": "Ju-Nu",
+    "dev_id": 5729
+  },
+  {
+    "name": "Y5 Firefly",
+    "dev_id": 5745
+  },
+  {
+    "name": "Škoda T 50",
+    "dev_id": 5761
+  },
+  {
+    "name": "KV-3",
+    "dev_id": 5889
+  },
+  {
+    "name": "M26 Pershing",
+    "dev_id": 5921
+  },
+  {
+    "name": "59-Patton",
+    "dev_id": 5937
+  },
+  {
+    "name": "AMX 38",
+    "dev_id": 5953
+  },
+  {
+    "name": "Centurion Mk. I",
+    "dev_id": 5969
+  },
+  {
+    "name": "Ju-To",
+    "dev_id": 5985
+  },
+  {
+    "name": "Y5 ELC bis",
+    "dev_id": 6001
+  },
+  {
+    "name": "TVP VTU Koncept",
+    "dev_id": 6017
+  },
+  {
+    "name": "IS-4",
+    "dev_id": 6145
+  },
+  {
+    "name": "Pz.Kpfw. II Luchs",
+    "dev_id": 6161
+  },
+  {
+    "name": "T18",
+    "dev_id": 6177
+  },
+  {
+    "name": "T-34-3",
+    "dev_id": 6193
+  },
+  {
+    "name": "AMX 50 B",
+    "dev_id": 6209
+  },
+  {
+    "name": "FV215b",
+    "dev_id": 6225
+  },
+  {
+    "name": "Chi-Se",
+    "dev_id": 6241
+  },
+  {
+    "name": "M4/FL10",
+    "dev_id": 6257
+  },
+  {
+    "name": "Konštrukta T-34/100",
+    "dev_id": 6273
+  },
+  {
+    "name": "SU-76",
+    "dev_id": 6401
+  },
+  {
+    "name": "Pz.Kpfw. III/IV",
+    "dev_id": 6417
+  },
+  {
+    "name": "T82",
+    "dev_id": 6433
+  },
+  {
+    "name": "WZ-113G FT",
+    "dev_id": 6449
+  },
+  {
+    "name": "AMX 12 t",
+    "dev_id": 6465
+  },
+  {
+    "name": "Covenanter",
+    "dev_id": 6481
+  },
+  {
+    "name": "Type 68",
+    "dev_id": 6497
+  },
+  {
+    "name": "Škoda T 25",
+    "dev_id": 6529
+  },
+  {
+    "name": "T-43",
+    "dev_id": 6657
+  },
+  {
+    "name": "Marder II",
+    "dev_id": 6673
+  },
+  {
+    "name": "T49 ATM",
+    "dev_id": 6689
+  },
+  {
+    "name": "LT vz. 38",
+    "dev_id": 6705
+  },
+  {
+    "name": "BDR G1 B",
+    "dev_id": 6721
+  },
+  {
+    "name": "Type 71",
+    "dev_id": 6753
+  },
+  {
+    "name": "Škoda T 27",
+    "dev_id": 6785
+  },
+  {
+    "name": "SU-85B",
+    "dev_id": 6913
+  },
+  {
+    "name": "Maus",
+    "dev_id": 6929
+  },
+  {
+    "name": "M10 Wolverine",
+    "dev_id": 6945
+  },
+  {
+    "name": "WZ-120-1G FT",
+    "dev_id": 6961
+  },
+  {
+    "name": "AMX M4 mle. 45",
+    "dev_id": 6977
+  },
+  {
+    "name": "Cruiser Mk. II",
+    "dev_id": 6993
+  },
+  {
+    "name": "Type 57",
+    "dev_id": 7009
+  },
+  {
+    "name": "Vulcan",
+    "dev_id": 7025
+  },
+  {
+    "name": "IS-7",
+    "dev_id": 7169
+  },
+  {
+    "name": "VK 30.01 (P)",
+    "dev_id": 7185
+  },
+  {
+    "name": "M36 Jackson",
+    "dev_id": 7201
+  },
+  {
+    "name": "WZ-112-2",
+    "dev_id": 7217
+  },
+  {
+    "name": "FV4202",
+    "dev_id": 7249
+  },
+  {
+    "name": "Ferrum",
+    "dev_id": 7265
+  },
+  {
+    "name": "Lycan",
+    "dev_id": 7281
+  },
+  {
+    "name": "60TP Lewandowskiego",
+    "dev_id": 7297
+  },
+  {
+    "name": "ISU-152",
+    "dev_id": 7425
+  },
+  {
+    "name": "VK 45.02 (P) Ausf. B",
+    "dev_id": 7441
+  },
+  {
+    "name": "T-34-2G FT",
+    "dev_id": 7473
+  },
+  {
+    "name": "Cruiser Mk. IV",
+    "dev_id": 7505
+  },
+  {
+    "name": "Type 5 Ka-Ri",
+    "dev_id": 7521
+  },
+  {
+    "name": "Nightmare",
+    "dev_id": 7537
+  },
+  {
+    "name": "50TP Tyszkiewicza",
+    "dev_id": 7553
+  },
+  {
+    "name": "Ferdinand",
+    "dev_id": 7697
+  },
+  {
+    "name": "T40",
+    "dev_id": 7713
+  },
+  {
+    "name": "WZ-131G FT",
+    "dev_id": 7729
+  },
+  {
+    "name": "Renault FT AC",
+    "dev_id": 7745
+  },
+  {
+    "name": "Cruiser Mk. III",
+    "dev_id": 7761
+  },
+  {
+    "name": "Type 63",
+    "dev_id": 7777
+  },
+  {
+    "name": "Annihilator",
+    "dev_id": 7793
+  },
+  {
+    "name": "53TP Markowskiego",
+    "dev_id": 7809
+  },
+  {
+    "name": "T-54",
+    "dev_id": 7937
+  },
+  {
+    "name": "Jagdtiger",
+    "dev_id": 7953
+  },
+  {
+    "name": "WZ-111-1G FT",
+    "dev_id": 7985
+  },
+  {
+    "name": "Lorraine 40 t",
+    "dev_id": 8001
+  },
+  {
+    "name": "Valentine AT",
+    "dev_id": 8017
+  },
+  {
+    "name": "Type 5 Heavy",
+    "dev_id": 8033
+  },
+  {
+    "name": "Spike",
+    "dev_id": 8049
+  },
+  {
+    "name": "40TP Habicha",
+    "dev_id": 8065
+  },
+  {
+    "name": "Object 704",
+    "dev_id": 8193
+  },
+  {
+    "name": "Pz.Kpfw. 38 (t) n.A.",
+    "dev_id": 8209
+  },
+  {
+    "name": "T28",
+    "dev_id": 8225
+  },
+  {
+    "name": "WZ-111G FT",
+    "dev_id": 8241
+  },
+  {
+    "name": "Renault UE 57",
+    "dev_id": 8257
+  },
+  {
+    "name": "Universal Carrier 2-pdr",
+    "dev_id": 8273
+  },
+  {
+    "name": "Type 95 Ji-Ro",
+    "dev_id": 8289
+  },
+  {
+    "name": "Titan H-Nd",
+    "dev_id": 8305
+  },
+  {
+    "name": "45TP Habicha",
+    "dev_id": 8321
+  },
+  {
+    "name": "Panther II",
+    "dev_id": 8465
+  },
+  {
+    "name": "WZ-111 model 5A",
+    "dev_id": 8497
+  },
+  {
+    "name": "AMX 30 B",
+    "dev_id": 8513
+  },
+  {
+    "name": "AT 15",
+    "dev_id": 8529
+  },
+  {
+    "name": "Titan T24 57",
+    "dev_id": 8561
+  },
+  {
+    "name": "Lansen C",
+    "dev_id": 8577
+  },
+  {
+    "name": "T95",
+    "dev_id": 8737
+  },
+  {
+    "name": "AT 2",
+    "dev_id": 8785
+  },
+  {
+    "name": "O-I Experimental",
+    "dev_id": 8801
+  },
+  {
+    "name": "Titan Mk. I",
+    "dev_id": 8817
+  },
+  {
+    "name": "KV-13",
+    "dev_id": 8961
+  },
+  {
+    "name": "M46 Patton",
+    "dev_id": 8993
+  },
+  {
+    "name": "Ox",
+    "dev_id": 9009
+  },
+  {
+    "name": "Alecto",
+    "dev_id": 9041
+  },
+  {
+    "name": "Type 5 Heavy Zetsu",
+    "dev_id": 9057
+  },
+  {
+    "name": "Titan-54d",
+    "dev_id": 9073
+  },
+  {
+    "name": "Škoda T 56",
+    "dev_id": 9089
+  },
+  {
+    "name": "IS-6",
+    "dev_id": 9217
+  },
+  {
+    "name": "T25 AT",
+    "dev_id": 9249
+  },
+  {
+    "name": "Type 58",
+    "dev_id": 9265
+  },
+  {
+    "name": "FV215b (183)",
+    "dev_id": 9297
+  },
+  {
+    "name": "Type 4 Heavy",
+    "dev_id": 9313
+  },
+  {
+    "name": "Titan-150",
+    "dev_id": 9329
+  },
+  {
+    "name": "Svear",
+    "dev_id": 9345
+  },
+  {
+    "name": "E 100",
+    "dev_id": 9489
+  },
+  {
+    "name": "M103",
+    "dev_id": 9505
+  },
+  {
+    "name": "WZ-122 TM",
+    "dev_id": 9521
+  },
+  {
+    "name": "AT 8",
+    "dev_id": 9553
+  },
+  {
+    "name": "O-Ni",
+    "dev_id": 9569
+  },
+  {
+    "name": "CS-52 LIS",
+    "dev_id": 9601
+  },
+  {
+    "name": "E 75",
+    "dev_id": 9745
+  },
+  {
+    "name": "M24 Chaffee",
+    "dev_id": 9761
+  },
+  {
+    "name": "WZ-114",
+    "dev_id": 9777
+  },
+  {
+    "name": "Somua SAu 40",
+    "dev_id": 9793
+  },
+  {
+    "name": "Churchill Gun Carrier",
+    "dev_id": 9809
+  },
+  {
+    "name": "O-Ho",
+    "dev_id": 9825
+  },
+  {
+    "name": "Rover",
+    "dev_id": 9841
+  },
+  {
+    "name": "Škoda T 45",
+    "dev_id": 9857
+  },
+  {
+    "name": "SU-101",
+    "dev_id": 9985
+  },
+  {
+    "name": "VK 28.01",
+    "dev_id": 10001
+  },
+  {
+    "name": "M4A3E2 Sherman Jumbo",
+    "dev_id": 10017
+  },
+  {
+    "name": "WZ-132A",
+    "dev_id": 10033
+  },
+  {
+    "name": "S35 CA",
+    "dev_id": 10049
+  },
+  {
+    "name": "AT 7",
+    "dev_id": 10065
+  },
+  {
+    "name": "O-I",
+    "dev_id": 10081
+  },
+  {
+    "name": "Medjay",
+    "dev_id": 10097
+  },
+  {
+    "name": "Carro da Combattimento 45t",
+    "dev_id": 10113
+  },
+  {
+    "name": "SU-100M1",
+    "dev_id": 10241
+  },
+  {
+    "name": "E 50",
+    "dev_id": 10257
+  },
+  {
+    "name": "M8A1",
+    "dev_id": 10273
+  },
+  {
+    "name": "WZ-132-1",
+    "dev_id": 10289
+  },
+  {
+    "name": "Kame",
+    "dev_id": 10337
+  },
+  {
+    "name": "Pharaoh",
+    "dev_id": 10353
+  },
+  {
+    "name": "Controcarro 3 Minotauro",
+    "dev_id": 10369
+  },
+  {
+    "name": "KV-2",
+    "dev_id": 10497
+  },
+  {
+    "name": "VK 45.02 (P) Ausf. A",
+    "dev_id": 10513
+  },
+  {
+    "name": "T67",
+    "dev_id": 10529
+  },
+  {
+    "name": "Wind",
+    "dev_id": 10545
+  },
+  {
+    "name": "Controcarro 1 Mk. 2",
+    "dev_id": 10625
+  },
+  {
+    "name": "ST-I",
+    "dev_id": 10753
+  },
+  {
+    "name": "Tiger (P)",
+    "dev_id": 10769
+  },
+  {
+    "name": "T110E5",
+    "dev_id": 10785
+  },
+  {
+    "name": "AMX AC mle. 46",
+    "dev_id": 10817
+  },
+  {
+    "name": "Semovente Controcarro mod. 1964",
+    "dev_id": 10881
+  },
+  {
+    "name": "KV-4",
+    "dev_id": 11009
+  },
+  {
+    "name": "Sturer Emil",
+    "dev_id": 11025
+  },
+  {
+    "name": "T25/2",
+    "dev_id": 11041
+  },
+  {
+    "name": "114 SP2",
+    "dev_id": 11057
+  },
+  {
+    "name": "AMX 50 Foch",
+    "dev_id": 11073
+  },
+  {
+    "name": "Semovente Controcarro mod. 1956",
+    "dev_id": 11137
+  },
+  {
+    "name": "T-150",
+    "dev_id": 11265
+  },
+  {
+    "name": "Kampfpanzer 70",
+    "dev_id": 11281
+  },
+  {
+    "name": "T28 Prototype",
+    "dev_id": 11297
+  },
+  {
+    "name": "Basilisk",
+    "dev_id": 11377
+  },
+  {
+    "name": "Semovente M43 Bassotto",
+    "dev_id": 11393
+  },
+  {
+    "name": "IS-8",
+    "dev_id": 11521
+  },
+  {
+    "name": "Jagdpanther II",
+    "dev_id": 11537
+  },
+  {
+    "name": "M18 Hellcat",
+    "dev_id": 11553
+  },
+  {
+    "name": "BZ-58-2",
+    "dev_id": 11569
+  },
+  {
+    "name": "ARL V39",
+    "dev_id": 11585
+  },
+  {
+    "name": "Forest Witch",
+    "dev_id": 11633
+  },
+  {
+    "name": "Semovente M41",
+    "dev_id": 11649
+  },
+  {
+    "name": "KV-1",
+    "dev_id": 11777
+  },
+  {
+    "name": "Nashorn",
+    "dev_id": 11793
+  },
+  {
+    "name": "T23E3",
+    "dev_id": 11809
+  },
+  {
+    "name": "BZ-75",
+    "dev_id": 11825
+  },
+  {
+    "name": "Nebulon",
+    "dev_id": 11889
+  },
+  {
+    "name": "Shadowhunter",
+    "dev_id": 11905
+  },
+  {
+    "name": "SU-122-54",
+    "dev_id": 12033
+  },
+  {
+    "name": "Jagdpanzer E 100",
+    "dev_id": 12049
+  },
+  {
+    "name": "T95E2",
+    "dev_id": 12065
+  },
+  {
+    "name": "BZ-68",
+    "dev_id": 12081
+  },
+  {
+    "name": "AMX AC mle. 48",
+    "dev_id": 12097
+  },
+  {
+    "name": "Glacier",
+    "dev_id": 12145
+  },
+  {
+    "name": "Strv K",
+    "dev_id": 12161
+  },
+  {
+    "name": "E 50 Ausf. M",
+    "dev_id": 12305
+  },
+  {
+    "name": "T6E1 Grizzly",
+    "dev_id": 12321
+  },
+  {
+    "name": "BZ-58",
+    "dev_id": 12337
+  },
+  {
+    "name": "Bisonte C45",
+    "dev_id": 12417
+  },
+  {
+    "name": "K-91",
+    "dev_id": 12545
+  },
+  {
+    "name": "BZ-166",
+    "dev_id": 12593
+  },
+  {
+    "name": "Titan Charioteer",
+    "dev_id": 12657
+  },
+  {
+    "name": "Bofors Tornvagn",
+    "dev_id": 12673
+  },
+  {
+    "name": "116-F3",
+    "dev_id": 12849
+  },
+  {
+    "name": "Groundtank",
+    "dev_id": 12913
+  },
+  {
+    "name": "TNH T Vz. 51",
+    "dev_id": 12929
+  },
+  {
+    "name": "Pz.Kpfw. II Ausf. G",
+    "dev_id": 13073
+  },
+  {
+    "name": "T110E4",
+    "dev_id": 13089
+  },
+  {
+    "name": "BZ-176",
+    "dev_id": 13105
+  },
+  {
+    "name": "AC-04 Wedge",
+    "dev_id": 13169
+  },
+  {
+    "name": "Vz. 55",
+    "dev_id": 13185
+  },
+  {
+    "name": "Durchbruchswagen 2",
+    "dev_id": 13329
+  },
+  {
+    "name": "T26E4 SuperPershing",
+    "dev_id": 13345
+  },
+  {
+    "name": "AC-05 Highlander",
+    "dev_id": 13425
+  },
+  {
+    "name": "Aeonix",
+    "dev_id": 13441
+  },
+  {
+    "name": "Object 268",
+    "dev_id": 13569
+  },
+  {
+    "name": "Type 59 spc",
+    "dev_id": 13617
+  },
+  {
+    "name": "AC-06 Ocelote",
+    "dev_id": 13681
+  },
+  {
+    "name": "TNH 105/1000",
+    "dev_id": 13697
+  },
+  {
+    "name": "T-62A",
+    "dev_id": 13825
+  },
+  {
+    "name": "Indien-Panzer",
+    "dev_id": 13841
+  },
+  {
+    "name": "T110E3",
+    "dev_id": 13857
+  },
+  {
+    "name": "BZ-74-1",
+    "dev_id": 13873
+  },
+  {
+    "name": "AMX 50 Foch (155)",
+    "dev_id": 13889
+  },
+  {
+    "name": "AC-07 Rebelde",
+    "dev_id": 13937
+  },
+  {
+    "name": "Vz. 44-1",
+    "dev_id": 13953
+  },
+  {
+    "name": "VK 30.01 (D)",
+    "dev_id": 14097
+  },
+  {
+    "name": "M48 Patton",
+    "dev_id": 14113
+  },
+  {
+    "name": "BZT-70",
+    "dev_id": 14129
+  },
+  {
+    "name": "AMX ELC bis",
+    "dev_id": 14145
+  },
+  {
+    "name": "Silencer",
+    "dev_id": 14193
+  },
+  {
+    "name": "Škoda P-JS",
+    "dev_id": 14209
+  },
+  {
+    "name": "Object 263",
+    "dev_id": 14337
+  },
+  {
+    "name": "WZ-120G FT",
+    "dev_id": 14385
+  },
+  {
+    "name": "Swindler",
+    "dev_id": 14449
+  },
+  {
+    "name": "DS PZInż",
+    "dev_id": 14465
+  },
+  {
+    "name": "Leopard 1",
+    "dev_id": 14609
+  },
+  {
+    "name": "T69",
+    "dev_id": 14625
+  },
+  {
+    "name": "Fänrik",
+    "dev_id": 14705
+  },
+  {
+    "name": "Strv 81",
+    "dev_id": 14721
+  },
+  {
+    "name": "Leopard Prototyp A",
+    "dev_id": 14865
+  },
+  {
+    "name": "T57 Heavy Tank",
+    "dev_id": 14881
+  },
+  {
+    "name": "Mutant",
+    "dev_id": 14961
+  },
+  {
+    "name": "CS-63",
+    "dev_id": 14977
+  },
+  {
+    "name": "T21",
+    "dev_id": 15137
+  },
+  {
+    "name": "AC-06V Forger",
+    "dev_id": 15217
+  },
+  {
+    "name": "CS-59",
+    "dev_id": 15233
+  },
+  {
+    "name": "T54E1",
+    "dev_id": 15393
+  },
+  {
+    "name": "ZQ-90",
+    "dev_id": 15409
+  },
+  {
+    "name": "Chieftain/T95",
+    "dev_id": 15441
+  },
+  {
+    "name": "Endurance",
+    "dev_id": 15473
+  },
+  {
+    "name": "CS-53",
+    "dev_id": 15489
+  },
+  {
+    "name": "Object 907",
+    "dev_id": 15617
+  },
+  {
+    "name": "T71",
+    "dev_id": 15649
+  },
+  {
+    "name": "Chieftain Mk. 6",
+    "dev_id": 15697
+  },
+  {
+    "name": "CS-44",
+    "dev_id": 15745
+  },
+  {
+    "name": "VK 30.02 (M)",
+    "dev_id": 15889
+  },
+  {
+    "name": "M60",
+    "dev_id": 15905
+  },
+  {
+    "name": "Renault R35",
+    "dev_id": 15937
+  },
+  {
+    "name": "FV201 (A45)",
+    "dev_id": 15953
+  },
+  {
+    "name": "Toxique",
+    "dev_id": 15985
+  },
+  {
+    "name": "B.U.G.I.",
+    "dev_id": 16001
+  },
+  {
+    "name": "Pz.Sfl. IVc",
+    "dev_id": 16145
+  },
+  {
+    "name": "M4A1 Revalorisé",
+    "dev_id": 16193
+  },
+  {
+    "name": "Cruiser Mk. I",
+    "dev_id": 16209
+  },
+  {
+    "name": "Outcast",
+    "dev_id": 16257
+  },
+  {
+    "name": "Waffenträger auf Pz. IV",
+    "dev_id": 16401
+  },
+  {
+    "name": "AMX 13 57",
+    "dev_id": 16449
+  },
+  {
+    "name": "Cruiser Mk. I",
+    "dev_id": 16465
+  },
+  {
+    "name": "E-10",
+    "dev_id": 16497
+  },
+  {
+    "name": "MT-25",
+    "dev_id": 16641
+  },
+  {
+    "name": "Rhm.-Borsig Waffenträger",
+    "dev_id": 16657
+  },
+  {
+    "name": "T37",
+    "dev_id": 16673
+  },
+  {
+    "name": "AMX M4 mle. 49",
+    "dev_id": 16705
+  },
+  {
+    "name": "DTH-STR",
+    "dev_id": 16753
+  },
+  {
+    "name": "SMV CC-64 Vipera",
+    "dev_id": 16769
+  },
+  {
+    "name": "Object 140",
+    "dev_id": 16897
+  },
+  {
+    "name": "KV-JR",
+    "dev_id": 17009
+  },
+  {
+    "name": "Progetto CC55 mod. 54",
+    "dev_id": 17025
+  },
+  {
+    "name": "Pz.Kpfw. IV Ausf. A",
+    "dev_id": 17169
+  },
+  {
+    "name": "FV4004 Conway",
+    "dev_id": 17233
+  },
+  {
+    "name": "Souleater",
+    "dev_id": 17265
+  },
+  {
+    "name": "Progetto C50 mod. 66",
+    "dev_id": 17281
+  },
+  {
+    "name": "Pz.Kpfw. IV Ausf. D",
+    "dev_id": 17425
+  },
+  {
+    "name": "Charioteer",
+    "dev_id": 17489
+  },
+  {
+    "name": "Lightbringer",
+    "dev_id": 17521
+  },
+  {
+    "name": "Carro d'assalto P.88",
+    "dev_id": 17537
+  },
+  {
+    "name": "Somua SM",
+    "dev_id": 17729
+  },
+  {
+    "name": "FV217 Badger",
+    "dev_id": 17745
+  },
+  {
+    "name": "Titan Strife",
+    "dev_id": 17777
+  },
+  {
+    "name": "Rinoceronte",
+    "dev_id": 17793
+  },
+  {
+    "name": "M41 Walker Bulldog",
+    "dev_id": 17953
+  },
+  {
+    "name": "Bretagne Panther",
+    "dev_id": 17985
+  },
+  {
+    "name": "FV4005",
+    "dev_id": 18001
+  },
+  {
+    "name": "Hazard I",
+    "dev_id": 18033
+  },
+  {
+    "name": "Lion",
+    "dev_id": 18049
+  },
+  {
+    "name": "T-54 ltwt.",
+    "dev_id": 18177
+  },
+  {
+    "name": "T49",
+    "dev_id": 18209
+  },
+  {
+    "name": "Bat.-Châtillon Bourrasque",
+    "dev_id": 18241
+  },
+  {
+    "name": "Challenger",
+    "dev_id": 18257
+  },
+  {
+    "name": "Quetzal",
+    "dev_id": 18289
+  },
+  {
+    "name": "SDP 40 Zadymka",
+    "dev_id": 18305
+  },
+  {
+    "name": "LTTB",
+    "dev_id": 18433
+  },
+  {
+    "name": "Spähpanzer Ru 251",
+    "dev_id": 18449
+  },
+  {
+    "name": "M2 Light Tank",
+    "dev_id": 18465
+  },
+  {
+    "name": "Lorraine 40 t Fearless",
+    "dev_id": 18497
+  },
+  {
+    "name": "Chimera",
+    "dev_id": 18513
+  },
+  {
+    "name": "Argonaut",
+    "dev_id": 18545
+  },
+  {
+    "name": "SDP 44 Burza",
+    "dev_id": 18561
+  },
+  {
+    "name": "T-70/57",
+    "dev_id": 18689
+  },
+  {
+    "name": "M2 Light Tank",
+    "dev_id": 18721
+  },
+  {
+    "name": "AMX Canon d'assaut 105",
+    "dev_id": 18753
+  },
+  {
+    "name": "Caernarvon Action X",
+    "dev_id": 18769
+  },
+  {
+    "name": "mau5Tank",
+    "dev_id": 18801
+  },
+  {
+    "name": "SDP 57 Gowika",
+    "dev_id": 18817
+  },
+  {
+    "name": "ISU-130",
+    "dev_id": 18945
+  },
+  {
+    "name": "Spähpanzer SP I C",
+    "dev_id": 18961
+  },
+  {
+    "name": "T95E6",
+    "dev_id": 18977
+  },
+  {
+    "name": "AMXmas",
+    "dev_id": 19009
+  },
+  {
+    "name": "Defender Mk. 1",
+    "dev_id": 19025
+  },
+  {
+    "name": "Destiny",
+    "dev_id": 19057
+  },
+  {
+    "name": "SDP 58 Kilana",
+    "dev_id": 19073
+  },
+  {
+    "name": "T-26",
+    "dev_id": 19201
+  },
+  {
+    "name": "Grille 15",
+    "dev_id": 19217
+  },
+  {
+    "name": "Chrysler K",
+    "dev_id": 19233
+  },
+  {
+    "name": "Charles",
+    "dev_id": 19265
+  },
+  {
+    "name": "Super Conqueror",
+    "dev_id": 19281
+  },
+  {
+    "name": "Prowler",
+    "dev_id": 19313
+  },
+  {
+    "name": "SDP 60 Gonkiewicza",
+    "dev_id": 19329
+  },
+  {
+    "name": "T-26",
+    "dev_id": 19457
+  },
+  {
+    "name": "Krupp-38(D)",
+    "dev_id": 19473
+  },
+  {
+    "name": "T28 Defender",
+    "dev_id": 19489
+  },
+  {
+    "name": "Bat.-Châtillon 25 t Avenir",
+    "dev_id": 19521
+  },
+  {
+    "name": "Vickers Light 105",
+    "dev_id": 19537
+  },
+  {
+    "name": "AC-09V Sterope",
+    "dev_id": 19569
+  },
+  {
+    "name": "NC 70 Błyskawica",
+    "dev_id": 19585
+  },
+  {
+    "name": "Loza's M4-A2 Sherman",
+    "dev_id": 19713
+  },
+  {
+    "name": "Tiger 131",
+    "dev_id": 19729
+  },
+  {
+    "name": "T26E5",
+    "dev_id": 19745
+  },
+  {
+    "name": "AltProto AMX 30",
+    "dev_id": 19777
+  },
+  {
+    "name": "Vickers Cruiser",
+    "dev_id": 19793
+  },
+  {
+    "name": "AC-10 Atlas",
+    "dev_id": 19825
+  },
+  {
+    "name": "SDP wz 66 Grom",
+    "dev_id": 19841
+  },
+  {
+    "name": "T-22 medium",
+    "dev_id": 19969
+  },
+  {
+    "name": "Rheinmetall Skorpion G",
+    "dev_id": 19985
+  },
+  {
+    "name": "T92E1",
+    "dev_id": 20001
+  },
+  {
+    "name": "Char Futur 4",
+    "dev_id": 20033
+  },
+  {
+    "name": "FV301",
+    "dev_id": 20049
+  },
+  {
+    "name": "AC-09 Celeno",
+    "dev_id": 20081
+  },
+  {
+    "name": "Felice",
+    "dev_id": 20097
+  },
+  {
+    "name": "Pz.Kpfw. II",
+    "dev_id": 20241
+  },
+  {
+    "name": "XM551 Sheridan",
+    "dev_id": 20257
+  },
+  {
+    "name": "Pirate",
+    "dev_id": 20289
+  },
+  {
+    "name": "AC-08 Taygete",
+    "dev_id": 20337
+  },
+  {
+    "name": "Object 252U",
+    "dev_id": 20481
+  },
+  {
+    "name": "VK 100.01 (P)",
+    "dev_id": 20497
+  },
+  {
+    "name": "T54E2",
+    "dev_id": 20513
+  },
+  {
+    "name": "Renault G1",
+    "dev_id": 20545
+  },
+  {
+    "name": "Turtle Mk. I",
+    "dev_id": 20561
+  },
+  {
+    "name": "AC-08V Pleione",
+    "dev_id": 20593
+  },
+  {
+    "name": "SU-130PM",
+    "dev_id": 20737
+  },
+  {
+    "name": "Mäuschen",
+    "dev_id": 20753
+  },
+  {
+    "name": "T25 Pilot Number 1",
+    "dev_id": 20769
+  },
+  {
+    "name": "Lorraine 50 t",
+    "dev_id": 20801
+  },
+  {
+    "name": "Explorer",
+    "dev_id": 20817
+  },
+  {
+    "name": "T-2020",
+    "dev_id": 20993
+  },
+  {
+    "name": "Panzer 58",
+    "dev_id": 21009
+  },
+  {
+    "name": "T26E3 Eagle 7",
+    "dev_id": 21025
+  },
+  {
+    "name": "Projet Murat",
+    "dev_id": 21057
+  },
+  {
+    "name": "Dreadnought",
+    "dev_id": 21073
+  },
+  {
+    "name": "AC-07V Merope",
+    "dev_id": 21105
+  },
+  {
+    "name": "Thunder",
+    "dev_id": 21249
+  },
+  {
+    "name": "VK 168.01 (P)",
+    "dev_id": 21265
+  },
+  {
+    "name": "Rudolph",
+    "dev_id": 21281
+  },
+  {
+    "name": "AMX 13 M24",
+    "dev_id": 21313
+  },
+  {
+    "name": "GSOR 1008",
+    "dev_id": 21329
+  },
+  {
+    "name": "Herdbreaker",
+    "dev_id": 21361
+  },
+  {
+    "name": "T-44-85",
+    "dev_id": 21505
+  },
+  {
+    "name": "E 75 TS",
+    "dev_id": 21521
+  },
+  {
+    "name": "Sherman Easy 8",
+    "dev_id": 21537
+  },
+  {
+    "name": "ERAC 105 Proto",
+    "dev_id": 21569
+  },
+  {
+    "name": "Blasteroid",
+    "dev_id": 21585
+  },
+  {
+    "name": "STG",
+    "dev_id": 21761
+  },
+  {
+    "name": "VK 90.01 (P)",
+    "dev_id": 21777
+  },
+  {
+    "name": "XM551 Sheridan Missile",
+    "dev_id": 21793
+  },
+  {
+    "name": "Projet Louis",
+    "dev_id": 21825
+  },
+  {
+    "name": "Caliban",
+    "dev_id": 21841
+  },
+  {
+    "name": "56TP",
+    "dev_id": 21889
+  },
+  {
+    "name": "T-34-85",
+    "dev_id": 22017
+  },
+  {
+    "name": "Agent",
+    "dev_id": 22033
+  },
+  {
+    "name": "Magnus",
+    "dev_id": 22049
+  },
+  {
+    "name": "ELC AMX-901",
+    "dev_id": 22081
+  },
+  {
+    "name": "Churchill VIII",
+    "dev_id": 22097
+  },
+  {
+    "name": "AC-110 Teichos",
+    "dev_id": 22129
+  },
+  {
+    "name": "Bofors Triton",
+    "dev_id": 22145
+  },
+  {
+    "name": "Object 260",
+    "dev_id": 22273
+  },
+  {
+    "name": "Tiger I",
+    "dev_id": 22289
+  },
+  {
+    "name": "AE Phase I",
+    "dev_id": 22305
+  },
+  {
+    "name": "Churchill W",
+    "dev_id": 22353
+  },
+  {
+    "name": "Titan JPanther II",
+    "dev_id": 22385
+  },
+  {
+    "name": "Ambassador",
+    "dev_id": 22401
+  },
+  {
+    "name": "LT-432",
+    "dev_id": 22529
+  },
+  {
+    "name": "Kanonenjagdpanzer 105",
+    "dev_id": 22545
+  },
+  {
+    "name": "TS-5",
+    "dev_id": 22561
+  },
+  {
+    "name": "Caernarvon Defender",
+    "dev_id": 22609
+  },
+  {
+    "name": "Convoyer",
+    "dev_id": 22641
+  },
+  {
+    "name": "Toro",
+    "dev_id": 22657
+  },
+  {
+    "name": "Triumphant",
+    "dev_id": 22785
+  },
+  {
+    "name": "Icebreaker",
+    "dev_id": 22801
+  },
+  {
+    "name": "M-VI-Yoh",
+    "dev_id": 22817
+  },
+  {
+    "name": "Brennos",
+    "dev_id": 22849
+  },
+  {
+    "name": "Charlemagne",
+    "dev_id": 22865
+  },
+  {
+    "name": "Donnola",
+    "dev_id": 22913
+  },
+  {
+    "name": "T-34 shielded",
+    "dev_id": 23041
+  },
+  {
+    "name": "Kunze Panzer",
+    "dev_id": 23057
+  },
+  {
+    "name": "M-V-Yoh",
+    "dev_id": 23073
+  },
+  {
+    "name": "M47 Chevalier",
+    "dev_id": 23105
+  },
+  {
+    "name": "Cobra",
+    "dev_id": 23121
+  },
+  {
+    "name": "Husarz",
+    "dev_id": 23169
+  },
+  {
+    "name": "Object 244",
+    "dev_id": 23297
+  },
+  {
+    "name": "Kampfpanzer 50 t",
+    "dev_id": 23313
+  },
+  {
+    "name": "M-III-Yoh",
+    "dev_id": 23329
+  },
+  {
+    "name": "FV1066 Senlac",
+    "dev_id": 23377
+  },
+  {
+    "name": "Zmije",
+    "dev_id": 23425
+  },
+  {
+    "name": "MS-1",
+    "dev_id": 23553
+  },
+  {
+    "name": "Pz. IV Gargoyle",
+    "dev_id": 23569
+  },
+  {
+    "name": "M-VII-Yoh",
+    "dev_id": 23585
+  },
+  {
+    "name": "A25 Harry Hopkins I",
+    "dev_id": 23633
+  },
+  {
+    "name": "Object 84",
+    "dev_id": 23809
+  },
+  {
+    "name": "Krupp-Steyr Waffenträger",
+    "dev_id": 23825
+  },
+  {
+    "name": "FV4201 Chieftain Proto",
+    "dev_id": 23889
+  },
+  {
+    "name": "LTG",
+    "dev_id": 24065
+  },
+  {
+    "name": "U-Panzer",
+    "dev_id": 24081
+  },
+  {
+    "name": "BLTZ9000",
+    "dev_id": 24097
+  },
+  {
+    "name": "GSOR 1008 Fearless",
+    "dev_id": 24145
+  },
+  {
+    "name": "LEY-1 Defender",
+    "dev_id": 24177
+  },
+  {
+    "name": "T-100 LT",
+    "dev_id": 24321
+  },
+  {
+    "name": "M48A2 Räumpanzer",
+    "dev_id": 24337
+  },
+  {
+    "name": "Vickers MBT Mk. 3",
+    "dev_id": 24401
+  },
+  {
+    "name": "Object 268 Version 4",
+    "dev_id": 24577
+  },
+  {
+    "name": "Keiler",
+    "dev_id": 24593
+  },
+  {
+    "name": "Concept 1B",
+    "dev_id": 24609
+  },
+  {
+    "name": "A46 Different",
+    "dev_id": 24657
+  },
+  {
+    "name": "星际猎人",
+    "dev_id": 24689
+  },
+  {
+    "name": "Kryos",
+    "dev_id": 24849
+  },
+  {
+    "name": "Scepter",
+    "dev_id": 24865
+  },
+  {
+    "name": "Nemesis",
+    "dev_id": 24913
+  },
+  {
+    "name": "Titan AMX",
+    "dev_id": 24945
+  },
+  {
+    "name": "Object 752",
+    "dev_id": 25089
+  },
+  {
+    "name": "Barkhan",
+    "dev_id": 25105
+  },
+  {
+    "name": "M46 Jaguar",
+    "dev_id": 25121
+  },
+  {
+    "name": "GSOR the TANK",
+    "dev_id": 25169
+  },
+  {
+    "name": "Object 274a",
+    "dev_id": 25345
+  },
+  {
+    "name": "T77",
+    "dev_id": 25377
+  },
+  {
+    "name": "HWK 30",
+    "dev_id": 25617
+  },
+  {
+    "name": "M-IV-Y",
+    "dev_id": 25633
+  },
+  {
+    "name": "Object 777 Version II",
+    "dev_id": 25857
+  },
+  {
+    "name": "Elefant",
+    "dev_id": 25873
+  },
+  {
+    "name": "Ranger",
+    "dev_id": 25889
+  },
+  {
+    "name": "Mark I Male",
+    "dev_id": 25937
+  },
+  {
+    "name": "Object 452K",
+    "dev_id": 26113
+  },
+  {
+    "name": "Epsilon",
+    "dev_id": 26129
+  },
+  {
+    "name": "High Score",
+    "dev_id": 26145
+  },
+  {
+    "name": "ST-62 Version 2",
+    "dev_id": 26369
+  },
+  {
+    "name": "Kampfpanzer 07 RH",
+    "dev_id": 26641
+  },
+  {
+    "name": "ASTRON Rex 105 mm",
+    "dev_id": 26657
+  },
+  {
+    "name": "Object 590",
+    "dev_id": 26881
+  },
+  {
+    "name": "Kpz. Pr.68 (P)",
+    "dev_id": 26897
+  },
+  {
+    "name": "Frosty",
+    "dev_id": 26913
+  },
+  {
+    "name": "K-2",
+    "dev_id": 27137
+  },
+  {
+    "name": "Aufklärungspanzer Panther",
+    "dev_id": 27153
+  },
+  {
+    "name": "Cyborg",
+    "dev_id": 27169
+  },
+  {
+    "name": "Object Kust",
+    "dev_id": 27393
+  },
+  {
+    "name": "Projekt Kpz. 07P(E)",
+    "dev_id": 27409
+  },
+  {
+    "name": "TL-7-120",
+    "dev_id": 27425
+  },
+  {
+    "name": "Schwarzpanzer 58",
+    "dev_id": 27665
+  },
+  {
+    "name": "Pawlack Tank",
+    "dev_id": 27681
+  },
+  {
+    "name": "Erich Konzept I",
+    "dev_id": 27921
+  },
+  {
+    "name": "T49 Fearless",
+    "dev_id": 27937
+  },
+  {
+    "name": "LKpz.70 K",
+    "dev_id": 28177
+  },
+  {
+    "name": "TS-60",
+    "dev_id": 28193
+  },
+  {
+    "name": "KV-4 KTTS",
+    "dev_id": 28417
+  },
+  {
+    "name": "HWK 12",
+    "dev_id": 28433
+  },
+  {
+    "name": "T42",
+    "dev_id": 28449
+  },
+  {
+    "name": "IS-8 Taurus",
+    "dev_id": 28673
+  },
+  {
+    "name": "XM66F",
+    "dev_id": 28705
+  },
+  {
+    "name": "Waffen F1.0",
+    "dev_id": 28945
+  },
+  {
+    "name": "Sherman Easy 8",
+    "dev_id": 28961
+  },
+  {
+    "name": "Tiger-Maus",
+    "dev_id": 29201
+  },
+  {
+    "name": "MBT-B",
+    "dev_id": 29217
+  },
+  {
+    "name": "VK 19.02“闪送宝”",
+    "dev_id": 29457
+  },
+  {
+    "name": "ATAC",
+    "dev_id": 29473
+  },
+  {
+    "name": "KJPZ TIII Jäger",
+    "dev_id": 29713
+  },
+  {
+    "name": "SPHT",
+    "dev_id": 29985
+  },
+  {
+    "name": "Kampfpanzer 70 Missile",
+    "dev_id": 30481
+  },
+  {
+    "name": "KV-220 Beta-Test",
+    "dev_id": 51201
+  },
+  {
+    "name": "Matilda IV",
+    "dev_id": 51457
+  },
+  {
+    "name": "Pz.Kpfw. V/IV",
+    "dev_id": 51473
+  },
+  {
+    "name": "T2 Light Tank",
+    "dev_id": 51489
+  },
+  {
+    "name": "Churchill III",
+    "dev_id": 51713
+  },
+  {
+    "name": "Pz.Kpfw. II Ausf. J",
+    "dev_id": 51729
+  },
+  {
+    "name": "Ram II",
+    "dev_id": 51745
+  },
+  {
+    "name": "Type 98 Ke-Ni Otsu",
+    "dev_id": 51809
+  },
+  {
+    "name": "Pz.Kpfw. S35 739 (f)",
+    "dev_id": 51985
+  },
+  {
+    "name": "Hetzer Kamesan SP",
+    "dev_id": 52065
+  },
+  {
+    "name": "BT-SV",
+    "dev_id": 52225
+  },
+  {
+    "name": "Pz.Kpfw. B2 740 (f)",
+    "dev_id": 52241
+  },
+  {
+    "name": "M4A2E4 Sherman",
+    "dev_id": 52257
+  },
+  {
+    "name": "Valentine II",
+    "dev_id": 52481
+  },
+  {
+    "name": "Pz.Kpfw. 38H 735 (f)",
+    "dev_id": 52497
+  },
+  {
+    "name": "M6A2E1",
+    "dev_id": 52513
+  },
+  {
+    "name": "Tortoise",
+    "dev_id": 52561
+  },
+  {
+    "name": "M3 Light",
+    "dev_id": 52737
+  },
+  {
+    "name": "M22 Locust",
+    "dev_id": 52769
+  },
+  {
+    "name": "A-32",
+    "dev_id": 52993
+  },
+  {
+    "name": "M6A2E1 EXP",
+    "dev_id": 53025
+  },
+  {
+    "name": "KV-5",
+    "dev_id": 53249
+  },
+  {
+    "name": "T-127",
+    "dev_id": 53505
+  },
+  {
+    "name": "T1E6",
+    "dev_id": 53537
+  },
+  {
+    "name": "Matilda Black Prince",
+    "dev_id": 53585
+  },
+  {
+    "name": "SU-85I",
+    "dev_id": 53761
+  },
+  {
+    "name": "TOG II*",
+    "dev_id": 53841
+  },
+  {
+    "name": "AT 15A",
+    "dev_id": 54097
+  },
+  {
+    "name": "SU-76I",
+    "dev_id": 54273
+  },
+  {
+    "name": "Löwe",
+    "dev_id": 54289
+  },
+  {
+    "name": "Excelsior",
+    "dev_id": 54353
+  },
+  {
+    "name": "Tetrarch",
+    "dev_id": 54529
+  },
+  {
+    "name": "T-25",
+    "dev_id": 54545
+  },
+  {
+    "name": "SU-100Y",
+    "dev_id": 54785
+  },
+  {
+    "name": "T-15",
+    "dev_id": 54801
+  },
+  {
+    "name": "Light Mk. VIC",
+    "dev_id": 54865
+  },
+  {
+    "name": "Pz.Kpfw. IV hydrostat.",
+    "dev_id": 55057
+  },
+  {
+    "name": "T7 Combat Car",
+    "dev_id": 55073
+  },
+  {
+    "name": "SU-122-44",
+    "dev_id": 55297
+  },
+  {
+    "name": "8,8 cm Pak 43 Jagdtiger",
+    "dev_id": 55313
+  },
+  {
+    "name": "Cromwell B",
+    "dev_id": 55889
+  },
+  {
+    "name": "M4A3E8 Fury",
+    "dev_id": 56097
+  },
+  {
+    "name": "LTP",
+    "dev_id": 56577
+  },
+  {
+    "name": "T28 Concept",
+    "dev_id": 56609
+  },
+  {
+    "name": "Dicker Max",
+    "dev_id": 57105
+  },
+  {
+    "name": "Pz.Kpfw. IV Schmalturm",
+    "dev_id": 57361
+  },
+  {
+    "name": "Panther/M10",
+    "dev_id": 57617
+  },
+  {
+    "name": "VK 72.01 (K)",
+    "dev_id": 58641
+  },
+  {
+    "name": "IS-5 (Object 730)",
+    "dev_id": 58881
+  },
+  {
+    "name": "IS-2 (1945)",
+    "dev_id": 59137
+  },
+  {
+    "name": "ISU-122S",
+    "dev_id": 59649
+  },
+  {
+    "name": "Großtraktor - Krupp",
+    "dev_id": 59665
+  },
+  {
+    "name": "T-54 first prototype",
+    "dev_id": 59905
+  },
+  {
+    "name": "IS-2Sh",
+    "dev_id": 60161
+  },
+  {
+    "name": "Panther mit 8,8 cm L/71",
+    "dev_id": 60177
+  },
+  {
+    "name": "IS-3 Defender",
+    "dev_id": 60417
+  },
+  {
+    "name": "BT-7 artillery",
+    "dev_id": 60929
+  },
+  {
+    "name": "leKpz M 41 90 mm",
+    "dev_id": 62737
+  },
+  {
+    "name": "T-44-100",
+    "dev_id": 62977
+  },
+  {
+    "name": "VK 45.03",
+    "dev_id": 62993
+  },
+  {
+    "name": "AMX Chasseur de chars",
+    "dev_id": 63553
+  },
+  {
+    "name": "Dracula",
+    "dev_id": 63601
+  },
+  {
+    "name": "Panzer IV Ankou Special",
+    "dev_id": 63841
+  },
+  {
+    "name": "T-34-85 Rudy",
+    "dev_id": 64001
+  },
+  {
+    "name": "Tankenstein",
+    "dev_id": 64017
+  },
+  {
+    "name": "FCM 50 t",
+    "dev_id": 64065
+  },
+  {
+    "name": "Mk I* Heavy Tank",
+    "dev_id": 64081
+  },
+  {
+    "name": "T-34-85 Victory",
+    "dev_id": 64257
+  },
+  {
+    "name": "Snowstorm Jagdtiger 8.8",
+    "dev_id": 64273
+  },
+  {
+    "name": "AC IV Sentinel",
+    "dev_id": 64337
+  },
+  {
+    "name": "E 25",
+    "dev_id": 64529
+  },
+  {
+    "name": "112 Glacial",
+    "dev_id": 64561
+  },
+  {
+    "name": "Angry Connor",
+    "dev_id": 64593
+  },
+  {
+    "name": "IS-6 Fearless",
+    "dev_id": 64769
+  },
+  {
+    "name": "Pz.Kpfw. II",
+    "dev_id": 64785
+  },
+  {
+    "name": "T34 Independence",
+    "dev_id": 64801
+  },
+  {
+    "name": "AC 1 Sentinel",
+    "dev_id": 64849
+  },
+  {
+    "name": "MS-1 mod. 1",
+    "dev_id": 65025
+  },
+  {
+    "name": "Leichttraktor",
+    "dev_id": 65041
+  },
+  {
+    "name": "T1 Cunningham",
+    "dev_id": 65057
+  },
+  {
+    "name": "Vickers Medium Mk. I",
+    "dev_id": 65105
+  },
+  {
+    "name": "MS-1 mod. 1",
+    "dev_id": 65281
+  },
+  {
+    "name": "Leichttraktor",
+    "dev_id": 65297
+  },
+  {
+    "name": "T1 Cunningham",
+    "dev_id": 65313
+  },
+  {
+    "name": "Type 62",
+    "dev_id": 65329
+  },
+  {
+    "name": "Vickers Medium Mk. I",
+    "dev_id": 65361
+  },
+  {
+    "name": "Type 3 Chi-Nu Kai",
+    "dev_id": 65377
+  },
+  {
+    "name": "Rhm. Pzw.",
+    "dev_id": 28689
+  }
+]

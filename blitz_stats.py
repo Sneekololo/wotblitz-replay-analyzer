@@ -108,7 +108,7 @@ for file in os.listdir(REPLAY_FOLDER):
         if tank_id:
             pl["tank_battles"][tank_id] += 1
             tank_info = TANK_DB.get(tank_id, {})
-            wg_type = tank_info.get("type", "unknown")
+            wg_type = tank_info.get("dev_id", "unknown")
             label = TYPE_LABELS.get(wg_type)
             if label:
                 pl["type_battles"][label] += 1
