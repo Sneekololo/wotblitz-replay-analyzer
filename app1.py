@@ -42,7 +42,15 @@ tank_db = {}
 
 if TANK_DB_FILE.exists():
     with TANK_DB_FILE.open(encoding="utf-8") as tank_file:
-        tank_db = {int(key): value for key, value in json.load(tank_file).items()}
+        raw_tank_db = json.load(tank_file)
+        if isinstance(raw_tank_db, list):
+            tank_db = {
+                int(tank["dev_id"]): tank
+                for tank in raw_tank_db
+                if tank.get("dev_id") is not None
+            }
+        else:
+            tank_db = {int(key): value for key, value in raw_tank_db.items()}
 
 
 @app.route("/")
