@@ -1,2450 +1,2922 @@
-{
-  "1": {
+[
+  {
     "name": "T-34",
-    "type": "mediumTank"
+    "dev_id": 1
   },
-  "17": {
+  {
     "name": "Pz.Kpfw. IV Ausf. G",
-    "type": "mediumTank"
+    "dev_id": 17
   },
-  "33": {
+  {
     "name": "T14",
-    "type": "heavyTank"
+    "dev_id": 33
   },
-  "49": {
+  {
     "name": "Type 59",
-    "type": "mediumTank"
+    "dev_id": 49
   },
-  "81": {
+  {
     "name": "Vickers Medium Mk. I",
-    "type": "mediumTank"
+    "dev_id": 81
   },
-  "113": {
+  {
     "name": "Vindicator Ultramarines",
-    "type": "AT-SPG"
+    "dev_id": 113
   },
-  "257": {
+  {
     "name": "SU-85",
-    "type": "AT-SPG"
+    "dev_id": 257
   },
-  "289": {
+  {
     "name": "M3 Stuart",
-    "type": "lightTank"
+    "dev_id": 289
   },
-  "321": {
+  {
     "name": "D2",
-    "type": "heavyTank"
+    "dev_id": 321
   },
-  "337": {
+  {
     "name": "Vickers Medium Mk. II",
-    "type": "mediumTank"
+    "dev_id": 337
   },
-  "353": {
+  {
     "name": "Chi-Ni",
-    "type": "mediumTank"
+    "dev_id": 353
   },
-  "385": {
+  {
     "name": "Progetto M40 mod. 65",
-    "type": "mediumTank"
+    "dev_id": 385
   },
-  "513": {
+  {
     "name": "IS",
-    "type": "heavyTank"
+    "dev_id": 513
   },
-  "529": {
+  {
     "name": "Tiger I",
-    "type": "heavyTank"
+    "dev_id": 529
   },
-  "545": {
+  {
     "name": "T1 Cunningham",
-    "type": "lightTank"
+    "dev_id": 545
   },
-  "577": {
+  {
     "name": "Renault FT",
-    "type": "lightTank"
+    "dev_id": 577
   },
-  "593": {
+  {
     "name": "Sherman Firefly",
-    "type": "mediumTank"
+    "dev_id": 593
   },
-  "609": {
+  {
     "name": "Renault Otsu",
-    "type": "lightTank"
+    "dev_id": 609
   },
-  "625": {
+  {
     "name": "Stridsvagn 74A2",
-    "type": "mediumTank"
+    "dev_id": 625
   },
-  "641": {
+  {
     "name": "Prototipo Standard B",
-    "type": "mediumTank"
+    "dev_id": 641
   },
-  "769": {
+  {
     "name": "BT-7",
-    "type": "lightTank"
+    "dev_id": 769
   },
-  "785": {
+  {
     "name": "Pz.Kpfw. 35 (t)",
-    "type": "lightTank"
+    "dev_id": 785
   },
-  "801": {
+  {
     "name": "M6",
-    "type": "heavyTank"
+    "dev_id": 801
   },
-  "817": {
+  {
     "name": "WZ-111",
-    "type": "heavyTank"
+    "dev_id": 817
   },
-  "849": {
+  {
     "name": "Matilda",
-    "type": "heavyTank"
+    "dev_id": 849
   },
-  "865": {
+  {
     "name": "Type 95 Ha-Go",
-    "type": "lightTank"
+    "dev_id": 865
   },
-  "881": {
+  {
     "name": "Edelweiss",
-    "type": "mediumTank"
+    "dev_id": 881
   },
-  "897": {
+  {
     "name": "P.44 Pantera",
-    "type": "mediumTank"
+    "dev_id": 897
   },
-  "1025": {
+  {
     "name": "BT-2",
-    "type": "lightTank"
+    "dev_id": 1025
   },
-  "1041": {
+  {
     "name": "StuG III Ausf. G",
-    "type": "AT-SPG"
+    "dev_id": 1041
   },
-  "1057": {
+  {
     "name": "M4 Sherman",
-    "type": "mediumTank"
+    "dev_id": 1057
   },
-  "1073": {
+  {
     "name": "T-34-1",
-    "type": "mediumTank"
+    "dev_id": 1073
   },
-  "1089": {
+  {
     "name": "B1",
-    "type": "heavyTank"
+    "dev_id": 1089
   },
-  "1105": {
+  {
     "name": "Cromwell",
-    "type": "mediumTank"
+    "dev_id": 1105
   },
-  "1121": {
+  {
     "name": "Type 5 Chi-Ri",
-    "type": "mediumTank"
+    "dev_id": 1121
   },
-  "1137": {
+  {
     "name": "Predator Ultramarines",
-    "type": "heavyTank"
+    "dev_id": 1137
   },
-  "1153": {
+  {
     "name": "P.43 ter",
-    "type": "mediumTank"
+    "dev_id": 1153
   },
-  "1297": {
+  {
     "name": "Panther I",
-    "type": "mediumTank"
+    "dev_id": 1297
   },
-  "1313": {
+  {
     "name": "M4A3E8 Sherman",
-    "type": "mediumTank"
+    "dev_id": 1313
   },
-  "1329": {
+  {
     "name": "Renault NC-31",
-    "type": "lightTank"
+    "dev_id": 1329
   },
-  "1361": {
+  {
     "name": "Churchill Mk. VI",
-    "type": "heavyTank"
+    "dev_id": 1361
   },
-  "1377": {
+  {
     "name": "Type 3 Chi-Nu",
-    "type": "mediumTank"
+    "dev_id": 1377
   },
-  "1393": {
+  {
     "name": "Nameless",
-    "type": "heavyTank"
+    "dev_id": 1393
   },
-  "1409": {
+  {
     "name": "P.43 bis",
-    "type": "mediumTank"
+    "dev_id": 1409
   },
-  "1537": {
+  {
     "name": "T-28 mod. 1940",
-    "type": "mediumTank"
+    "dev_id": 1537
   },
-  "1553": {
+  {
     "name": "Jagdpanzer IV",
-    "type": "AT-SPG"
+    "dev_id": 1553
   },
-  "1569": {
+  {
     "name": "T20",
-    "type": "mediumTank"
+    "dev_id": 1569
   },
-  "1585": {
+  {
     "name": "T-34-2",
-    "type": "mediumTank"
+    "dev_id": 1585
   },
-  "1601": {
+  {
     "name": "D1",
-    "type": "lightTank"
+    "dev_id": 1601
   },
-  "1617": {
+  {
     "name": "Sherman V",
-    "type": "mediumTank"
+    "dev_id": 1617
   },
-  "1633": {
+  {
     "name": "Type 1 Chi-He",
-    "type": "mediumTank"
+    "dev_id": 1633
   },
-  "1649": {
+  {
     "name": "Helsing",
-    "type": "AT-SPG"
+    "dev_id": 1649
   },
-  "1665": {
+  {
     "name": "Lago",
-    "type": "mediumTank"
+    "dev_id": 1665
   },
-  "1809": {
+  {
     "name": "Hetzer",
-    "type": "AT-SPG"
+    "dev_id": 1809
   },
-  "1825": {
+  {
     "name": "M2 Light Tank",
-    "type": "lightTank"
+    "dev_id": 1825
   },
-  "1841": {
+  {
     "name": "WZ-120",
-    "type": "mediumTank"
+    "dev_id": 1841
   },
-  "1857": {
+  {
     "name": "Bat.-Châtillon 25 t AP",
-    "type": "lightTank"
+    "dev_id": 1857
   },
-  "1889": {
+  {
     "name": "Type 4 Chi-To",
-    "type": "mediumTank"
+    "dev_id": 1889
   },
-  "1905": {
+  {
     "name": "O-47",
-    "type": "mediumTank"
+    "dev_id": 1905
   },
-  "1921": {
+  {
     "name": "Strv m/42",
-    "type": "mediumTank"
+    "dev_id": 1921
   },
-  "2049": {
+  {
     "name": "A-20",
-    "type": "lightTank"
+    "dev_id": 2049
   },
-  "2065": {
+  {
     "name": "Pz.Kpfw. II",
-    "type": "lightTank"
+    "dev_id": 2065
   },
-  "2097": {
+  {
     "name": "WZ-111 model 1-4",
-    "type": "heavyTank"
+    "dev_id": 2097
   },
-  "2129": {
+  {
     "name": "Crusader",
-    "type": "lightTank"
+    "dev_id": 2129
   },
-  "2145": {
+  {
     "name": "Type 97 Chi-Ha",
-    "type": "mediumTank"
+    "dev_id": 2145
   },
-  "2161": {
+  {
     "name": "WZ 135G FT Blaze",
-    "type": "AT-SPG"
+    "dev_id": 2161
   },
-  "2177": {
+  {
     "name": "14TP",
-    "type": "lightTank"
+    "dev_id": 2177
   },
-  "2305": {
+  {
     "name": "SU-152",
-    "type": "AT-SPG"
+    "dev_id": 2305
   },
-  "2321": {
+  {
     "name": "VK 36.01 (H)",
-    "type": "heavyTank"
+    "dev_id": 2321
   },
-  "2353": {
+  {
     "name": "Vickers Mk. E Type B",
-    "type": "lightTank"
+    "dev_id": 2353
   },
-  "2369": {
+  {
     "name": "FCM 36 Pak 40",
-    "type": "AT-SPG"
+    "dev_id": 2369
   },
-  "2385": {
+  {
     "name": "Vickers Medium Mk. III",
-    "type": "mediumTank"
+    "dev_id": 2385
   },
-  "2401": {
+  {
     "name": "Type 98 Ke-Ni",
-    "type": "lightTank"
+    "dev_id": 2401
   },
-  "2433": {
+  {
     "name": "10TP",
-    "type": "lightTank"
+    "dev_id": 2433
   },
-  "2561": {
+  {
     "name": "T-34-85",
-    "type": "mediumTank"
+    "dev_id": 2561
   },
-  "2577": {
+  {
     "name": "VK 30.01 (H)",
-    "type": "heavyTank"
+    "dev_id": 2577
   },
-  "2593": {
+  {
     "name": "T30",
-    "type": "AT-SPG"
+    "dev_id": 2593
   },
-  "2609": {
+  {
     "name": "Type 64",
-    "type": "lightTank"
+    "dev_id": 2609
   },
-  "2625": {
+  {
     "name": "ARL 44",
-    "type": "heavyTank"
+    "dev_id": 2625
   },
-  "2657": {
+  {
     "name": "STA-1",
-    "type": "mediumTank"
+    "dev_id": 2657
   },
-  "2689": {
+  {
     "name": "Vickers Mk. F",
-    "type": "lightTank"
+    "dev_id": 2689
   },
-  "2817": {
+  {
     "name": "KV-1S",
-    "type": "heavyTank"
+    "dev_id": 2817
   },
-  "2849": {
+  {
     "name": "T34",
-    "type": "heavyTank"
+    "dev_id": 2849
   },
-  "2865": {
+  {
     "name": "WZ-110",
-    "type": "heavyTank"
+    "dev_id": 2865
   },
-  "2881": {
+  {
     "name": "AMX 40",
-    "type": "mediumTank"
+    "dev_id": 2881
   },
-  "2897": {
+  {
     "name": "Churchill I",
-    "type": "heavyTank"
+    "dev_id": 2897
   },
-  "2913": {
+  {
     "name": "Type 5 Ke-Ho",
-    "type": "lightTank"
+    "dev_id": 2913
   },
-  "2945": {
+  {
     "name": "Progetto M35 mod. 46",
-    "type": "mediumTank"
+    "dev_id": 2945
   },
-  "3073": {
+  {
     "name": "T-46",
-    "type": "lightTank"
+    "dev_id": 3073
   },
-  "3089": {
+  {
     "name": "Leichttraktor",
-    "type": "lightTank"
+    "dev_id": 3089
   },
-  "3105": {
+  {
     "name": "M3 Lee",
-    "type": "mediumTank"
+    "dev_id": 3105
   },
-  "3121": {
+  {
     "name": "M5A1 Stuart",
-    "type": "lightTank"
+    "dev_id": 3121
   },
-  "3137": {
+  {
     "name": "AMX 50 100",
-    "type": "heavyTank"
+    "dev_id": 3137
   },
-  "3153": {
+  {
     "name": "Black Prince",
-    "type": "heavyTank"
+    "dev_id": 3153
   },
-  "3201": {
+  {
     "name": "50TP prototyp",
-    "type": "heavyTank"
+    "dev_id": 3201
   },
-  "3329": {
+  {
     "name": "MS-1 mod. 1",
-    "type": "lightTank"
+    "dev_id": 3329
   },
-  "3345": {
+  {
     "name": "Pz.Kpfw. 38 (t)",
-    "type": "lightTank"
+    "dev_id": 3345
   },
-  "3361": {
+  {
     "name": "T1 Heavy Tank",
-    "type": "heavyTank"
+    "dev_id": 3361
   },
-  "3377": {
+  {
     "name": "WZ-131",
-    "type": "lightTank"
+    "dev_id": 3377
   },
-  "3425": {
+  {
     "name": "Type 61",
-    "type": "mediumTank"
+    "dev_id": 3425
   },
-  "3457": {
+  {
     "name": "Emil I",
-    "type": "heavyTank"
+    "dev_id": 3457
   },
-  "3585": {
+  {
     "name": "SU-100",
-    "type": "AT-SPG"
+    "dev_id": 3585
   },
-  "3601": {
+  {
     "name": "Panzerjäger I",
-    "type": "AT-SPG"
+    "dev_id": 3601
   },
-  "3633": {
+  {
     "name": "IS-2",
-    "type": "heavyTank"
+    "dev_id": 3633
   },
-  "3649": {
+  {
     "name": "Bat.-Châtillon 25 t",
-    "type": "lightTank"
+    "dev_id": 3649
   },
-  "3681": {
+  {
     "name": "STB-1",
-    "type": "mediumTank"
+    "dev_id": 3681
   },
-  "3697": {
+  {
     "name": "Lupus",
-    "type": "heavyTank"
+    "dev_id": 3697
   },
-  "3713": {
+  {
     "name": "Strv 74",
-    "type": "mediumTank"
+    "dev_id": 3713
   },
-  "3857": {
+  {
     "name": "Jagdpanther",
-    "type": "AT-SPG"
+    "dev_id": 3857
   },
-  "3873": {
+  {
     "name": "T29",
-    "type": "heavyTank"
+    "dev_id": 3873
   },
-  "3889": {
+  {
     "name": "WZ-132",
-    "type": "lightTank"
+    "dev_id": 3889
   },
-  "3905": {
+  {
     "name": "AMX 50 120",
-    "type": "heavyTank"
+    "dev_id": 3905
   },
-  "3921": {
+  {
     "name": "Caernarvon",
-    "type": "heavyTank"
+    "dev_id": 3921
   },
-  "3937": {
+  {
     "name": "Ho-Ri Type III",
-    "type": "AT-SPG"
+    "dev_id": 3937
   },
-  "3953": {
+  {
     "name": "T 55A",
-    "type": "mediumTank"
+    "dev_id": 3953
   },
-  "3969": {
+  {
     "name": "Leo",
-    "type": "mediumTank"
+    "dev_id": 3969
   },
-  "4113": {
+  {
     "name": "VK 30.02 (D)",
-    "type": "mediumTank"
+    "dev_id": 4113
   },
-  "4145": {
+  {
     "name": "WZ-121",
-    "type": "mediumTank"
+    "dev_id": 4145
   },
-  "4193": {
+  {
     "name": "Ho-Ri Type II",
-    "type": "AT-SPG"
+    "dev_id": 4193
   },
-  "4209": {
+  {
     "name": "WarDuck",
-    "type": "mediumTank"
+    "dev_id": 4209
   },
-  "4225": {
+  {
     "name": "Emil II",
-    "type": "heavyTank"
+    "dev_id": 4225
   },
-  "4353": {
+  {
     "name": "T-44",
-    "type": "mediumTank"
+    "dev_id": 4353
   },
-  "4369": {
+  {
     "name": "Pz.Kpfw. III",
-    "type": "mediumTank"
+    "dev_id": 4369
   },
-  "4385": {
+  {
     "name": "T32",
-    "type": "heavyTank"
+    "dev_id": 4385
   },
-  "4401": {
+  {
     "name": "Type 2597 Chi-Ha",
-    "type": "mediumTank"
+    "dev_id": 4401
   },
-  "4417": {
+  {
     "name": "AMX M4 mle. 54",
-    "type": "heavyTank"
+    "dev_id": 4417
   },
-  "4433": {
+  {
     "name": "Conqueror",
-    "type": "heavyTank"
+    "dev_id": 4433
   },
-  "4449": {
+  {
     "name": "IS-2 Pravda SP",
-    "type": "heavyTank"
+    "dev_id": 4449
   },
-  "4465": {
+  {
     "name": "Hafen",
-    "type": "mediumTank"
+    "dev_id": 4465
   },
-  "4481": {
+  {
     "name": "Kranvagn",
-    "type": "heavyTank"
+    "dev_id": 4481
   },
-  "4609": {
+  {
     "name": "T-26",
-    "type": "lightTank"
+    "dev_id": 4609
   },
-  "4657": {
+  {
     "name": "Type T-34",
-    "type": "mediumTank"
+    "dev_id": 4657
   },
-  "4689": {
+  {
     "name": "Churchill VII",
-    "type": "heavyTank"
+    "dev_id": 4689
   },
-  "4705": {
+  {
     "name": "Firefly Saunders SP",
-    "type": "mediumTank"
+    "dev_id": 4705
   },
-  "4721": {
+  {
     "name": "Gravedigger",
-    "type": "heavyTank"
+    "dev_id": 4721
   },
-  "4737": {
+  {
     "name": "EMIL 1951",
-    "type": "heavyTank"
+    "dev_id": 4737
   },
-  "4881": {
+  {
     "name": "Pz.Kpfw. III Ausf. A",
-    "type": "lightTank"
+    "dev_id": 4881
   },
-  "4897": {
+  {
     "name": "M2 Medium Tank",
-    "type": "mediumTank"
+    "dev_id": 4897
   },
-  "4913": {
+  {
     "name": "59-16",
-    "type": "lightTank"
+    "dev_id": 4913
   },
-  "4929": {
+  {
     "name": "AMX 13 90",
-    "type": "lightTank"
+    "dev_id": 4929
   },
-  "4945": {
+  {
     "name": "Valentine Mk. IX",
-    "type": "lightTank"
+    "dev_id": 4945
   },
-  "4961": {
+  {
     "name": "Ho-Ri Type I",
-    "type": "AT-SPG"
+    "dev_id": 4961
   },
-  "4977": {
+  {
     "name": "Scavenger",
-    "type": "mediumTank"
+    "dev_id": 4977
   },
-  "4993": {
+  {
     "name": "P.43/06 anniversario",
-    "type": "mediumTank"
+    "dev_id": 4993
   },
-  "5121": {
+  {
     "name": "AT-1",
-    "type": "AT-SPG"
+    "dev_id": 5121
   },
-  "5137": {
+  {
     "name": "Tiger II",
-    "type": "heavyTank"
+    "dev_id": 5137
   },
-  "5153": {
+  {
     "name": "M5 Stuart",
-    "type": "lightTank"
+    "dev_id": 5153
   },
-  "5169": {
+  {
     "name": "Type 58",
-    "type": "mediumTank"
+    "dev_id": 5169
   },
-  "5185": {
+  {
     "name": "AMX 13 75",
-    "type": "lightTank"
+    "dev_id": 5185
   },
-  "5201": {
+  {
     "name": "Cruiser Mk. I",
-    "type": "lightTank"
+    "dev_id": 5201
   },
-  "5217": {
+  {
     "name": "Chi-To SPG",
-    "type": "AT-SPG"
+    "dev_id": 5217
   },
-  "5233": {
+  {
     "name": "Smasher",
-    "type": "heavyTank"
+    "dev_id": 5233
   },
-  "5249": {
+  {
     "name": "Pudel",
-    "type": "mediumTank"
+    "dev_id": 5249
   },
-  "5377": {
+  {
     "name": "IS-3",
-    "type": "heavyTank"
+    "dev_id": 5377
   },
-  "5393": {
+  {
     "name": "VK 16.02 Leopard",
-    "type": "lightTank"
+    "dev_id": 5393
   },
-  "5409": {
+  {
     "name": "M7",
-    "type": "mediumTank"
+    "dev_id": 5409
   },
-  "5425": {
+  {
     "name": "WZ-113",
-    "type": "heavyTank"
+    "dev_id": 5425
   },
-  "5441": {
+  {
     "name": "AMX 30 1er prototype",
-    "type": "mediumTank"
+    "dev_id": 5441
   },
-  "5457": {
+  {
     "name": "Comet",
-    "type": "mediumTank"
+    "dev_id": 5457
   },
-  "5473": {
+  {
     "name": "Mitsu 108",
-    "type": "heavyTank"
+    "dev_id": 5473
   },
-  "5489": {
+  {
     "name": "Y5 T-34",
-    "type": "mediumTank"
+    "dev_id": 5489
   },
-  "5505": {
+  {
     "name": "TVP T 50/51",
-    "type": "mediumTank"
+    "dev_id": 5505
   },
-  "5665": {
+  {
     "name": "T2 Medium Tank",
-    "type": "mediumTank"
+    "dev_id": 5665
   },
-  "5681": {
+  {
     "name": "121B",
-    "type": "mediumTank"
+    "dev_id": 5681
   },
-  "5713": {
+  {
     "name": "Centurion Mk. 7/1",
-    "type": "mediumTank"
+    "dev_id": 5713
   },
-  "5729": {
+  {
     "name": "Ju-Nu",
-    "type": "heavyTank"
+    "dev_id": 5729
   },
-  "5745": {
+  {
     "name": "Y5 Firefly",
-    "type": "mediumTank"
+    "dev_id": 5745
   },
-  "5761": {
+  {
     "name": "Škoda T 50",
-    "type": "mediumTank"
+    "dev_id": 5761
   },
-  "5889": {
+  {
     "name": "KV-3",
-    "type": "heavyTank"
+    "dev_id": 5889
   },
-  "5921": {
+  {
     "name": "M26 Pershing",
-    "type": "mediumTank"
+    "dev_id": 5921
   },
-  "5937": {
+  {
     "name": "59-Patton",
-    "type": "mediumTank"
+    "dev_id": 5937
   },
-  "5953": {
+  {
     "name": "AMX 38",
-    "type": "mediumTank"
+    "dev_id": 5953
   },
-  "5969": {
+  {
     "name": "Centurion Mk. I",
-    "type": "mediumTank"
+    "dev_id": 5969
   },
-  "5985": {
+  {
     "name": "Ju-To",
-    "type": "heavyTank"
+    "dev_id": 5985
   },
-  "6001": {
+  {
     "name": "Y5 ELC bis",
-    "type": "mediumTank"
+    "dev_id": 6001
   },
-  "6017": {
+  {
     "name": "TVP VTU Koncept",
-    "type": "mediumTank"
+    "dev_id": 6017
   },
-  "6145": {
+  {
     "name": "IS-4",
-    "type": "heavyTank"
+    "dev_id": 6145
   },
-  "6161": {
+  {
     "name": "Pz.Kpfw. II Luchs",
-    "type": "lightTank"
+    "dev_id": 6161
   },
-  "6177": {
+  {
     "name": "T18",
-    "type": "AT-SPG"
+    "dev_id": 6177
   },
-  "6193": {
+  {
     "name": "T-34-3",
-    "type": "mediumTank"
+    "dev_id": 6193
   },
-  "6209": {
+  {
     "name": "AMX 50 B",
-    "type": "heavyTank"
+    "dev_id": 6209
   },
-  "6225": {
+  {
     "name": "FV215b",
-    "type": "heavyTank"
+    "dev_id": 6225
   },
-  "6241": {
+  {
     "name": "Chi-Se",
-    "type": "heavyTank"
+    "dev_id": 6241
   },
-  "6257": {
+  {
     "name": "M4/FL10",
-    "type": "mediumTank"
+    "dev_id": 6257
   },
-  "6273": {
+  {
     "name": "Konštrukta T-34/100",
-    "type": "mediumTank"
+    "dev_id": 6273
   },
-  "6401": {
+  {
     "name": "SU-76",
-    "type": "AT-SPG"
+    "dev_id": 6401
   },
-  "6417": {
+  {
     "name": "Pz.Kpfw. III/IV",
-    "type": "mediumTank"
+    "dev_id": 6417
   },
-  "6433": {
+  {
     "name": "T82",
-    "type": "AT-SPG"
+    "dev_id": 6433
   },
-  "6449": {
+  {
     "name": "WZ-113G FT",
-    "type": "AT-SPG"
+    "dev_id": 6449
   },
-  "6465": {
+  {
     "name": "AMX 12 t",
-    "type": "lightTank"
+    "dev_id": 6465
   },
-  "6481": {
+  {
     "name": "Covenanter",
-    "type": "lightTank"
+    "dev_id": 6481
   },
-  "6497": {
+  {
     "name": "Type 68",
-    "type": "heavyTank"
+    "dev_id": 6497
   },
-  "6529": {
+  {
     "name": "Škoda T 25",
-    "type": "mediumTank"
+    "dev_id": 6529
   },
-  "6657": {
+  {
     "name": "T-43",
-    "type": "mediumTank"
+    "dev_id": 6657
   },
-  "6673": {
+  {
     "name": "Marder II",
-    "type": "AT-SPG"
+    "dev_id": 6673
   },
-  "6689": {
+  {
     "name": "T49 ATM",
-    "type": "lightTank"
+    "dev_id": 6689
   },
-  "6705": {
+  {
     "name": "LT vz. 38",
-    "type": "lightTank"
+    "dev_id": 6705
   },
-  "6721": {
+  {
     "name": "BDR G1 B",
-    "type": "heavyTank"
+    "dev_id": 6721
   },
-  "6753": {
+  {
     "name": "Type 71",
-    "type": "heavyTank"
+    "dev_id": 6753
   },
-  "6785": {
+  {
     "name": "Škoda T 27",
-    "type": "mediumTank"
+    "dev_id": 6785
   },
-  "6913": {
+  {
     "name": "SU-85B",
-    "type": "AT-SPG"
+    "dev_id": 6913
   },
-  "6929": {
+  {
     "name": "Maus",
-    "type": "heavyTank"
+    "dev_id": 6929
   },
-  "6945": {
+  {
     "name": "M10 Wolverine",
-    "type": "AT-SPG"
+    "dev_id": 6945
   },
-  "6961": {
+  {
     "name": "WZ-120-1G FT",
-    "type": "AT-SPG"
+    "dev_id": 6961
   },
-  "6977": {
+  {
     "name": "AMX M4 mle. 45",
-    "type": "heavyTank"
+    "dev_id": 6977
   },
-  "6993": {
+  {
     "name": "Cruiser Mk. II",
-    "type": "lightTank"
+    "dev_id": 6993
   },
-  "7009": {
+  {
     "name": "Type 57",
-    "type": "heavyTank"
+    "dev_id": 7009
   },
-  "7025": {
+  {
     "name": "Vulcan",
-    "type": "heavyTank"
+    "dev_id": 7025
   },
-  "7041": {
-    "name": "Turbo",
-    "type": "mediumTank"
-  },
-  "7169": {
+  {
     "name": "IS-7",
-    "type": "heavyTank"
+    "dev_id": 7169
   },
-  "7185": {
+  {
     "name": "VK 30.01 (P)",
-    "type": "mediumTank"
+    "dev_id": 7185
   },
-  "7201": {
+  {
     "name": "M36 Jackson",
-    "type": "AT-SPG"
+    "dev_id": 7201
   },
-  "7217": {
+  {
     "name": "WZ-112-2",
-    "type": "heavyTank"
+    "dev_id": 7217
   },
-  "7249": {
+  {
     "name": "FV4202",
-    "type": "mediumTank"
+    "dev_id": 7249
   },
-  "7265": {
+  {
     "name": "Ferrum",
-    "type": "heavyTank"
+    "dev_id": 7265
   },
-  "7281": {
+  {
     "name": "Lycan",
-    "type": "heavyTank"
+    "dev_id": 7281
   },
-  "7297": {
+  {
     "name": "60TP Lewandowskiego",
-    "type": "heavyTank"
+    "dev_id": 7297
   },
-  "7425": {
+  {
     "name": "ISU-152",
-    "type": "AT-SPG"
+    "dev_id": 7425
   },
-  "7441": {
+  {
     "name": "VK 45.02 (P) Ausf. B",
-    "type": "heavyTank"
+    "dev_id": 7441
   },
-  "7473": {
+  {
     "name": "T-34-2G FT",
-    "type": "AT-SPG"
+    "dev_id": 7473
   },
-  "7505": {
+  {
     "name": "Cruiser Mk. IV",
-    "type": "mediumTank"
+    "dev_id": 7505
   },
-  "7537": {
+  {
+    "name": "Type 5 Ka-Ri",
+    "dev_id": 7521
+  },
+  {
     "name": "Nightmare",
-    "type": "AT-SPG"
+    "dev_id": 7537
   },
-  "7553": {
+  {
     "name": "50TP Tyszkiewicza",
-    "type": "heavyTank"
+    "dev_id": 7553
   },
-  "7697": {
+  {
     "name": "Ferdinand",
-    "type": "AT-SPG"
+    "dev_id": 7697
   },
-  "7713": {
+  {
     "name": "T40",
-    "type": "AT-SPG"
+    "dev_id": 7713
   },
-  "7729": {
+  {
     "name": "WZ-131G FT",
-    "type": "AT-SPG"
+    "dev_id": 7729
   },
-  "7745": {
+  {
     "name": "Renault FT AC",
-    "type": "AT-SPG"
+    "dev_id": 7745
   },
-  "7761": {
+  {
     "name": "Cruiser Mk. III",
-    "type": "mediumTank"
+    "dev_id": 7761
   },
-  "7793": {
+  {
+    "name": "Type 63",
+    "dev_id": 7777
+  },
+  {
     "name": "Annihilator",
-    "type": "heavyTank"
+    "dev_id": 7793
   },
-  "7809": {
+  {
     "name": "53TP Markowskiego",
-    "type": "heavyTank"
+    "dev_id": 7809
   },
-  "7937": {
+  {
     "name": "T-54",
-    "type": "mediumTank"
+    "dev_id": 7937
   },
-  "7953": {
+  {
     "name": "Jagdtiger",
-    "type": "AT-SPG"
+    "dev_id": 7953
   },
-  "7985": {
+  {
     "name": "WZ-111-1G FT",
-    "type": "AT-SPG"
+    "dev_id": 7985
   },
-  "8001": {
+  {
     "name": "Lorraine 40 t",
-    "type": "mediumTank"
+    "dev_id": 8001
   },
-  "8017": {
+  {
     "name": "Valentine AT",
-    "type": "AT-SPG"
+    "dev_id": 8017
   },
-  "8049": {
+  {
+    "name": "Type 5 Heavy",
+    "dev_id": 8033
+  },
+  {
     "name": "Spike",
-    "type": "mediumTank"
+    "dev_id": 8049
   },
-  "8065": {
+  {
     "name": "40TP Habicha",
-    "type": "heavyTank"
+    "dev_id": 8065
   },
-  "8193": {
+  {
     "name": "Object 704",
-    "type": "AT-SPG"
+    "dev_id": 8193
   },
-  "8209": {
+  {
     "name": "Pz.Kpfw. 38 (t) n.A.",
-    "type": "lightTank"
+    "dev_id": 8209
   },
-  "8225": {
+  {
     "name": "T28",
-    "type": "AT-SPG"
+    "dev_id": 8225
   },
-  "8241": {
+  {
     "name": "WZ-111G FT",
-    "type": "AT-SPG"
+    "dev_id": 8241
   },
-  "8257": {
+  {
     "name": "Renault UE 57",
-    "type": "AT-SPG"
+    "dev_id": 8257
   },
-  "8273": {
+  {
     "name": "Universal Carrier 2-pdr",
-    "type": "AT-SPG"
+    "dev_id": 8273
   },
-  "8305": {
+  {
+    "name": "Type 95 Ji-Ro",
+    "dev_id": 8289
+  },
+  {
     "name": "Titan H-Nd",
-    "type": "heavyTank"
+    "dev_id": 8305
   },
-  "8321": {
+  {
     "name": "45TP Habicha",
-    "type": "heavyTank"
+    "dev_id": 8321
   },
-  "8465": {
+  {
     "name": "Panther II",
-    "type": "mediumTank"
+    "dev_id": 8465
   },
-  "8497": {
+  {
     "name": "WZ-111 model 5A",
-    "type": "heavyTank"
+    "dev_id": 8497
   },
-  "8513": {
+  {
     "name": "AMX 30 B",
-    "type": "mediumTank"
+    "dev_id": 8513
   },
-  "8529": {
+  {
     "name": "AT 15",
-    "type": "AT-SPG"
+    "dev_id": 8529
   },
-  "8561": {
+  {
     "name": "Titan T24 57",
-    "type": "lightTank"
+    "dev_id": 8561
   },
-  "8577": {
+  {
     "name": "Lansen C",
-    "type": "mediumTank"
+    "dev_id": 8577
   },
-  "8737": {
+  {
     "name": "T95",
-    "type": "AT-SPG"
+    "dev_id": 8737
   },
-  "8753": {
-    "name": "M41D",
-    "type": "lightTank"
-  },
-  "8785": {
+  {
     "name": "AT 2",
-    "type": "AT-SPG"
+    "dev_id": 8785
   },
-  "8817": {
+  {
+    "name": "O-I Experimental",
+    "dev_id": 8801
+  },
+  {
     "name": "Titan Mk. I",
-    "type": "lightTank"
+    "dev_id": 8817
   },
-  "8833": {
-    "name": "Spark",
-    "type": "mediumTank"
-  },
-  "8961": {
+  {
     "name": "KV-13",
-    "type": "mediumTank"
+    "dev_id": 8961
   },
-  "8993": {
+  {
     "name": "M46 Patton",
-    "type": "mediumTank"
+    "dev_id": 8993
   },
-  "9009": {
+  {
     "name": "Ox",
-    "type": "mediumTank"
+    "dev_id": 9009
   },
-  "9041": {
+  {
     "name": "Alecto",
-    "type": "AT-SPG"
+    "dev_id": 9041
   },
-  "9073": {
+  {
+    "name": "Type 5 Heavy Zetsu",
+    "dev_id": 9057
+  },
+  {
     "name": "Titan-54d",
-    "type": "mediumTank"
+    "dev_id": 9073
   },
-  "9089": {
+  {
     "name": "Škoda T 56",
-    "type": "heavyTank"
+    "dev_id": 9089
   },
-  "9217": {
+  {
     "name": "IS-6",
-    "type": "heavyTank"
+    "dev_id": 9217
   },
-  "9249": {
+  {
     "name": "T25 AT",
-    "type": "AT-SPG"
+    "dev_id": 9249
   },
-  "9265": {
+  {
     "name": "Type 58",
-    "type": "mediumTank"
+    "dev_id": 9265
   },
-  "9297": {
+  {
     "name": "FV215b (183)",
-    "type": "AT-SPG"
+    "dev_id": 9297
   },
-  "9329": {
+  {
+    "name": "Type 4 Heavy",
+    "dev_id": 9313
+  },
+  {
     "name": "Titan-150",
-    "type": "heavyTank"
+    "dev_id": 9329
   },
-  "9345": {
+  {
     "name": "Svear",
-    "type": "mediumTank"
+    "dev_id": 9345
   },
-  "9489": {
+  {
     "name": "E 100",
-    "type": "heavyTank"
+    "dev_id": 9489
   },
-  "9505": {
+  {
     "name": "M103",
-    "type": "heavyTank"
+    "dev_id": 9505
   },
-  "9521": {
+  {
     "name": "WZ-122 TM",
-    "type": "mediumTank"
+    "dev_id": 9521
   },
-  "9553": {
+  {
     "name": "AT 8",
-    "type": "AT-SPG"
+    "dev_id": 9553
   },
-  "9601": {
+  {
+    "name": "O-Ni",
+    "dev_id": 9569
+  },
+  {
     "name": "CS-52 LIS",
-    "type": "mediumTank"
+    "dev_id": 9601
   },
-  "9745": {
+  {
     "name": "E 75",
-    "type": "heavyTank"
+    "dev_id": 9745
   },
-  "9761": {
+  {
     "name": "M24 Chaffee",
-    "type": "lightTank"
+    "dev_id": 9761
   },
-  "9777": {
+  {
     "name": "WZ-114",
-    "type": "heavyTank"
+    "dev_id": 9777
   },
-  "9793": {
+  {
     "name": "Somua SAu 40",
-    "type": "AT-SPG"
+    "dev_id": 9793
   },
-  "9809": {
+  {
     "name": "Churchill Gun Carrier",
-    "type": "AT-SPG"
+    "dev_id": 9809
   },
-  "9841": {
+  {
+    "name": "O-Ho",
+    "dev_id": 9825
+  },
+  {
     "name": "Rover",
-    "type": "lightTank"
+    "dev_id": 9841
   },
-  "9857": {
+  {
     "name": "Škoda T 45",
-    "type": "heavyTank"
+    "dev_id": 9857
   },
-  "9985": {
+  {
     "name": "SU-101",
-    "type": "AT-SPG"
+    "dev_id": 9985
   },
-  "10001": {
+  {
     "name": "VK 28.01",
-    "type": "lightTank"
+    "dev_id": 10001
   },
-  "10017": {
+  {
     "name": "M4A3E2 Sherman Jumbo",
-    "type": "mediumTank"
+    "dev_id": 10017
   },
-  "10033": {
+  {
     "name": "WZ-132A",
-    "type": "lightTank"
+    "dev_id": 10033
   },
-  "10049": {
+  {
     "name": "S35 CA",
-    "type": "AT-SPG"
+    "dev_id": 10049
   },
-  "10065": {
+  {
     "name": "AT 7",
-    "type": "AT-SPG"
+    "dev_id": 10065
   },
-  "10097": {
+  {
+    "name": "O-I",
+    "dev_id": 10081
+  },
+  {
     "name": "Medjay",
-    "type": "heavyTank"
+    "dev_id": 10097
   },
-  "10113": {
+  {
     "name": "Carro da Combattimento 45t",
-    "type": "mediumTank"
+    "dev_id": 10113
   },
-  "10241": {
+  {
     "name": "SU-100M1",
-    "type": "AT-SPG"
+    "dev_id": 10241
   },
-  "10257": {
+  {
     "name": "E 50",
-    "type": "mediumTank"
+    "dev_id": 10257
   },
-  "10273": {
+  {
     "name": "M8A1",
-    "type": "AT-SPG"
+    "dev_id": 10273
   },
-  "10289": {
+  {
     "name": "WZ-132-1",
-    "type": "lightTank"
+    "dev_id": 10289
   },
-  "10353": {
+  {
+    "name": "Kame",
+    "dev_id": 10337
+  },
+  {
     "name": "Pharaoh",
-    "type": "heavyTank"
+    "dev_id": 10353
   },
-  "10369": {
+  {
     "name": "Controcarro 3 Minotauro",
-    "type": "AT-SPG"
+    "dev_id": 10369
   },
-  "10497": {
+  {
     "name": "KV-2",
-    "type": "heavyTank"
+    "dev_id": 10497
   },
-  "10513": {
+  {
     "name": "VK 45.02 (P) Ausf. A",
-    "type": "heavyTank"
+    "dev_id": 10513
   },
-  "10529": {
+  {
     "name": "T67",
-    "type": "AT-SPG"
+    "dev_id": 10529
   },
-  "10545": {
+  {
     "name": "Wind",
-    "type": "lightTank"
+    "dev_id": 10545
   },
-  "10609": {
-    "name": "Magnate",
-    "type": "mediumTank"
-  },
-  "10625": {
+  {
     "name": "Controcarro 1 Mk. 2",
-    "type": "AT-SPG"
+    "dev_id": 10625
   },
-  "10753": {
+  {
     "name": "ST-I",
-    "type": "heavyTank"
+    "dev_id": 10753
   },
-  "10769": {
+  {
     "name": "Tiger (P)",
-    "type": "heavyTank"
+    "dev_id": 10769
   },
-  "10785": {
+  {
     "name": "T110E5",
-    "type": "heavyTank"
+    "dev_id": 10785
   },
-  "10801": {
-    "name": "Panlong",
-    "type": "AT-SPG"
-  },
-  "10817": {
+  {
     "name": "AMX AC mle. 46",
-    "type": "AT-SPG"
+    "dev_id": 10817
   },
-  "10865": {
-    "name": "Fixer",
-    "type": "mediumTank"
-  },
-  "10881": {
+  {
     "name": "Semovente Controcarro mod. 1964",
-    "type": "AT-SPG"
+    "dev_id": 10881
   },
-  "11009": {
+  {
     "name": "KV-4",
-    "type": "heavyTank"
+    "dev_id": 11009
   },
-  "11025": {
+  {
     "name": "Sturer Emil",
-    "type": "AT-SPG"
+    "dev_id": 11025
   },
-  "11041": {
+  {
     "name": "T25/2",
-    "type": "AT-SPG"
+    "dev_id": 11041
   },
-  "11057": {
+  {
     "name": "114 SP2",
-    "type": "heavyTank"
+    "dev_id": 11057
   },
-  "11073": {
+  {
     "name": "AMX 50 Foch",
-    "type": "AT-SPG"
+    "dev_id": 11073
   },
-  "11121": {
-    "name": "Regressor",
-    "type": "heavyTank"
-  },
-  "11137": {
+  {
     "name": "Semovente Controcarro mod. 1956",
-    "type": "AT-SPG"
+    "dev_id": 11137
   },
-  "11265": {
+  {
     "name": "T-150",
-    "type": "heavyTank"
+    "dev_id": 11265
   },
-  "11281": {
+  {
     "name": "Kampfpanzer 70",
-    "type": "heavyTank"
+    "dev_id": 11281
   },
-  "11297": {
+  {
     "name": "T28 Prototype",
-    "type": "AT-SPG"
+    "dev_id": 11297
   },
-  "11393": {
+  {
+    "name": "Basilisk",
+    "dev_id": 11377
+  },
+  {
     "name": "Semovente M43 Bassotto",
-    "type": "AT-SPG"
+    "dev_id": 11393
   },
-  "11521": {
+  {
     "name": "IS-8",
-    "type": "heavyTank"
+    "dev_id": 11521
   },
-  "11537": {
+  {
     "name": "Jagdpanther II",
-    "type": "AT-SPG"
+    "dev_id": 11537
   },
-  "11553": {
+  {
     "name": "M18 Hellcat",
-    "type": "AT-SPG"
+    "dev_id": 11553
   },
-  "11585": {
+  {
+    "name": "BZ-58-2",
+    "dev_id": 11569
+  },
+  {
     "name": "ARL V39",
-    "type": "AT-SPG"
+    "dev_id": 11585
   },
-  "11649": {
+  {
+    "name": "Forest Witch",
+    "dev_id": 11633
+  },
+  {
     "name": "Semovente M41",
-    "type": "AT-SPG"
+    "dev_id": 11649
   },
-  "11777": {
+  {
     "name": "KV-1",
-    "type": "heavyTank"
+    "dev_id": 11777
   },
-  "11793": {
+  {
     "name": "Nashorn",
-    "type": "AT-SPG"
+    "dev_id": 11793
   },
-  "11809": {
+  {
     "name": "T23E3",
-    "type": "mediumTank"
+    "dev_id": 11809
   },
-  "11905": {
+  {
+    "name": "BZ-75",
+    "dev_id": 11825
+  },
+  {
+    "name": "Nebulon",
+    "dev_id": 11889
+  },
+  {
     "name": "Shadowhunter",
-    "type": "mediumTank"
+    "dev_id": 11905
   },
-  "12033": {
+  {
     "name": "SU-122-54",
-    "type": "AT-SPG"
+    "dev_id": 12033
   },
-  "12049": {
+  {
     "name": "Jagdpanzer E 100",
-    "type": "AT-SPG"
+    "dev_id": 12049
   },
-  "12065": {
+  {
     "name": "T95E2",
-    "type": "mediumTank"
+    "dev_id": 12065
   },
-  "12097": {
+  {
+    "name": "BZ-68",
+    "dev_id": 12081
+  },
+  {
     "name": "AMX AC mle. 48",
-    "type": "AT-SPG"
+    "dev_id": 12097
   },
-  "12161": {
+  {
+    "name": "Glacier",
+    "dev_id": 12145
+  },
+  {
     "name": "Strv K",
-    "type": "heavyTank"
+    "dev_id": 12161
   },
-  "12305": {
+  {
     "name": "E 50 Ausf. M",
-    "type": "mediumTank"
+    "dev_id": 12305
   },
-  "12321": {
+  {
     "name": "T6E1 Grizzly",
-    "type": "mediumTank"
+    "dev_id": 12321
   },
-  "12417": {
+  {
+    "name": "BZ-58",
+    "dev_id": 12337
+  },
+  {
     "name": "Bisonte C45",
-    "type": "heavyTank"
+    "dev_id": 12417
   },
-  "12545": {
+  {
     "name": "K-91",
-    "type": "heavyTank"
+    "dev_id": 12545
   },
-  "12673": {
+  {
+    "name": "BZ-166",
+    "dev_id": 12593
+  },
+  {
+    "name": "Titan Charioteer",
+    "dev_id": 12657
+  },
+  {
     "name": "Bofors Tornvagn",
-    "type": "heavyTank"
+    "dev_id": 12673
   },
-  "12929": {
+  {
+    "name": "116-F3",
+    "dev_id": 12849
+  },
+  {
+    "name": "Groundtank",
+    "dev_id": 12913
+  },
+  {
     "name": "TNH T Vz. 51",
-    "type": "heavyTank"
+    "dev_id": 12929
   },
-  "13073": {
+  {
     "name": "Pz.Kpfw. II Ausf. G",
-    "type": "lightTank"
+    "dev_id": 13073
   },
-  "13089": {
+  {
     "name": "T110E4",
-    "type": "AT-SPG"
+    "dev_id": 13089
   },
-  "13185": {
+  {
+    "name": "BZ-176",
+    "dev_id": 13105
+  },
+  {
+    "name": "AC-04 Wedge",
+    "dev_id": 13169
+  },
+  {
     "name": "Vz. 55",
-    "type": "heavyTank"
+    "dev_id": 13185
   },
-  "13329": {
+  {
     "name": "Durchbruchswagen 2",
-    "type": "heavyTank"
+    "dev_id": 13329
   },
-  "13345": {
+  {
     "name": "T26E4 SuperPershing",
-    "type": "mediumTank"
+    "dev_id": 13345
   },
-  "13441": {
+  {
+    "name": "AC-05 Highlander",
+    "dev_id": 13425
+  },
+  {
     "name": "Aeonix",
-    "type": "mediumTank"
+    "dev_id": 13441
   },
-  "13569": {
+  {
     "name": "Object 268",
-    "type": "AT-SPG"
+    "dev_id": 13569
   },
-  "13697": {
+  {
+    "name": "Type 59 spc",
+    "dev_id": 13617
+  },
+  {
+    "name": "AC-06 Ocelote",
+    "dev_id": 13681
+  },
+  {
     "name": "TNH 105/1000",
-    "type": "heavyTank"
+    "dev_id": 13697
   },
-  "13825": {
+  {
     "name": "T-62A",
-    "type": "mediumTank"
+    "dev_id": 13825
   },
-  "13841": {
+  {
     "name": "Indien-Panzer",
-    "type": "mediumTank"
+    "dev_id": 13841
   },
-  "13857": {
+  {
     "name": "T110E3",
-    "type": "AT-SPG"
+    "dev_id": 13857
   },
-  "13889": {
+  {
+    "name": "BZ-74-1",
+    "dev_id": 13873
+  },
+  {
     "name": "AMX 50 Foch (155)",
-    "type": "AT-SPG"
+    "dev_id": 13889
   },
-  "13953": {
+  {
+    "name": "AC-07 Rebelde",
+    "dev_id": 13937
+  },
+  {
     "name": "Vz. 44-1",
-    "type": "heavyTank"
+    "dev_id": 13953
   },
-  "14097": {
+  {
     "name": "VK 30.01 (D)",
-    "type": "mediumTank"
+    "dev_id": 14097
   },
-  "14113": {
+  {
     "name": "M48 Patton",
-    "type": "mediumTank"
+    "dev_id": 14113
   },
-  "14145": {
+  {
+    "name": "BZT-70",
+    "dev_id": 14129
+  },
+  {
     "name": "AMX ELC bis",
-    "type": "lightTank"
+    "dev_id": 14145
   },
-  "14209": {
+  {
+    "name": "Silencer",
+    "dev_id": 14193
+  },
+  {
     "name": "Škoda P-JS",
-    "type": "heavyTank"
+    "dev_id": 14209
   },
-  "14337": {
+  {
     "name": "Object 263",
-    "type": "AT-SPG"
+    "dev_id": 14337
   },
-  "14609": {
+  {
+    "name": "WZ-120G FT",
+    "dev_id": 14385
+  },
+  {
+    "name": "Swindler",
+    "dev_id": 14449
+  },
+  {
+    "name": "DS PZInż",
+    "dev_id": 14465
+  },
+  {
     "name": "Leopard 1",
-    "type": "mediumTank"
+    "dev_id": 14609
   },
-  "14625": {
+  {
     "name": "T69",
-    "type": "mediumTank"
+    "dev_id": 14625
   },
-  "14721": {
+  {
+    "name": "Fänrik",
+    "dev_id": 14705
+  },
+  {
     "name": "Strv 81",
-    "type": "mediumTank"
+    "dev_id": 14721
   },
-  "14865": {
+  {
     "name": "Leopard Prototyp A",
-    "type": "mediumTank"
+    "dev_id": 14865
   },
-  "14881": {
+  {
     "name": "T57 Heavy Tank",
-    "type": "heavyTank"
+    "dev_id": 14881
   },
-  "14977": {
+  {
+    "name": "Mutant",
+    "dev_id": 14961
+  },
+  {
     "name": "CS-63",
-    "type": "mediumTank"
+    "dev_id": 14977
   },
-  "15137": {
+  {
     "name": "T21",
-    "type": "lightTank"
+    "dev_id": 15137
   },
-  "15393": {
+  {
+    "name": "AC-06V Forger",
+    "dev_id": 15217
+  },
+  {
+    "name": "CS-59",
+    "dev_id": 15233
+  },
+  {
     "name": "T54E1",
-    "type": "mediumTank"
+    "dev_id": 15393
   },
-  "15441": {
+  {
+    "name": "ZQ-90",
+    "dev_id": 15409
+  },
+  {
     "name": "Chieftain/T95",
-    "type": "heavyTank"
+    "dev_id": 15441
   },
-  "15617": {
+  {
+    "name": "Endurance",
+    "dev_id": 15473
+  },
+  {
+    "name": "CS-53",
+    "dev_id": 15489
+  },
+  {
     "name": "Object 907",
-    "type": "mediumTank"
+    "dev_id": 15617
   },
-  "15649": {
+  {
     "name": "T71",
-    "type": "lightTank"
+    "dev_id": 15649
   },
-  "15697": {
+  {
     "name": "Chieftain Mk. 6",
-    "type": "heavyTank"
+    "dev_id": 15697
   },
-  "15889": {
+  {
+    "name": "CS-44",
+    "dev_id": 15745
+  },
+  {
     "name": "VK 30.02 (M)",
-    "type": "mediumTank"
+    "dev_id": 15889
   },
-  "15905": {
+  {
     "name": "M60",
-    "type": "mediumTank"
+    "dev_id": 15905
   },
-  "15937": {
+  {
     "name": "Renault R35",
-    "type": "mediumTank"
+    "dev_id": 15937
   },
-  "15953": {
+  {
     "name": "FV201 (A45)",
-    "type": "heavyTank"
+    "dev_id": 15953
   },
-  "16145": {
+  {
+    "name": "Toxique",
+    "dev_id": 15985
+  },
+  {
+    "name": "B.U.G.I.",
+    "dev_id": 16001
+  },
+  {
     "name": "Pz.Sfl. IVc",
-    "type": "AT-SPG"
+    "dev_id": 16145
   },
-  "16193": {
+  {
     "name": "M4A1 Revalorisé",
-    "type": "mediumTank"
+    "dev_id": 16193
   },
-  "16209": {
+  {
     "name": "Cruiser Mk. I",
-    "type": "lightTank"
+    "dev_id": 16209
   },
-  "16257": {
+  {
     "name": "Outcast",
-    "type": "heavyTank"
+    "dev_id": 16257
   },
-  "16401": {
+  {
     "name": "Waffenträger auf Pz. IV",
-    "type": "AT-SPG"
+    "dev_id": 16401
   },
-  "16449": {
+  {
     "name": "AMX 13 57",
-    "type": "lightTank"
+    "dev_id": 16449
   },
-  "16465": {
+  {
     "name": "Cruiser Mk. I",
-    "type": "lightTank"
+    "dev_id": 16465
   },
-  "16641": {
+  {
+    "name": "E-10",
+    "dev_id": 16497
+  },
+  {
     "name": "MT-25",
-    "type": "lightTank"
+    "dev_id": 16641
   },
-  "16657": {
+  {
     "name": "Rhm.-Borsig Waffenträger",
-    "type": "AT-SPG"
+    "dev_id": 16657
   },
-  "16673": {
+  {
     "name": "T37",
-    "type": "lightTank"
+    "dev_id": 16673
   },
-  "16705": {
+  {
     "name": "AMX M4 mle. 49",
-    "type": "heavyTank"
+    "dev_id": 16705
   },
-  "16897": {
+  {
+    "name": "DTH-STR",
+    "dev_id": 16753
+  },
+  {
+    "name": "SMV CC-64 Vipera",
+    "dev_id": 16769
+  },
+  {
     "name": "Object 140",
-    "type": "mediumTank"
+    "dev_id": 16897
   },
-  "17169": {
+  {
+    "name": "KV-JR",
+    "dev_id": 17009
+  },
+  {
+    "name": "Progetto CC55 mod. 54",
+    "dev_id": 17025
+  },
+  {
     "name": "Pz.Kpfw. IV Ausf. A",
-    "type": "mediumTank"
+    "dev_id": 17169
   },
-  "17217": {
-    "name": "Eraser BP44",
-    "type": "heavyTank"
-  },
-  "17233": {
+  {
     "name": "FV4004 Conway",
-    "type": "AT-SPG"
+    "dev_id": 17233
   },
-  "17425": {
+  {
+    "name": "Souleater",
+    "dev_id": 17265
+  },
+  {
+    "name": "Progetto C50 mod. 66",
+    "dev_id": 17281
+  },
+  {
     "name": "Pz.Kpfw. IV Ausf. D",
-    "type": "mediumTank"
+    "dev_id": 17425
   },
-  "17473": {
-    "name": "AMX Defender",
-    "type": "lightTank"
-  },
-  "17489": {
+  {
     "name": "Charioteer",
-    "type": "AT-SPG"
+    "dev_id": 17489
   },
-  "17729": {
+  {
+    "name": "Lightbringer",
+    "dev_id": 17521
+  },
+  {
+    "name": "Carro d'assalto P.88",
+    "dev_id": 17537
+  },
+  {
     "name": "Somua SM",
-    "type": "heavyTank"
+    "dev_id": 17729
   },
-  "17745": {
+  {
     "name": "FV217 Badger",
-    "type": "AT-SPG"
+    "dev_id": 17745
   },
-  "17953": {
+  {
+    "name": "Titan Strife",
+    "dev_id": 17777
+  },
+  {
+    "name": "Rinoceronte",
+    "dev_id": 17793
+  },
+  {
     "name": "M41 Walker Bulldog",
-    "type": "lightTank"
+    "dev_id": 17953
   },
-  "17985": {
+  {
     "name": "Bretagne Panther",
-    "type": "mediumTank"
+    "dev_id": 17985
   },
-  "18001": {
+  {
     "name": "FV4005",
-    "type": "AT-SPG"
+    "dev_id": 18001
   },
-  "18177": {
+  {
+    "name": "Hazard I",
+    "dev_id": 18033
+  },
+  {
+    "name": "Lion",
+    "dev_id": 18049
+  },
+  {
     "name": "T-54 ltwt.",
-    "type": "lightTank"
+    "dev_id": 18177
   },
-  "18209": {
+  {
     "name": "T49",
-    "type": "lightTank"
+    "dev_id": 18209
   },
-  "18241": {
+  {
     "name": "Bat.-Châtillon Bourrasque",
-    "type": "mediumTank"
+    "dev_id": 18241
   },
-  "18257": {
+  {
     "name": "Challenger",
-    "type": "AT-SPG"
+    "dev_id": 18257
   },
-  "18433": {
+  {
+    "name": "Quetzal",
+    "dev_id": 18289
+  },
+  {
+    "name": "SDP 40 Zadymka",
+    "dev_id": 18305
+  },
+  {
     "name": "LTTB",
-    "type": "lightTank"
+    "dev_id": 18433
   },
-  "18449": {
+  {
     "name": "Spähpanzer Ru 251",
-    "type": "lightTank"
+    "dev_id": 18449
   },
-  "18465": {
+  {
     "name": "M2 Light Tank",
-    "type": "lightTank"
+    "dev_id": 18465
   },
-  "18497": {
+  {
     "name": "Lorraine 40 t Fearless",
-    "type": "mediumTank"
+    "dev_id": 18497
   },
-  "18513": {
+  {
     "name": "Chimera",
-    "type": "mediumTank"
+    "dev_id": 18513
   },
-  "18689": {
+  {
+    "name": "Argonaut",
+    "dev_id": 18545
+  },
+  {
+    "name": "SDP 44 Burza",
+    "dev_id": 18561
+  },
+  {
     "name": "T-70/57",
-    "type": "lightTank"
+    "dev_id": 18689
   },
-  "18721": {
+  {
     "name": "M2 Light Tank",
-    "type": "lightTank"
+    "dev_id": 18721
   },
-  "18753": {
+  {
     "name": "AMX Canon d'assaut 105",
-    "type": "AT-SPG"
+    "dev_id": 18753
   },
-  "18769": {
+  {
     "name": "Caernarvon Action X",
-    "type": "heavyTank"
+    "dev_id": 18769
   },
-  "18945": {
+  {
+    "name": "mau5Tank",
+    "dev_id": 18801
+  },
+  {
+    "name": "SDP 57 Gowika",
+    "dev_id": 18817
+  },
+  {
     "name": "ISU-130",
-    "type": "AT-SPG"
+    "dev_id": 18945
   },
-  "18961": {
+  {
     "name": "Spähpanzer SP I C",
-    "type": "lightTank"
+    "dev_id": 18961
   },
-  "18977": {
+  {
     "name": "T95E6",
-    "type": "heavyTank"
+    "dev_id": 18977
   },
-  "19009": {
+  {
     "name": "AMXmas",
-    "type": "lightTank"
+    "dev_id": 19009
   },
-  "19025": {
+  {
     "name": "Defender Mk. 1",
-    "type": "mediumTank"
+    "dev_id": 19025
   },
-  "19201": {
+  {
+    "name": "Destiny",
+    "dev_id": 19057
+  },
+  {
+    "name": "SDP 58 Kilana",
+    "dev_id": 19073
+  },
+  {
     "name": "T-26",
-    "type": "lightTank"
+    "dev_id": 19201
   },
-  "19217": {
+  {
     "name": "Grille 15",
-    "type": "AT-SPG"
+    "dev_id": 19217
   },
-  "19233": {
+  {
     "name": "Chrysler K",
-    "type": "heavyTank"
+    "dev_id": 19233
   },
-  "19265": {
+  {
     "name": "Charles",
-    "type": "AT-SPG"
+    "dev_id": 19265
   },
-  "19281": {
+  {
     "name": "Super Conqueror",
-    "type": "heavyTank"
+    "dev_id": 19281
   },
-  "19457": {
+  {
+    "name": "Prowler",
+    "dev_id": 19313
+  },
+  {
+    "name": "SDP 60 Gonkiewicza",
+    "dev_id": 19329
+  },
+  {
     "name": "T-26",
-    "type": "lightTank"
+    "dev_id": 19457
   },
-  "19473": {
+  {
     "name": "Krupp-38(D)",
-    "type": "mediumTank"
+    "dev_id": 19473
   },
-  "19489": {
+  {
     "name": "T28 Defender",
-    "type": "AT-SPG"
+    "dev_id": 19489
   },
-  "19521": {
-    "name": "#france_vehicles:Bat-Chat-25CL",
-    "type": "lightTank"
+  {
+    "name": "Bat.-Châtillon 25 t Avenir",
+    "dev_id": 19521
   },
-  "19537": {
+  {
     "name": "Vickers Light 105",
-    "type": "lightTank"
+    "dev_id": 19537
   },
-  "19713": {
+  {
+    "name": "AC-09V Sterope",
+    "dev_id": 19569
+  },
+  {
+    "name": "NC 70 Błyskawica",
+    "dev_id": 19585
+  },
+  {
     "name": "Loza's M4-A2 Sherman",
-    "type": "mediumTank"
+    "dev_id": 19713
   },
-  "19729": {
+  {
     "name": "Tiger 131",
-    "type": "heavyTank"
+    "dev_id": 19729
   },
-  "19745": {
+  {
     "name": "T26E5",
-    "type": "heavyTank"
+    "dev_id": 19745
   },
-  "19777": {
+  {
     "name": "AltProto AMX 30",
-    "type": "mediumTank"
+    "dev_id": 19777
   },
-  "19793": {
+  {
     "name": "Vickers Cruiser",
-    "type": "lightTank"
+    "dev_id": 19793
   },
-  "19969": {
+  {
+    "name": "AC-10 Atlas",
+    "dev_id": 19825
+  },
+  {
+    "name": "SDP wz 66 Grom",
+    "dev_id": 19841
+  },
+  {
     "name": "T-22 medium",
-    "type": "mediumTank"
+    "dev_id": 19969
   },
-  "19985": {
+  {
     "name": "Rheinmetall Skorpion G",
-    "type": "AT-SPG"
+    "dev_id": 19985
   },
-  "20001": {
+  {
     "name": "T92E1",
-    "type": "lightTank"
+    "dev_id": 20001
   },
-  "20033": {
+  {
     "name": "Char Futur 4",
-    "type": "mediumTank"
+    "dev_id": 20033
   },
-  "20049": {
+  {
     "name": "FV301",
-    "type": "lightTank"
+    "dev_id": 20049
   },
-  "20241": {
+  {
+    "name": "AC-09 Celeno",
+    "dev_id": 20081
+  },
+  {
+    "name": "Felice",
+    "dev_id": 20097
+  },
+  {
     "name": "Pz.Kpfw. II",
-    "type": "lightTank"
+    "dev_id": 20241
   },
-  "20257": {
+  {
     "name": "XM551 Sheridan",
-    "type": "lightTank"
+    "dev_id": 20257
   },
-  "20289": {
+  {
     "name": "Pirate",
-    "type": "AT-SPG"
+    "dev_id": 20289
   },
-  "20305": {
-    "name": "Centurion Mk. 5/1 RAAC",
-    "type": "mediumTank"
+  {
+    "name": "AC-08 Taygete",
+    "dev_id": 20337
   },
-  "20481": {
+  {
     "name": "Object 252U",
-    "type": "heavyTank"
+    "dev_id": 20481
   },
-  "20497": {
+  {
     "name": "VK 100.01 (P)",
-    "type": "heavyTank"
+    "dev_id": 20497
   },
-  "20513": {
+  {
     "name": "T54E2",
-    "type": "heavyTank"
+    "dev_id": 20513
   },
-  "20545": {
+  {
     "name": "Renault G1",
-    "type": "heavyTank"
+    "dev_id": 20545
   },
-  "20561": {
+  {
     "name": "Turtle Mk. I",
-    "type": "AT-SPG"
+    "dev_id": 20561
   },
-  "20737": {
+  {
+    "name": "AC-08V Pleione",
+    "dev_id": 20593
+  },
+  {
     "name": "SU-130PM",
-    "type": "AT-SPG"
+    "dev_id": 20737
   },
-  "20753": {
+  {
     "name": "Mäuschen",
-    "type": "heavyTank"
+    "dev_id": 20753
   },
-  "20769": {
+  {
     "name": "T25 Pilot Number 1",
-    "type": "mediumTank"
+    "dev_id": 20769
   },
-  "20817": {
+  {
+    "name": "Lorraine 50 t",
+    "dev_id": 20801
+  },
+  {
     "name": "Explorer",
-    "type": "mediumTank"
+    "dev_id": 20817
   },
-  "20993": {
+  {
     "name": "T-2020",
-    "type": "heavyTank"
+    "dev_id": 20993
   },
-  "21009": {
+  {
     "name": "Panzer 58",
-    "type": "mediumTank"
+    "dev_id": 21009
   },
-  "21025": {
+  {
     "name": "T26E3 Eagle 7",
-    "type": "mediumTank"
+    "dev_id": 21025
   },
-  "21073": {
+  {
+    "name": "Projet Murat",
+    "dev_id": 21057
+  },
+  {
     "name": "Dreadnought",
-    "type": "AT-SPG"
+    "dev_id": 21073
   },
-  "21249": {
+  {
+    "name": "AC-07V Merope",
+    "dev_id": 21105
+  },
+  {
     "name": "Thunder",
-    "type": "heavyTank"
+    "dev_id": 21249
   },
-  "21265": {
+  {
     "name": "VK 168.01 (P)",
-    "type": "heavyTank"
+    "dev_id": 21265
   },
-  "21281": {
+  {
     "name": "Rudolph",
-    "type": "mediumTank"
+    "dev_id": 21281
   },
-  "21329": {
+  {
+    "name": "AMX 13 M24",
+    "dev_id": 21313
+  },
+  {
     "name": "GSOR 1008",
-    "type": "AT-SPG"
+    "dev_id": 21329
   },
-  "21505": {
+  {
+    "name": "Herdbreaker",
+    "dev_id": 21361
+  },
+  {
     "name": "T-44-85",
-    "type": "mediumTank"
+    "dev_id": 21505
   },
-  "21521": {
+  {
     "name": "E 75 TS",
-    "type": "heavyTank"
+    "dev_id": 21521
   },
-  "21537": {
+  {
     "name": "Sherman Easy 8",
-    "type": "mediumTank"
+    "dev_id": 21537
   },
-  "21585": {
+  {
+    "name": "ERAC 105 Proto",
+    "dev_id": 21569
+  },
+  {
     "name": "Blasteroid",
-    "type": "heavyTank"
+    "dev_id": 21585
   },
-  "21761": {
+  {
     "name": "STG",
-    "type": "mediumTank"
+    "dev_id": 21761
   },
-  "21777": {
+  {
     "name": "VK 90.01 (P)",
-    "type": "heavyTank"
+    "dev_id": 21777
   },
-  "21793": {
+  {
     "name": "XM551 Sheridan Missile",
-    "type": "lightTank"
+    "dev_id": 21793
   },
-  "21841": {
+  {
+    "name": "Projet Louis",
+    "dev_id": 21825
+  },
+  {
     "name": "Caliban",
-    "type": "heavyTank"
+    "dev_id": 21841
   },
-  "22017": {
+  {
+    "name": "56TP",
+    "dev_id": 21889
+  },
+  {
     "name": "T-34-85",
-    "type": "mediumTank"
+    "dev_id": 22017
   },
-  "22033": {
+  {
     "name": "Agent",
-    "type": "lightTank"
+    "dev_id": 22033
   },
-  "22049": {
+  {
     "name": "Magnus",
-    "type": "heavyTank"
+    "dev_id": 22049
   },
-  "22097": {
+  {
+    "name": "ELC AMX-901",
+    "dev_id": 22081
+  },
+  {
     "name": "Churchill VIII",
-    "type": "heavyTank"
+    "dev_id": 22097
   },
-  "22273": {
+  {
+    "name": "AC-110 Teichos",
+    "dev_id": 22129
+  },
+  {
+    "name": "Bofors Triton",
+    "dev_id": 22145
+  },
+  {
     "name": "Object 260",
-    "type": "heavyTank"
+    "dev_id": 22273
   },
-  "22289": {
+  {
     "name": "Tiger I",
-    "type": "heavyTank"
+    "dev_id": 22289
   },
-  "22305": {
+  {
     "name": "AE Phase I",
-    "type": "heavyTank"
+    "dev_id": 22305
   },
-  "22353": {
+  {
     "name": "Churchill W",
-    "type": "heavyTank"
+    "dev_id": 22353
   },
-  "22529": {
+  {
+    "name": "Titan JPanther II",
+    "dev_id": 22385
+  },
+  {
+    "name": "Ambassador",
+    "dev_id": 22401
+  },
+  {
     "name": "LT-432",
-    "type": "lightTank"
+    "dev_id": 22529
   },
-  "22545": {
+  {
     "name": "Kanonenjagdpanzer 105",
-    "type": "AT-SPG"
+    "dev_id": 22545
   },
-  "22561": {
+  {
     "name": "TS-5",
-    "type": "AT-SPG"
+    "dev_id": 22561
   },
-  "22609": {
+  {
     "name": "Caernarvon Defender",
-    "type": "heavyTank"
+    "dev_id": 22609
   },
-  "22785": {
+  {
+    "name": "Convoyer",
+    "dev_id": 22641
+  },
+  {
+    "name": "Toro",
+    "dev_id": 22657
+  },
+  {
     "name": "Triumphant",
-    "type": "mediumTank"
+    "dev_id": 22785
   },
-  "22801": {
+  {
     "name": "Icebreaker",
-    "type": "heavyTank"
+    "dev_id": 22801
   },
-  "22817": {
+  {
     "name": "M-VI-Yoh",
-    "type": "heavyTank"
+    "dev_id": 22817
   },
-  "22865": {
+  {
+    "name": "Brennos",
+    "dev_id": 22849
+  },
+  {
     "name": "Charlemagne",
-    "type": "heavyTank"
+    "dev_id": 22865
   },
-  "23041": {
+  {
+    "name": "Donnola",
+    "dev_id": 22913
+  },
+  {
     "name": "T-34 shielded",
-    "type": "mediumTank"
+    "dev_id": 23041
   },
-  "23057": {
+  {
     "name": "Kunze Panzer",
-    "type": "lightTank"
+    "dev_id": 23057
   },
-  "23073": {
+  {
     "name": "M-V-Yoh",
-    "type": "heavyTank"
+    "dev_id": 23073
   },
-  "23121": {
+  {
+    "name": "M47 Chevalier",
+    "dev_id": 23105
+  },
+  {
     "name": "Cobra",
-    "type": "mediumTank"
+    "dev_id": 23121
   },
-  "23297": {
+  {
+    "name": "Husarz",
+    "dev_id": 23169
+  },
+  {
     "name": "Object 244",
-    "type": "heavyTank"
+    "dev_id": 23297
   },
-  "23313": {
+  {
     "name": "Kampfpanzer 50 t",
-    "type": "mediumTank"
+    "dev_id": 23313
   },
-  "23329": {
+  {
     "name": "M-III-Yoh",
-    "type": "heavyTank"
+    "dev_id": 23329
   },
-  "23553": {
+  {
+    "name": "FV1066 Senlac",
+    "dev_id": 23377
+  },
+  {
+    "name": "Zmije",
+    "dev_id": 23425
+  },
+  {
     "name": "MS-1",
-    "type": "lightTank"
+    "dev_id": 23553
   },
-  "23569": {
+  {
     "name": "Pz. IV Gargoyle",
-    "type": "mediumTank"
+    "dev_id": 23569
   },
-  "23585": {
+  {
     "name": "M-VII-Yoh",
-    "type": "heavyTank"
+    "dev_id": 23585
   },
-  "23809": {
+  {
+    "name": "A25 Harry Hopkins I",
+    "dev_id": 23633
+  },
+  {
     "name": "Object 84",
-    "type": "lightTank"
+    "dev_id": 23809
   },
-  "23825": {
+  {
     "name": "Krupp-Steyr Waffenträger",
-    "type": "AT-SPG"
+    "dev_id": 23825
   },
-  "23841": {
-    "name": "Super Hellcat",
-    "type": "AT-SPG"
+  {
+    "name": "FV4201 Chieftain Proto",
+    "dev_id": 23889
   },
-  "24065": {
+  {
     "name": "LTG",
-    "type": "lightTank"
+    "dev_id": 24065
   },
-  "24081": {
+  {
     "name": "U-Panzer",
-    "type": "mediumTank"
+    "dev_id": 24081
   },
-  "24097": {
+  {
     "name": "BLTZ9000",
-    "type": "mediumTank"
+    "dev_id": 24097
   },
-  "24321": {
+  {
+    "name": "GSOR 1008 Fearless",
+    "dev_id": 24145
+  },
+  {
+    "name": "LEY-1 Defender",
+    "dev_id": 24177
+  },
+  {
     "name": "T-100 LT",
-    "type": "lightTank"
+    "dev_id": 24321
   },
-  "24337": {
+  {
     "name": "M48A2 Räumpanzer",
-    "type": "mediumTank"
+    "dev_id": 24337
   },
-  "24577": {
+  {
+    "name": "Vickers MBT Mk. 3",
+    "dev_id": 24401
+  },
+  {
     "name": "Object 268 Version 4",
-    "type": "AT-SPG"
+    "dev_id": 24577
   },
-  "24593": {
+  {
     "name": "Keiler",
-    "type": "heavyTank"
+    "dev_id": 24593
   },
-  "24609": {
+  {
     "name": "Concept 1B",
-    "type": "heavyTank"
+    "dev_id": 24609
   },
-  "24849": {
+  {
+    "name": "A46 Different",
+    "dev_id": 24657
+  },
+  {
+    "name": "星际猎人",
+    "dev_id": 24689
+  },
+  {
     "name": "Kryos",
-    "type": "AT-SPG"
+    "dev_id": 24849
   },
-  "24865": {
+  {
     "name": "Scepter",
-    "type": "heavyTank"
+    "dev_id": 24865
   },
-  "25089": {
+  {
+    "name": "Nemesis",
+    "dev_id": 24913
+  },
+  {
+    "name": "Titan AMX",
+    "dev_id": 24945
+  },
+  {
     "name": "Object 752",
-    "type": "heavyTank"
+    "dev_id": 25089
   },
-  "25105": {
+  {
     "name": "Barkhan",
-    "type": "heavyTank"
+    "dev_id": 25105
   },
-  "25345": {
+  {
+    "name": "M46 Jaguar",
+    "dev_id": 25121
+  },
+  {
+    "name": "GSOR the TANK",
+    "dev_id": 25169
+  },
+  {
     "name": "Object 274a",
-    "type": "mediumTank"
+    "dev_id": 25345
   },
-  "25361": {
-    "name": "Waffenträger Ritter",
-    "type": "AT-SPG"
-  },
-  "25377": {
+  {
     "name": "T77",
-    "type": "heavyTank"
+    "dev_id": 25377
   },
-  "25601": {
-    "name": "IS-2 shielded",
-    "type": "heavyTank"
-  },
-  "25617": {
+  {
     "name": "HWK 30",
-    "type": "lightTank"
+    "dev_id": 25617
   },
-  "25633": {
+  {
     "name": "M-IV-Y",
-    "type": "heavyTank"
+    "dev_id": 25633
   },
-  "25857": {
+  {
     "name": "Object 777 Version II",
-    "type": "heavyTank"
+    "dev_id": 25857
   },
-  "25889": {
+  {
+    "name": "Elefant",
+    "dev_id": 25873
+  },
+  {
     "name": "Ranger",
-    "type": "lightTank"
+    "dev_id": 25889
   },
-  "26113": {
+  {
+    "name": "Mark I Male",
+    "dev_id": 25937
+  },
+  {
     "name": "Object 452K",
-    "type": "heavyTank"
+    "dev_id": 26113
   },
-  "26129": {
+  {
     "name": "Epsilon",
-    "type": "AT-SPG"
+    "dev_id": 26129
   },
-  "26145": {
+  {
     "name": "High Score",
-    "type": "mediumTank"
+    "dev_id": 26145
   },
-  "26401": {
-    "name": "Enforcer",
-    "type": "AT-SPG"
+  {
+    "name": "ST-62 Version 2",
+    "dev_id": 26369
   },
-  "26641": {
+  {
     "name": "Kampfpanzer 07 RH",
-    "type": "mediumTank"
+    "dev_id": 26641
   },
-  "26657": {
+  {
     "name": "ASTRON Rex 105 mm",
-    "type": "mediumTank"
+    "dev_id": 26657
   },
-  "26913": {
+  {
+    "name": "Object 590",
+    "dev_id": 26881
+  },
+  {
+    "name": "Kpz. Pr.68 (P)",
+    "dev_id": 26897
+  },
+  {
     "name": "Frosty",
-    "type": "lightTank"
+    "dev_id": 26913
   },
-  "27169": {
+  {
+    "name": "K-2",
+    "dev_id": 27137
+  },
+  {
+    "name": "Aufklärungspanzer Panther",
+    "dev_id": 27153
+  },
+  {
     "name": "Cyborg",
-    "type": "heavyTank"
+    "dev_id": 27169
   },
-  "27425": {
+  {
+    "name": "Object Kust",
+    "dev_id": 27393
+  },
+  {
+    "name": "Projekt Kpz. 07P(E)",
+    "dev_id": 27409
+  },
+  {
     "name": "TL-7-120",
-    "type": "heavyTank"
+    "dev_id": 27425
   },
-  "27681": {
+  {
+    "name": "Schwarzpanzer 58",
+    "dev_id": 27665
+  },
+  {
     "name": "Pawlack Tank",
-    "type": "heavyTank"
+    "dev_id": 27681
   },
-  "27937": {
+  {
+    "name": "Erich Konzept I",
+    "dev_id": 27921
+  },
+  {
     "name": "T49 Fearless",
-    "type": "lightTank"
+    "dev_id": 27937
   },
-  "28193": {
+  {
+    "name": "LKpz.70 K",
+    "dev_id": 28177
+  },
+  {
     "name": "TS-60",
-    "type": "AT-SPG"
+    "dev_id": 28193
   },
-  "28449": {
+  {
+    "name": "KV-4 KTTS",
+    "dev_id": 28417
+  },
+  {
+    "name": "HWK 12",
+    "dev_id": 28433
+  },
+  {
     "name": "T42",
-    "type": "mediumTank"
+    "dev_id": 28449
   },
-  "51201": {
+  {
+    "name": "IS-8 Taurus",
+    "dev_id": 28673
+  },
+  {
+    "name": "XM66F",
+    "dev_id": 28705
+  },
+  {
+    "name": "Waffen F1.0",
+    "dev_id": 28945
+  },
+  {
+    "name": "Sherman Easy 8",
+    "dev_id": 28961
+  },
+  {
+    "name": "Tiger-Maus",
+    "dev_id": 29201
+  },
+  {
+    "name": "MBT-B",
+    "dev_id": 29217
+  },
+  {
+    "name": "VK 19.02“闪送宝”",
+    "dev_id": 29457
+  },
+  {
+    "name": "ATAC",
+    "dev_id": 29473
+  },
+  {
+    "name": "KJPZ TIII Jäger",
+    "dev_id": 29713
+  },
+  {
+    "name": "SPHT",
+    "dev_id": 29985
+  },
+  {
+    "name": "Kampfpanzer 70 Missile",
+    "dev_id": 30481
+  },
+  {
     "name": "KV-220 Beta-Test",
-    "type": "heavyTank"
+    "dev_id": 51201
   },
-  "51457": {
+  {
     "name": "Matilda IV",
-    "type": "mediumTank"
+    "dev_id": 51457
   },
-  "51473": {
+  {
     "name": "Pz.Kpfw. V/IV",
-    "type": "mediumTank"
+    "dev_id": 51473
   },
-  "51489": {
+  {
     "name": "T2 Light Tank",
-    "type": "lightTank"
+    "dev_id": 51489
   },
-  "51713": {
+  {
     "name": "Churchill III",
-    "type": "heavyTank"
+    "dev_id": 51713
   },
-  "51729": {
+  {
     "name": "Pz.Kpfw. II Ausf. J",
-    "type": "lightTank"
+    "dev_id": 51729
   },
-  "51745": {
+  {
     "name": "Ram II",
-    "type": "mediumTank"
+    "dev_id": 51745
   },
-  "51809": {
+  {
     "name": "Type 98 Ke-Ni Otsu",
-    "type": "lightTank"
+    "dev_id": 51809
   },
-  "51985": {
+  {
     "name": "Pz.Kpfw. S35 739 (f)",
-    "type": "mediumTank"
+    "dev_id": 51985
   },
-  "52065": {
-    "name": "Hetzer Kame SP",
-    "type": "AT-SPG"
+  {
+    "name": "Hetzer Kamesan SP",
+    "dev_id": 52065
   },
-  "52225": {
+  {
     "name": "BT-SV",
-    "type": "lightTank"
+    "dev_id": 52225
   },
-  "52241": {
+  {
     "name": "Pz.Kpfw. B2 740 (f)",
-    "type": "heavyTank"
+    "dev_id": 52241
   },
-  "52257": {
+  {
     "name": "M4A2E4 Sherman",
-    "type": "mediumTank"
+    "dev_id": 52257
   },
-  "52481": {
+  {
     "name": "Valentine II",
-    "type": "lightTank"
+    "dev_id": 52481
   },
-  "52497": {
+  {
     "name": "Pz.Kpfw. 38H 735 (f)",
-    "type": "lightTank"
+    "dev_id": 52497
   },
-  "52513": {
+  {
     "name": "M6A2E1",
-    "type": "heavyTank"
+    "dev_id": 52513
   },
-  "52561": {
+  {
     "name": "Tortoise",
-    "type": "AT-SPG"
+    "dev_id": 52561
   },
-  "52737": {
+  {
     "name": "M3 Light",
-    "type": "lightTank"
+    "dev_id": 52737
   },
-  "52769": {
+  {
     "name": "M22 Locust",
-    "type": "lightTank"
+    "dev_id": 52769
   },
-  "52993": {
+  {
     "name": "A-32",
-    "type": "mediumTank"
+    "dev_id": 52993
   },
-  "53025": {
+  {
     "name": "M6A2E1 EXP",
-    "type": "heavyTank"
+    "dev_id": 53025
   },
-  "53249": {
+  {
     "name": "KV-5",
-    "type": "heavyTank"
+    "dev_id": 53249
   },
-  "53505": {
+  {
     "name": "T-127",
-    "type": "lightTank"
+    "dev_id": 53505
   },
-  "53537": {
+  {
     "name": "T1E6",
-    "type": "lightTank"
+    "dev_id": 53537
   },
-  "53585": {
+  {
     "name": "Matilda Black Prince",
-    "type": "mediumTank"
+    "dev_id": 53585
   },
-  "53761": {
+  {
     "name": "SU-85I",
-    "type": "AT-SPG"
+    "dev_id": 53761
   },
-  "53841": {
+  {
     "name": "TOG II*",
-    "type": "heavyTank"
+    "dev_id": 53841
   },
-  "54097": {
+  {
     "name": "AT 15A",
-    "type": "AT-SPG"
+    "dev_id": 54097
   },
-  "54273": {
+  {
     "name": "SU-76I",
-    "type": "AT-SPG"
+    "dev_id": 54273
   },
-  "54289": {
+  {
     "name": "Löwe",
-    "type": "heavyTank"
+    "dev_id": 54289
   },
-  "54353": {
+  {
     "name": "Excelsior",
-    "type": "heavyTank"
+    "dev_id": 54353
   },
-  "54529": {
+  {
     "name": "Tetrarch",
-    "type": "lightTank"
+    "dev_id": 54529
   },
-  "54545": {
+  {
     "name": "T-25",
-    "type": "mediumTank"
+    "dev_id": 54545
   },
-  "54785": {
+  {
     "name": "SU-100Y",
-    "type": "AT-SPG"
+    "dev_id": 54785
   },
-  "54801": {
+  {
     "name": "T-15",
-    "type": "lightTank"
+    "dev_id": 54801
   },
-  "54865": {
+  {
     "name": "Light Mk. VIC",
-    "type": "lightTank"
+    "dev_id": 54865
   },
-  "55057": {
+  {
     "name": "Pz.Kpfw. IV hydrostat.",
-    "type": "mediumTank"
+    "dev_id": 55057
   },
-  "55073": {
+  {
     "name": "T7 Combat Car",
-    "type": "lightTank"
+    "dev_id": 55073
   },
-  "55297": {
+  {
     "name": "SU-122-44",
-    "type": "AT-SPG"
+    "dev_id": 55297
   },
-  "55313": {
+  {
     "name": "8,8 cm Pak 43 Jagdtiger",
-    "type": "AT-SPG"
+    "dev_id": 55313
   },
-  "55889": {
+  {
     "name": "Cromwell B",
-    "type": "mediumTank"
+    "dev_id": 55889
   },
-  "56097": {
+  {
     "name": "M4A3E8 Fury",
-    "type": "mediumTank"
+    "dev_id": 56097
   },
-  "56577": {
+  {
     "name": "LTP",
-    "type": "lightTank"
+    "dev_id": 56577
   },
-  "56609": {
+  {
     "name": "T28 Concept",
-    "type": "AT-SPG"
+    "dev_id": 56609
   },
-  "57105": {
+  {
     "name": "Dicker Max",
-    "type": "AT-SPG"
+    "dev_id": 57105
   },
-  "57361": {
+  {
     "name": "Pz.Kpfw. IV Schmalturm",
-    "type": "mediumTank"
+    "dev_id": 57361
   },
-  "57617": {
+  {
     "name": "Panther/M10",
-    "type": "mediumTank"
+    "dev_id": 57617
   },
-  "58641": {
+  {
     "name": "VK 72.01 (K)",
-    "type": "heavyTank"
+    "dev_id": 58641
   },
-  "58881": {
+  {
     "name": "IS-5 (Object 730)",
-    "type": "heavyTank"
+    "dev_id": 58881
   },
-  "59137": {
+  {
     "name": "IS-2 (1945)",
-    "type": "heavyTank"
+    "dev_id": 59137
   },
-  "59649": {
+  {
     "name": "ISU-122S",
-    "type": "AT-SPG"
+    "dev_id": 59649
   },
-  "59665": {
+  {
     "name": "Großtraktor - Krupp",
-    "type": "heavyTank"
+    "dev_id": 59665
   },
-  "59905": {
+  {
     "name": "T-54 first prototype",
-    "type": "mediumTank"
+    "dev_id": 59905
   },
-  "60161": {
+  {
     "name": "IS-2Sh",
-    "type": "heavyTank"
+    "dev_id": 60161
   },
-  "60177": {
+  {
     "name": "Panther mit 8,8 cm L/71",
-    "type": "mediumTank"
+    "dev_id": 60177
   },
-  "60417": {
+  {
     "name": "IS-3 Defender",
-    "type": "heavyTank"
+    "dev_id": 60417
   },
-  "60929": {
+  {
     "name": "BT-7 artillery",
-    "type": "lightTank"
+    "dev_id": 60929
   },
-  "62737": {
+  {
     "name": "leKpz M 41 90 mm",
-    "type": "lightTank"
+    "dev_id": 62737
   },
-  "62977": {
+  {
     "name": "T-44-100",
-    "type": "mediumTank"
+    "dev_id": 62977
   },
-  "62993": {
+  {
     "name": "VK 45.03",
-    "type": "heavyTank"
+    "dev_id": 62993
   },
-  "63553": {
+  {
     "name": "AMX Chasseur de chars",
-    "type": "mediumTank"
+    "dev_id": 63553
   },
-  "63585": {
-    "name": "Tiger Kuromorimine SP",
-    "type": "heavyTank"
-  },
-  "63601": {
+  {
     "name": "Dracula",
-    "type": "mediumTank"
+    "dev_id": 63601
   },
-  "63841": {
+  {
     "name": "Panzer IV Ankou Special",
-    "type": "mediumTank"
+    "dev_id": 63841
   },
-  "64001": {
+  {
     "name": "T-34-85 Rudy",
-    "type": "mediumTank"
+    "dev_id": 64001
   },
-  "64017": {
+  {
     "name": "Tankenstein",
-    "type": "heavyTank"
+    "dev_id": 64017
   },
-  "64065": {
+  {
     "name": "FCM 50 t",
-    "type": "mediumTank"
+    "dev_id": 64065
   },
-  "64081": {
+  {
     "name": "Mk I* Heavy Tank",
-    "type": "heavyTank"
+    "dev_id": 64081
   },
-  "64257": {
+  {
     "name": "T-34-85 Victory",
-    "type": "mediumTank"
+    "dev_id": 64257
   },
-  "64273": {
+  {
     "name": "Snowstorm Jagdtiger 8.8",
-    "type": "AT-SPG"
+    "dev_id": 64273
   },
-  "64337": {
+  {
     "name": "AC IV Sentinel",
-    "type": "mediumTank"
+    "dev_id": 64337
   },
-  "64529": {
+  {
     "name": "E 25",
-    "type": "AT-SPG"
+    "dev_id": 64529
   },
-  "64561": {
+  {
     "name": "112 Glacial",
-    "type": "heavyTank"
+    "dev_id": 64561
   },
-  "64593": {
+  {
     "name": "Angry Connor",
-    "type": "AT-SPG"
+    "dev_id": 64593
   },
-  "64769": {
+  {
     "name": "IS-6 Fearless",
-    "type": "heavyTank"
+    "dev_id": 64769
   },
-  "64785": {
+  {
     "name": "Pz.Kpfw. II",
-    "type": "lightTank"
+    "dev_id": 64785
   },
-  "64801": {
+  {
     "name": "T34 Independence",
-    "type": "heavyTank"
+    "dev_id": 64801
   },
-  "64849": {
+  {
     "name": "AC 1 Sentinel",
-    "type": "mediumTank"
+    "dev_id": 64849
   },
-  "65025": {
+  {
     "name": "MS-1 mod. 1",
-    "type": "lightTank"
+    "dev_id": 65025
   },
-  "65041": {
+  {
     "name": "Leichttraktor",
-    "type": "lightTank"
+    "dev_id": 65041
   },
-  "65057": {
+  {
     "name": "T1 Cunningham",
-    "type": "lightTank"
+    "dev_id": 65057
   },
-  "65105": {
+  {
     "name": "Vickers Medium Mk. I",
-    "type": "mediumTank"
+    "dev_id": 65105
   },
-  "65281": {
+  {
     "name": "MS-1 mod. 1",
-    "type": "lightTank"
+    "dev_id": 65281
   },
-  "65297": {
+  {
     "name": "Leichttraktor",
-    "type": "lightTank"
+    "dev_id": 65297
   },
-  "65313": {
+  {
     "name": "T1 Cunningham",
-    "type": "lightTank"
+    "dev_id": 65313
   },
-  "65329": {
+  {
     "name": "Type 62",
-    "type": "lightTank"
+    "dev_id": 65329
   },
-  "65361": {
+  {
     "name": "Vickers Medium Mk. I",
-    "type": "mediumTank"
+    "dev_id": 65361
   },
-  "65377": {
+  {
     "name": "Type 3 Chi-Nu Kai",
-    "type": "mediumTank"
+    "dev_id": 65377
   }
-}
+]
