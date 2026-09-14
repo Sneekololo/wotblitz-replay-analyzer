@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://blitzscrim.sneeko.fr/sitemap.xml
