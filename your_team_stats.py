@@ -1,10 +1,10 @@
 import os
-import json
 import math
 import subprocess
 from collections import defaultdict, Counter
 from openpyxl import Workbook
 from dotenv import load_dotenv
+from tank_database import load_tank_db
 
 load_dotenv()
 
@@ -16,9 +16,7 @@ if not os.path.exists(TANK_DB_FILE):
     print("❌ tank_db.json not found. Run fetch_tanks.py first.")
     exit(1)
 
-with open(TANK_DB_FILE, encoding="utf-8") as f:
-    raw_db = json.load(f)
-    TANK_DB = {int(k): v for k, v in raw_db.items()}
+TANK_DB = load_tank_db(TANK_DB_FILE)
 
 TYPE_LABELS = {
     "heavyTank": "HT",

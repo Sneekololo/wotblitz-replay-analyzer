@@ -14,6 +14,7 @@ from excel_export import send_stats_workbook
 from excel_import import parse_team_database
 from replay_parser import ReplayParser
 from stats import process_replay_folder
+from tank_database import load_tank_db
 from usage_stats import UsageStats
 
 
@@ -38,19 +39,7 @@ app.config["MAX_CONTENT_LENGTH"] = MAX_UPLOAD_MB * 1024 * 1024
 
 parser = ReplayParser(os.getenv("WOTBREPLAY_INSPECTOR_BIN", "wotbreplay-inspector"))
 usage_stats = UsageStats(USAGE_STATS_FILE)
-tank_db = {}
-
-if TANK_DB_FILE.exists():
-    with TANK_DB_FILE.open(encoding="utf-8") as tank_file:
-        raw_tank_db = json.load(tank_file)
-        if isinstance(raw_tank_db, list):
-            tank_db = {
-                int(tank["dev_id"]): tank
-                for tank in raw_tank_db
-                if tank.get("dev_id") is not None
-            }
-        else:
-            tank_db = {int(key): value for key, value in raw_tank_db.items()}
+tank_db = load_tank_db(TANK_DB_FILE, BASE_DIR / "tank_db_old_version.json")
 
 
 @app.route("/")
